@@ -3,6 +3,12 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+// this requires the npm-package dotenv.
+let env = process.env.NODE_ENV || 'development';
+require('dotenv').config({ path: `./.env.${env}` });
+
+
+
 const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
@@ -15,6 +21,29 @@ const settings = require("./src/util/site.json")
 module.exports = {
   siteMetadata: settings.meta,
   plugins: [
+    {
+      resolve: 'gatsby-source-github',
+      options: {
+        headers: {
+          Authorization: `Bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
+        },
+        queries: [
+          `{ viewer {                 
+                  pinnedItems(first: 5, types: REPOSITORY){
+                   nodes {
+                     ... on Repository {
+                    id                       
+                    name
+                    url
+                    description
+                    homepageUrl
+                  }
+                 }
+                }}
+              }`,
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
