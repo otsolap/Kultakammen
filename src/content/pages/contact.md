@@ -1,8 +1,8 @@
 ---
 template: contact-page
 slug: /contact
-title: Get in touch
+title: Ota yhteyttä!
 ---
-Got a burning question regarding **JAMstack**, Need a new **Website**, or just anything in general. We are happy to talk.
+Kysymyksiä **JAMstackista**, tai tarvitsetko uusia **Verkkosivuja** tai haluat muuten vain rupatella?
 
-Just send us a message using the form below or you can send us a DM on [LinkedIn](https://www.linkedin.com/in/otsolap/)
+Lähetä minulle viesti käyttämällä allaolevaa lomaketta tai voit ottaa minuun suoraan yhteyttä:0 [LinkedIn](https://www.linkedin.com/in/otsolap/)

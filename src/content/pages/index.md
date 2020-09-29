@@ -1,11 +1,11 @@
 ---
 template: index-page
 slug: /
-title: Wyatt Morriss
-tagline: Graphic Designer
-featuredImage: /assets/toa-heftiba-0rlfirsdvzu-unsplash.jpg
+title: Otso Lappalainen
+tagline: Web Developer
+featuredImage: /assets/otso_profiilikuva_032020.png
 cta:
-  ctaText: Know more
+  ctaText: Tutustu minuun
   ctaLink: /about
 ---
-He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda
+Koodarivelho.
