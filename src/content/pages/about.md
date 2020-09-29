@@ -13,7 +13,7 @@ Uskon, että nämä kokemukset työmaailmasta sekä se, että olen luonteeltani 
 
 Vapaa-ajallani luen mielelläni aiheista, jotka liittyvät markkinointiin sekä digitaalisuuteen. Minua kiinnostavia aiheita ovat mm. symbolit, viestintästrategiat ja Google työkalut (Firebase ja Firestore ovat uusia suosikkejani). Harrastan myös tubettamista, sillä nautin tiedonkeräämisestä ja informaation jakamisesta.  
 
-Haluan onnistua kaikissa tehtävissä, joita minulle annetaan ja keskitän työhön kaiken huomioni ja osaamiseni. Haluan tuoda oman rautaisen työntekijän asenteeni koodaamisesta, projektihallinnasta, sekä asiakaskonsultoinnista, ja laittaa sen testiin juuri PHZ:ssa
+Haluan onnistua kaikissa tehtävissä, joita minulle annetaan ja keskitän työhön kaiken huomioni ja osaamiseni. Haluan tuoda oman rautaisen työntekijän asenteeni koodaamisesta, projektihallinnasta, sekä asiakaskonsultoinnista, ja laittaa sen testiin juuri sinun kanssasi lukjija!
 
 Kiitän ajastanne. :-)
 

@@ -28,11 +28,11 @@ module.exports = {
           Authorization: `Bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
         },
         queries: [
-          `{ viewer {                 
+          `{ 
+            viewer {                 
                   pinnedItems(first: 5, types: REPOSITORY){
                    nodes {
-                     ... on Repository {
-                    id                       
+                     ... on Repository {                     
                     name
                     url
                     description
@@ -43,6 +43,16 @@ module.exports = {
               }`,
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Hind Guntur`,
+
+        ],
+        display: 'swap'
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
