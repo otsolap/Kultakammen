@@ -118,13 +118,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Foundation`,
-        short_name: `Foundation`,
+        name: `Otso Lappalainen`,
+        short_name: `Otso`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `static/assets/stackrole.png`,
+        icon: `static/assets/vanhalogo.png`,
       },
     },
     'gatsby-plugin-offline',

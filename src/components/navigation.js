@@ -8,15 +8,15 @@ const MenuItems = [
     title: "Index"
   },
   {
-    path: "/about",
+    path: "/otso",
     title: "Otso"
   },
   {
-    path: "/blog",
+    path: "/projektit",
     title: "Projektit"
   },
   {
-    path: "/contact",
+    path: "/yhteydenotto",
     title: "Ota Yhteyttä"
   },
 ]

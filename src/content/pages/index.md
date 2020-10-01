@@ -6,6 +6,6 @@ tagline: Web Developer
 featuredImage: /assets/otso_profiilikuva_032020.png
 cta:
   ctaText: Tutustu minuun
-  ctaLink: /about
+  ctaLink: /otso
 ---
 Koodarivelho.

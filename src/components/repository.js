@@ -28,7 +28,7 @@ const Repository = () => {
           <Card.Body>
             <Card.Title>{repository.name}</Card.Title>
             <Card.Link href={repository.url} target="_blank"> GitHub URL</Card.Link>
-            <Card.Link href={repository.homepageUrl} target="_blank"> Page URL</Card.Link>
+            <Card.Link href={repository.homepageUrl} target="_blank"> Appin URL</Card.Link>
             <Card.Text>{repository.description}</Card.Text>
           </Card.Body>
         </Card>

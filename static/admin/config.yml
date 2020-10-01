@@ -117,7 +117,7 @@ collections:
               - widget: image
                 name: image
                 label: image
-                default: '/assets/stackrole.png'
+                default: '/assets/vanhalogo.png'
               - widget: string
                 name: twitterUsername
                 label: Twitter

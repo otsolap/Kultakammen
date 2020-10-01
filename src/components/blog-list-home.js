@@ -10,7 +10,7 @@ const PostMaker = ({ data }) => (
     <div className="grids col-1 sm-2 lg-3">
       {data}
     </div>
-    <Link className="button" to="/blog">See more<span class="icon -right"><RiArrowRightSLine /></span></Link>
+    <Link className="button" to="/projektit">Perehdy lisää<span class="icon -right"><RiArrowRightSLine /></span></Link>
   </section>
 )
 
