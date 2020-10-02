@@ -1,11 +1,11 @@
 {
 	"meta": {
-		"title": "Otso Lappalainen - Kultakämmen",
+		"title": "Otso Lappalainen",
 		"titleTemplate": "%s",
 		"description": "Junior Webdevaaja",
 		"siteUrl": "https://otsolappalainen.netlify.app/",
-		"image": "/assets/otso_profiilikuva_032020.png",
-		"twitterUsername": "@MetsanOde"
+		"image": "/assets/vanhalogo.png",
+		"twitterUsername": ""
 	},
 	"ga": "UA-151881827-3"
 }

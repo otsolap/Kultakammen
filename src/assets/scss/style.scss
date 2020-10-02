@@ -1,6 +1,9 @@
 @import "theme-variables";
 @import "defaults";
 @import "lib/css-grid-utility";
+@import "utility";
+// Libraries
+@import "lib/prism-default";
 
 // .primary-container {
 // 	display: grid;
@@ -147,7 +150,8 @@
 	padding-bottom: 100px;
 }
 .post-card {
-	padding: 16px;
+	width: 20vw;
+	padding: 20px;
 	border: 1px solid #111;
 	background-color: #05090b;
 	box-shadow: 0 5px 10px #111;
@@ -429,8 +433,3 @@ article img {
 		}
 	}
 }
-
-@import "utility";
-
-// Libraries
-@import "lib/prism-default";

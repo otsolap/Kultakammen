@@ -111,7 +111,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: settings.ga,
+        trackingId: "UA-151881827-3",
+        head: true,
       },
     },
     `gatsby-plugin-advanced-sitemap`,
@@ -121,8 +122,8 @@ module.exports = {
         name: `Otso Lappalainen`,
         short_name: `Otso`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#faf7f2`,
+        theme_color: `#e39b41`,
         display: `standalone`,
         icon: `static/assets/vanhalogo.png`,
       },

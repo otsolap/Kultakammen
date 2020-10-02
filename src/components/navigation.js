@@ -16,6 +16,10 @@ const MenuItems = [
     title: "Projektit"
   },
   {
+    path: "/blogi",
+    title: "Blogi"
+  },
+  {
     path: "/yhteydenotto",
     title: "Ota Yhteyttä"
   },

@@ -1,5 +1,5 @@
 ---
-template: blog-post
+template: project-post
 title: Roar! Sosiaalisen Median applikaatio
 slug: /roar
 date: 2020-09-09 09:30

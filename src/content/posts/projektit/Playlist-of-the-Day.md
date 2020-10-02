@@ -1,5 +1,5 @@
 ---
-template: blog-post
+template: project-post
 title: Playlist of the Day!
 slug: /playlist-of-the-day
 date: 2020-06-06 11:30
