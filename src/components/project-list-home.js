@@ -21,7 +21,7 @@ export default function ProjectListHome() {
         query {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { template: { eq: "blog-post" } } }
+            filter: { frontmatter: { template: { eq: "project-post" } } }
             limit: 6
           ) {
             edges {
