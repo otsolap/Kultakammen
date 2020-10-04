@@ -4,7 +4,7 @@ title: Roar! Sosiaalisen Median applikaatio
 slug: /roar
 date: 2020-09-09 09:30
 description: Tehdään SoMesta mahtava taas!
-featuredImage: /assets/vanhalogo.png
+featuredImage: /assets/Roar-Login.jpg
 ---
 Tämä teksti esittelee projektin ja kertoo lukijalle, mistä projektissa oli kyse.
 

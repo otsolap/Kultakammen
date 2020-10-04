@@ -1,6 +1,4 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
 import PostCard from "../components/post-card"
@@ -36,73 +34,28 @@ export const projectListQuery = graphql`
     }
   }
 `
-const Pagination = (props) => (
-  <div className="pagination">
-    <ul>
-      {!props.isFirst && (
-        <li>
-          <Link to={props.prevPage} rel="prev">
-            <span className="icon -left"><RiArrowLeftLine /></span> Previous
-          </Link>
-        </li>
-      )}
-      {Array.from({ length: props.numPages }, (_, i) => (
-        <li key={`pagination-number${i + 1}`} >
-          <Link
-            to={`${props.projectSlug}${i === 0 ? '' : i + 1}`}
-            className={props.currentPage === i + 1 ? "is-active num" : "num"}
-          >
-            {i + 1}
-          </Link>
-        </li>
-      ))}
-      {!props.isLast && (
-        <li>
-          <Link to={props.nextPage} rel="next">
-            Next <span className="icon -right"><RiArrowRightLine /></span>
-          </Link>
-        </li>
-      )}
-    </ul>
-  </div>
-)
+
 class ProjectIndex extends React.Component {
   render() {
 
     const { data } = this.props
-    const { currentPage, numPages } = this.props.pageContext
-    const projectSlug = '/projektit/'
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? projectSlug : projectSlug + (currentPage - 1).toString()
-    const nextPage = projectSlug + (currentPage + 1).toString()
 
     const posts = data.allMarkdownRemark.edges
       .filter(edge => !!edge.node.frontmatter.date)
       .map(edge =>
         <PostCard key={edge.node.id} data={edge.node} />
       )
-    let props = {
-      isFirst,
-      prevPage,
-      numPages,
-      projectSlug,
-      currentPage,
-      isLast,
-      nextPage
-    }
 
     return (
       <Layout className="project-page">
         <SEO
-          title={"Projektit " + currentPage + " sivusta " + numPages}
-          description={"Otso Lappalaisen tuorempia projekteja " + currentPage + " sivusta " + numPages}
+          title={"Projektit"}
+          description={"Otso Lappalaisen tuorempia projekteja "}
         />
         <h1>Projektit</h1>
         <div className="grids col-1 sm-2 lg-3">
           {posts}
         </div>
-        <Pagination {...props} />
       </Layout>
     )
   }

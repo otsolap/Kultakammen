@@ -5,7 +5,7 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 const MenuItems = [
   {
     path: "/",
-    title: "Index"
+    title: "Etusivu"
   },
   {
     path: "/otso",
