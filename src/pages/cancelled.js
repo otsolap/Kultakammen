@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 
 const NotFound = () => (
   <Layout className="not-found-page">
-    <SEO title="Page not found" />
+    <SEO title="Sivua ei löytynyt" />
     <div className="wrapper" style={{
       textAlign: "center"
     }}>
@@ -16,8 +16,8 @@ const NotFound = () => (
           fontSize: "128px",
           color: "var(--primary-color)"
         }} />
-        <h1>Oletko eksynyt?</h1>
-        <p>Oletko tipahtanut kaninkoloon etkä pääse pois? Ei se mitään, näin pääset takaisin.</p>
+        <h1>Peruit tilauksen</h1>
+        <p>Ei se mitään. En ole velottanut sinulta mitään. Voit palata helposti takaisin etusivulle alla olevasta linkistä.</p>
       </header>
       <Link to="/" className="button"><RiArrowLeftSLine className="icon -left" />Takaisin etusivulle.</Link>
       <Link to="/contact" className="button -outline">Report this <RiBugLine className="icon -right" /></Link>

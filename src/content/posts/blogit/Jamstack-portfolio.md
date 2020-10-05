@@ -1,6 +1,6 @@
 ---
 template: blog-post
-title: Jamstack portfoliosivuni.
+title: Lol
 slug: /jamstack-portfolio
 date: 2020-09-19 09:15
 description: Mikä Jamstack on?

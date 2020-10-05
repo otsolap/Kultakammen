@@ -46,7 +46,7 @@ const Pagination = (props) => (
           </Link>
         </li>
       )}
-      {Array.from({ length: props.numPages }, (_, i) => (
+      {Array.from({ length: props.numBlogPages }, (_, i) => (
         <li key={`pagination-number${i + 1}`} >
           <Link
             to={`${props.blogSlug}${i === 0 ? '' : i + 1}`}
@@ -70,10 +70,10 @@ class BlogIndex extends React.Component {
   render() {
 
     const { data } = this.props
-    const { currentPage, numPages } = this.props.pageContext
+    const { currentPage, numBlogPages } = this.props.pageContext
     const blogSlug = '/blogi/'
     const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
+    const isLast = currentPage === numBlogPages
     const prevPage = currentPage - 1 === 1 ? blogSlug : blogSlug + (currentPage - 1).toString()
     const nextPage = blogSlug + (currentPage + 1).toString()
 
@@ -85,7 +85,7 @@ class BlogIndex extends React.Component {
     let props = {
       isFirst,
       prevPage,
-      numPages,
+      numBlogPages,
       blogSlug,
       currentPage,
       isLast,
@@ -95,8 +95,8 @@ class BlogIndex extends React.Component {
     return (
       <Layout className="blog-page">
         <SEO
-          title={"Blogisivu " + currentPage + "/" + numPages}
-          description={"Otso Lappalaisen tuorempia projekteja " + currentPage + "/" + numPages}
+          title={"Blogisivu " + currentPage + "/" + numBlogPages}
+          description={"Otso Lappalaisen tuorempia projekteja " + currentPage + "/" + numBlogPages}
         />
         <h1>Blogit</h1>
         <div className="grids col-1 sm-2 lg-3">

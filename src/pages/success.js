@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 
 const Thanks = () => (
   <Layout className="thanks-page">
-    <SEO title="Kiitos yhteydenotosta" />
+    <SEO title="Kiitos tilauksesta" />
     <div className="wrapper" style={{
       textAlign: "center"
     }}>
@@ -15,8 +15,8 @@ const Thanks = () => (
         fontSize: "128px",
         color: "var(--primary-color)"
       }} />
-      <h1>Viesti vastaanotettu</h1>
-      <p>Kiitos viestistäsi! Lupaan palata viestiisi viikon sisällä.</p>
+      <h1>Tilauksesi vahvistettu</h1>
+      <p>Kiitos tilauksestasi! Olen lähettänyt vahvistuksen sähköpostiisi ja olen yhteydessä sinuun mahdollisimman pian!</p>
       <Link to="/" className="button"><RiArrowLeftSLine className="icon -left" />Palaa takaisin etusivulle.</Link>
     </div>
 
