@@ -22,29 +22,6 @@ module.exports = {
   siteMetadata: settings.meta,
   plugins: [
     {
-      resolve: 'gatsby-source-github',
-      options: {
-        headers: {
-          Authorization: `Bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
-        },
-        queries: [
-          `{ 
-            viewer {                 
-                  pinnedItems(first: 5, types: REPOSITORY){
-                   nodes {
-                     ... on Repository {                     
-                    name
-                    url
-                    description
-                    homepageUrl
-                  }
-                 }
-                }}
-              }`,
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
@@ -107,10 +84,11 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-stripe`,
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: ["Price"],
+        objects: ['Product', 'Price'],
         secretKey: process.env.STRIPE_SECRET_KEY,
         downloadFiles: true,
       },
@@ -127,8 +105,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Otso Lappalainen`,
-        short_name: `Otso`,
+        name: `Kultakämmen`,
+        short_name: `Kultakämmen`,
         start_url: `/`,
         background_color: `#faf7f2`,
         theme_color: `#e39b41`,
@@ -137,5 +115,28 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-github',
+      options: {
+        headers: {
+          Authorization: `Bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
+        },
+        queries: [
+          `{ 
+            viewer {                 
+                  pinnedItems(first: 5, types: REPOSITORY){
+                   nodes {
+                     ... on Repository {                     
+                    name
+                    url
+                    description
+                    homepageUrl
+                  }
+                 }
+                }}
+              }`,
+        ],
+      },
+    },
   ],
 }
