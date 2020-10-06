@@ -50,7 +50,7 @@ const ProductCard = ({ product }) => {
     const stripe = await getStripe()
     const { error } = await stripe.redirectToCheckout({
       mode: "payment",
-      lineItems: [{ product, price, quantity: 1 }],
+      lineItems: [{ price, quantity: 1 }],
       successUrl: `${process.env.URL}/success/`,
       cancelUrl: `${process.env.URL}/cancelled`,
     })
