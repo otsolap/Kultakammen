@@ -1,11 +1,11 @@
 {
 	"meta": {
-		"title": "Otso Lappalainen",
+		"title": "Kultakämmen",
 		"titleTemplate": "%s",
-		"description": "Junior Webdevaaja",
+		"description": "Junior Full Stack Devaaja",
 		"siteUrl": "https://otsolappalainen.netlify.app/",
 		"image": "/assets/vanhalogo.png",
-		"twitterUsername": ""
+		"LinkedInUsername": "otsolap"
 	},
 	"ga": "UA-151881827-3"
 }

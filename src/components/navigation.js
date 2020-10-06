@@ -8,6 +8,10 @@ const MenuItems = [
     title: "Etusivu"
   },
   {
+    path: "/palvelut",
+    title: "Palvelut"
+  },
+  {
     path: "/otso",
     title: "Otso"
   },
