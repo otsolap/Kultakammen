@@ -52,7 +52,7 @@ const ProductCard = ({ product }) => {
       mode: "payment",
       lineItems: [{ price, quantity: 1 }],
       successUrl: 'https://otsolappalainen.netlify.app/success/',
-      cancelUrl: 'https://otsolappalainen.netlify.app/cancelled',
+      cancelUrl: `${process.env.URL}/cancelled/`,
     })
 
     if (error) {
