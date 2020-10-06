@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { RiArrowLeftSLine, RiBugLine, RiSkullLine } from "react-icons/ri"
+import { RiArrowLeftSLine, RiSkullLine } from "react-icons/ri"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -20,7 +20,6 @@ const NotFound = () => (
         <p>Ei se mitään. En ole velottanut sinulta mitään. Voit palata helposti takaisin etusivulle alla olevasta linkistä.</p>
       </header>
       <Link to="/" className="button"><RiArrowLeftSLine className="icon -left" />Takaisin etusivulle.</Link>
-      <Link to="/contact" className="button -outline">Report this <RiBugLine className="icon -right" /></Link>
     </div>
   </Layout>
 )
