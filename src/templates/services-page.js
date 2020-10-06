@@ -22,7 +22,7 @@ export const pageQuery = graphql`
 const ServicesIndex = () => (
   <Layout>
     <SEO title="page" />
-    <h1>Buy my stuff!!!!!</h1>
+    <h1>Palveluni:</h1>
     <Products />
   </Layout>
 )

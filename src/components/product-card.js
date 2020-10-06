@@ -8,7 +8,6 @@ const cardStyles = {
   alignItems: "flex-start",
   padding: "1rem",
   marginBottom: "1rem",
-  boxShadow: "5px 5px 25px 0 #fff",
   backgroundColor: "rgba(46,61,73,.2)",
   borderRadius: "6px",
   maxWidth: "300px",
@@ -17,7 +16,7 @@ const buttonStyles = {
   display: "block",
   fontSize: "13px",
   textAlign: "center",
-  color: "#fff",
+  color: "#000",
   padding: "12px",
   boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
   backgroundColor: "rgb(255, 178, 56)",
@@ -53,7 +52,7 @@ const ProductCard = ({ product }) => {
       mode: "payment",
       lineItems: [{ price, quantity: 1 }],
       successUrl: `${window.location.origin}/success/`,
-      cancelUrl: `${window.location.origin}/cancelled/`,
+      cancelUrl: `${window.location.origin}/cancelled`,
     })
 
     if (error) {
@@ -88,7 +87,7 @@ const ProductCard = ({ product }) => {
               : buttonStyles
           }
         >
-          Osta!
+          Osta minut.
         </button>
       </form>
     </div>
