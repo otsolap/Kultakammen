@@ -10,6 +10,7 @@ const Services = () => {
     }).format((amount / 100).toFixed(2));
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
     handleFormSubmission();
   };
 

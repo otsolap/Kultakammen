@@ -1,5 +1,4 @@
 export async function handleFormSubmission(event) {
-  event.preventDefault();
   // Formilla revimme kaikki tiedot itse lomakkeesta.
   // Joke on meidän inventory.
   const form = new FormData(event.target);
