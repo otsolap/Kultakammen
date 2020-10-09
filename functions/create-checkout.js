@@ -6,6 +6,7 @@ exports.handler = async ({ body }) => {
   const service = services.find((s) => s.sku === sku);
 
   const session = await stripe.checkout.sessions.create({
+    mode: 'payment',
     payment_method_types: ['card'],
     billing_address_collection: 'auto',
     line_items: [
