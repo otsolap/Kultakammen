@@ -19,7 +19,8 @@ exports.handler = async ({ body }) => {
     success_url: `${process.env.URL}/success/`,
     cancel_url: `${process.env.URL}/palvelut/`,
   });
-
+  console.log('session is:', session)
+  console.log(session.id)
   return {
     statusCode: 200,
     body: JSON.stringify({
