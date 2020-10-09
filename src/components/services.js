@@ -1,6 +1,8 @@
 import React from "react"
+import { loadStripe } from '@stripe/stripe-js';
 import inventory from '../../static/inventory/services.json';
-import { handleFormSubmission } from '../../functions/stripe-purchase'
+
+const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
 
 const Services = () => {
   const format = (amount, currency) =>
@@ -11,7 +13,33 @@ const Services = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    handleFormSubmission();
+    // Formilla revimme kaikki tiedot itse lomakkeesta.
+    // Joke on meidän inventory.
+    const form = new FormData(event.target);
+    // data => sku
+    const data = {
+      sku: form.get('sku'),
+    };
+
+    // TODO send to serverless function
+    const response = await fetch('/.netlify/functions/create-checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then((res) => res.json());
+
+    // TODO get the session ID and redirect to checkout
+    const stripe = await stripePromise;
+
+    const { error } = await stripe.redirectToCheckout({
+      sessionId: response.sessionId,
+    });
+
+    if (error) {
+      console.error(error);
+    }
   };
 
   return (
