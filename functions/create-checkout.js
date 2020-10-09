@@ -13,7 +13,7 @@ exports.handler = async ({ body }) => {
       {
         name: service.name,
         description: service.description,
-        image: [service.image],
+        images: [service.images],
         currency: service.currency,
       },
     ],
