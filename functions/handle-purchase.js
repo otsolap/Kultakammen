@@ -1,4 +1,6 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
+  maxNetworkRetries: 2,
+});
 
 exports.handler = async ({ body, headers }) => {
   // stripe webhooks constructEvent varmistaa
