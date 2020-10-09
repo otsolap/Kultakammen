@@ -64,7 +64,7 @@ const Services = () => {
             sx={{
               width: '100%',
             }}
-            src={service.images}
+            src={service.image}
             alt={service.name}
           />
           <h2 sx={{ fontSize: 3 }}>{service.name}</h2>
@@ -83,12 +83,13 @@ const Services = () => {
           <form
             onSubmit={handleSubmit}
             sx={{ display: 'grid', gap: 2, gridTemplateColumns: 'auto 50px' }}
-          >  <label
-            htmlFor="quantity"
-            sx={{ fontSize: 1, fontWeight: 600, p: 2, textAlign: 'right' }}
           >
+            <label
+              htmlFor="quantity"
+              sx={{ fontSize: 1, fontWeight: 600, p: 2, textAlign: 'right' }}
+            >
               Quantity
-        </label>
+            </label>
             <input
               type="number"
               id="quantity"
@@ -117,16 +118,16 @@ const Services = () => {
                 gridColumn: '1 / 3',
                 p: 2,
                 textShadow: `
-                0.05em 0.05em #4F4F4F99,
-                0.05em -0.05em #4F4F4F99,
-                -0.05em 0.05em #4F4F4F99,
-                -0.05em -0.05em #4F4F4F99
-              `,
+                  0.05em 0.05em #4F4F4F99,
+                  0.05em -0.05em #4F4F4F99,
+                  -0.05em 0.05em #4F4F4F99,
+                  -0.05em -0.05em #4F4F4F99
+                `,
                 textTransform: 'uppercase',
               }}
             >
-              Buy Now
-          </button>
+              Osta
+            </button>
           </form>
         </div>
       ))}
