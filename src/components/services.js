@@ -63,7 +63,7 @@ const Services = () => {
             sx={{
               width: '100%',
             }}
-            src={service.image}
+            src={service.images}
             alt={service.name}
           />
           <h2 sx={{ fontSize: 3 }}>{service.name}</h2>
