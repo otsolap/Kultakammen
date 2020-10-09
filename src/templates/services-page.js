@@ -17,8 +17,6 @@ export const pageQuery = graphql`
     }
   }
 `
-
-
 const ServicesIndex = () => (
   <Layout>
     <SEO title="page" />

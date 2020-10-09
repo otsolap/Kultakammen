@@ -1,8 +1,6 @@
 import React from "react"
-import { loadStripe } from '@stripe/stripe-js';
 import inventory from '../../static/inventory/services.json';
-
-const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
+import { handleFormSubmission } from '../../functions/stripe-purchase'
 
 const Services = () => {
   const format = (amount, currency) =>
@@ -12,32 +10,7 @@ const Services = () => {
     }).format((amount / 100).toFixed(2));
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    const form = new FormData(event.target);
-
-    const data = {
-      sku: form.get('sku'),
-    };
-
-    // TODO send to serverless function
-    const response = await fetch('/.netlify/functions/create-checkout', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    }).then((res) => res.json());
-
-    // TODO get the session ID and redirect to checkout
-    const stripe = await stripePromise;
-
-    const { error } = await stripe.redirectToCheckout({
-      sessionId: response.sessionId,
-    });
-
-    if (error) {
-      console.error(error);
-    }
+    handleFormSubmission();
   };
 
   return (
@@ -80,27 +53,6 @@ const Services = () => {
             onSubmit={handleSubmit}
             sx={{ display: 'grid', gap: 2, gridTemplateColumns: 'auto 50px' }}
           >
-            <label
-              htmlFor="quantity"
-              sx={{ fontSize: 1, fontWeight: 600, p: 2, textAlign: 'right' }}
-            >
-              Quantity
-          </label>
-            <input
-              type="number"
-              id="quantity"
-              name="quantity"
-              defaultValue={1}
-              min="1"
-              max="10"
-              sx={{
-                border: '1px solid',
-                borderColor: 'primary',
-                borderRadius: 2,
-                fontSize: 1,
-                p: 2,
-              }}
-            />
             <input type="hidden" name="sku" value={service.sku} />
             <button
               sx={{

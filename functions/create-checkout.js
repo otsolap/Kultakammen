@@ -3,7 +3,7 @@ const services = require('../static/inventory/services.json');
 
 exports.handler = async ({ body }) => {
   const { sku } = JSON.parse(body);
-  const service = services.find(s => s.sku === sku);
+  const service = services.find((s) => s.sku === sku);
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
@@ -12,16 +12,19 @@ exports.handler = async ({ body }) => {
       {
         name: service.name,
         description: service.description,
-        images: [service.image],
+        image: [service.image],
         currency: service.currency,
-      }
+      },
     ],
-    success_url: 'https://otsolappalainen.netlify.app/success/',
-    cancel_url: 'https://otsolappalainen.netlify.app/palvelut/',
+    success_url: `${process.env.URL}/success/`,
+    cancel_url: `${process.env.URL}//palvelut/`,
   });
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ sessionId: session.id }),
+    body: JSON.stringify({
+      sessionId: session.id,
+      publishableKey: process.env.GATSBY_STRIPE_PUBLISHABLE_KEY
+    }),
   };
 };
