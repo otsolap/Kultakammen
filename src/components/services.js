@@ -1,7 +1,9 @@
 import React from "react"
-import { handleFormSubmission } from '../../functions/stripe-purchase'
+import { loadStripe } from '@stripe/stripe-js';
 import inventory from '../../static/inventory/services.json';
-
+// Tällä varmistamme että Stripe on sivussamme ja lataantunut.
+// loadStripe => lataa stripen tähän sivulle.
+const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
 
 const Services = () => {
   const format = (amount, currency) =>
@@ -10,7 +12,36 @@ const Services = () => {
       currency: currency,
     }).format((amount / 100).toFixed(2));
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // Formilla revimme kaikki tiedot itse lomakkeesta.
+    // Joke on meidän inventory.
+    const form = new FormData(event.target);
+    // data => sku
+    const data = {
+      sku: form.get('sku'),
+    };
 
+    // TODO send to serverless function
+    const response = await fetch('/.netlify/functions/create-checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then((res) => res.json());
+
+    // TODO get the session ID and redirect to checkout
+    const stripe = await stripePromise;
+
+    const { error } = await stripe.redirectToCheckout({
+      sessionId: response.sessionId,
+    });
+
+    if (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <section
@@ -49,7 +80,7 @@ const Services = () => {
             {format(service.amount, service.currency)}
           </p>
           <form
-            onSubmit={handleFormSubmission}
+            onSubmit={handleSubmit}
             sx={{ display: 'grid', gap: 2, gridTemplateColumns: 'auto 50px' }}
           >
             <input type="hidden" name="sku" value={service.sku} />
