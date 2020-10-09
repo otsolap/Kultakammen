@@ -1,0 +1,18 @@
+[
+	{
+		"sku": "KK001",
+		"name": "Osta Nettisivut",
+		"description": "amazing site",
+		"image": "https://images.unsplash.com/photo-1492515114975-b062d1a270ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=350&q=80",
+		"amount": "99900",
+		"currency": "EUR"
+	},
+	{
+		"sku": "KK002",
+		"name": "Osta Digimarkkinointiaspa",
+		"description": "amazing service",
+		"image": "https://images.unsplash.com/photo-1492515114975-b062d1a270ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=350&q=80",
+		"amount": "99900",
+		"currency": "EUR"
+	}
+]

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Products from "../components/products"
+import Services from "../components/services"
 
 export const pageQuery = graphql`
   query ProductQuery($id: String!){
@@ -23,7 +23,7 @@ const ServicesIndex = () => (
   <Layout>
     <SEO title="page" />
     <h1>Palveluni:</h1>
-    <Products />
+    <Services />
   </Layout>
 )
 
