@@ -16,8 +16,8 @@ exports.handler = async ({ body }) => {
         currency: service.currency,
       }
     ],
-    success_url: `${process.env.URL}/success/`,
-    cancel_url: `${process.env.URL}/palvelut/`,
+    success_url: 'https://otsolappalainen.netlify.app/success/',
+    cancel_url: 'https://otsolappalainen.netlify.app/palvelut/',
   });
 
   return {
