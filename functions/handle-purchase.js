@@ -19,15 +19,12 @@ exports.handler = async ({ headers, body }) => {
     console.log(session);
   }
 
-
   // TODO read out the line items
   // TODO send email - Hanki Sendgrid APi, jotta saat dataa.
   // Front-end mastercourse JamStack, selvitä sieltä.
-  // 
-
 
   return {
     statusCode: 200,
-    body: 'test',
+    body: JSON.stringify({ sessionId: session.id }),
   };
 };

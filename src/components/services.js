@@ -66,7 +66,6 @@ const Services = () => {
       },
       body: JSON.stringify(data),
     }).then((res) => res.json());
-
     // ottaa sessionID 
     // jonka tarvitsemme redirect
     // checkouttiin.
