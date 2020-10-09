@@ -20,6 +20,7 @@ const Services = () => {
     // data => sku
     const data = {
       sku: form.get('sku'),
+      quantity: Number(form.get('quantity')),
     };
 
     // TODO send to serverless function
@@ -82,7 +83,27 @@ const Services = () => {
           <form
             onSubmit={handleSubmit}
             sx={{ display: 'grid', gap: 2, gridTemplateColumns: 'auto 50px' }}
+          >  <label
+            htmlFor="quantity"
+            sx={{ fontSize: 1, fontWeight: 600, p: 2, textAlign: 'right' }}
           >
+              Quantity
+        </label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              defaultValue={1}
+              min="1"
+              max="10"
+              sx={{
+                border: '1px solid',
+                borderColor: 'primary',
+                borderRadius: 2,
+                fontSize: 1,
+                p: 2,
+              }}
+            />
             <input type="hidden" name="sku" value={service.sku} />
             <button
               sx={{
