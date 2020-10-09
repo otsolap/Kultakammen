@@ -2,34 +2,33 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 exports.handler = async ({ headers, body }) => {
-  const sig = headers['stripe-signature'];
-  // tässä scopen takia, voimme käyttää eventtia myöhemmin uudestaan)
-  let event;
+  let StripeEvent;
+  // stripe webhooks constructEvent varmistaa
+  // että tilaukset ovat ihmisten tekijöitä eikä bottien.
+  // funktio tarvitsee stripe webhook salaisuuden.
   try {
-    event = stripe.webhooks.constructEvent(
+    StripeEvent = stripe.webhooks.constructEvent(
       body,
-      sig,
-      endpointSecret);
+      headers['stripe-signature'],
+      endpointSecret,
+    );
+    // Stripesta otettu
+    if (StripeEvent.type === 'checkout.session.completed') {
+      const session = StripeEvent.data.object
+      console.log(session);
+    } return {
+      statusCode: 200,
+      body: JSON.stringify({ received: true }),
+    };
   } catch (error) {
+    console.log(`Stripe webhook failed with ${err}`);
+
     return {
       statusCode: 400,
       body: `WebHook error: ${error.message}`,
     };
   }
-  // Stripesta otettu
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object;
-
-    console.log(session);
-  }
-
-
   // TODO read out the line items
   // TODO send email - Hanki Sendgrid APi, jotta saat dataa.
   // Front-end mastercourse JamStack, selvitä sieltä.
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ received: true }),
-  };
 };

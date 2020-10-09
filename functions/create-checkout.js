@@ -17,7 +17,7 @@ exports.handler = async ({ body }) => {
       },
     ],
     success_url: `${process.env.URL}/success/`,
-    cancel_url: `${process.env.URL}//palvelut/`,
+    cancel_url: `${process.env.URL}/palvelut/`,
   });
 
   return {
