@@ -10,10 +10,3 @@
   package = "netlify-plugin-gatsby-cache"
 
 
-[template.environment]
-GATSBY_PORTFOLIO_GITHUB_TOKEN=498f3b910b33cfecba712066d36f843dfe31a997
-GATSBY_STRIPE_PUBLISHABLE_KEY=pk_live_51HYmgJHDkK2gz9zvLNlom2CzujXGfPywmrVAdMoDaiMcRJy7bzXGGVfdJz0F3oMu0xA6sCnR6BGgJPcMXgh7vpBl00MRNQ4HQi
-STRIPE_SECRET_KEY=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
-STRIPE_WEBHOOK_SECRET=whsec_rdiWiEvGgc9p6Iy68gk9JJQYf0te7kmm
-URL
-URL=https://otsolappalainen.netlify.app
