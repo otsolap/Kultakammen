@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
+const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST_KEY, {
   maxNetworkRetries: 2,
 });
 const services = require('../static/inventory/services.json');
@@ -31,7 +31,7 @@ exports.handler = async ({ body }) => {
     statusCode: 200,
     body: JSON.stringify({
       sessionId: session.id,
-      publishableKey: process.env.GATSBY_STRIPE_PUBLISHABLE_KEY
+      publishableKey: process.env.GATSBY_STRIPE_TEST_PUBLISHABLE_KEY
     }),
   };
 };

@@ -3,7 +3,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import inventory from '../../static/inventory/services.json';
 // Tällä varmistamme että Stripe on sivussamme ja lataantunut.
 // loadStripe => lataa stripen tähän sivulle.
-const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(process.env.GATSBY_STRIPE_TEST_PUBLISHABLE_KEY);
 
 const Services = () => {
   const format = (amount, currency) =>

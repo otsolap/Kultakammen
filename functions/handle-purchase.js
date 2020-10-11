@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
+const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST_KEY, {
   maxNetworkRetries: 2,
 });
 
@@ -10,7 +10,7 @@ exports.handler = async ({ body, headers }) => {
     const stripeEvent = stripe.webhooks.constructEvent(
       body,
       headers['stripe-signature'],
-      process.env.STRIPE_WEBHOOK_SECRET,
+      process.env.STRIPE_WEBHOOK_TEST_SECRET,
     );
     // Stripesta otettu
     if (stripeEvent.type === 'checkout.session.completed') {
