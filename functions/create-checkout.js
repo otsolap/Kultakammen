@@ -19,7 +19,7 @@ exports.handler = async ({ body }) => {
         images: [service.image],
         currency: service.currency,
         quantity: validatedQuantity,
-        unit_amount: service.amount,
+        amount: service.amount,
       },
     ],
     success_url: `${process.env.URL}/success/`,
