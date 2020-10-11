@@ -37,7 +37,6 @@ const Services = () => {
 
     const { error } = await stripe.redirectToCheckout({
       sessionId: response.sessionId,
-      quantity: 1
     });
 
     if (error) {
@@ -97,7 +96,7 @@ const Services = () => {
               name="quantity"
               defaultValue={1}
               min="1"
-              max="10"
+              max="1"
               sx={{
                 border: '1px solid',
                 borderColor: 'primary',

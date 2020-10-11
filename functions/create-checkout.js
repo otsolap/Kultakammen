@@ -6,7 +6,7 @@ const services = require('../static/inventory/services.json');
 exports.handler = async ({ body }) => {
   const { sku, quantity } = JSON.parse(body);
   const service = services.find((s) => s.sku === sku);
-  const validatedQuantity = quantity > 0 && quantity <= 2 ? quantity : 1;
+  const validatedQuantity = quantity > 0 && quantity <= 1 ? quantity : 1;
 
   const session = await stripe.checkout.sessions.create({
     mode: 'payment',
