@@ -4,7 +4,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
 const services = require('../static/inventory/services.json');
 
 exports.handler = async ({ body }) => {
-  const { sku } = JSON.parse(body);
+  const { sku, quantity } = JSON.parse(body);
   const service = services.find((s) => s.sku === sku);
   const validatedQuantity = quantity > 0 && quantity <= 2 ? quantity : 1;
 

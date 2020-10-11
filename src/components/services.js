@@ -37,6 +37,7 @@ const Services = () => {
 
     const { error } = await stripe.redirectToCheckout({
       sessionId: response.sessionId,
+      quantity: 1
     });
 
     if (error) {
