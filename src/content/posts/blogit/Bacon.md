@@ -4,7 +4,7 @@ title: Bacon
 slug: /jamstack-portfolio
 date: 2020-09-19 09:15
 description: Mikä Jamstack on?
-featuredImage: /assets/vanhalogo.png
+featuredImage: /assets/Banner.png
 ---
 Tämä teksti esittelee projektin ja kertoo lukijalle, mistä projektissa oli kyse.
 

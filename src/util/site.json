@@ -4,7 +4,7 @@
 		"titleTemplate": "%s",
 		"description": "Junior Full Stack Devaaja",
 		"siteUrl": "https://otsolappalainen.netlify.app/",
-		"image": "/assets/vanhalogo.png",
+		"image": "/assets/Banner.png",
 		"LinkedInUsername": "otsolap"
 	},
 	"ga": "UA-151881827-3"
