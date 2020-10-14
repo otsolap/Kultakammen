@@ -4,7 +4,7 @@ title: Jamstack portfoliosivuni.
 slug: /jamstack-portfolio
 date: 2020-09-19 09:15
 description: Mikä Jamstack on?
-featuredImage: /assets/Arvolupaus.png
+featuredImage: /assets/Banner.png
 ---
 Tämä teksti esittelee projektin ja kertoo lukijalle, mistä projektissa oli kyse.
 
@@ -29,6 +29,9 @@ Yhteenveto projektista.
 [Github](https://github.com/otsolap/Portfolio-V2-Jam-Stack)
 
 [Gatsby](https://www.gatsbyjs.com/)
+
 [GraphQL](https://graphql.org/)
+
 [Netlify](https://www.netlify.com/)
+
 [Netlify CMS](https://www.netlifycms.org/)

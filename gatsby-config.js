@@ -84,6 +84,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-stripe`,
       options: {
@@ -92,7 +93,6 @@ module.exports = {
         downloadFiles: true,
       },
     },
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -110,7 +110,7 @@ module.exports = {
         background_color: `#faf7f2`,
         theme_color: `#e39b41`,
         display: `standalone`,
-        icon: `static/assets/Avatar.png`,
+        icon: `static/assets/Kultakammen_laatikko_logo.png`,
       },
     },
     'gatsby-plugin-offline',

@@ -96,9 +96,9 @@ class BlogIndex extends React.Component {
       <Layout className="blog-page">
         <SEO
           title={"Blogisivu " + currentPage + "/" + numBlogPages}
-          description={"Otso Lappalaisen tuorempia projekteja " + currentPage + "/" + numBlogPages}
+          description={"Kultakämmenen tuorempia blogeja " + currentPage + "/" + numBlogPages}
         />
-        <h1>Blogit</h1>
+        <h1>Blogi</h1>
         <div className="grids col-1 sm-2 lg-3">
           {posts}
         </div>

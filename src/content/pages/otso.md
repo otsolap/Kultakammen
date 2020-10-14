@@ -2,7 +2,9 @@
 template: about-page
 slug: /otso
 title:  Minusta
+featuredImage: /assets/Otso_Profiilikuva_032020.jpeg
 ---
+
 Haen Junior Web Developer työpaikkaa, sillä haluan syventää osaamistani ohjelmistokehityksen toteuttamisessa sekä olla osana asiakaskonsultointitiimiänne ja toteuttaa asiakaslähtöistä palvelua käyttäen avoimen teknologian työkaluja. Olen urani alussa ohjelmistokehittäjänä ja innokas tarjoamaan osaamiseni. Saan opintoni päätökseen tammikuussa mutta olen valmis aloittamaan työtehtäväni mahdollisimman nopeasti. Voin suorittaa viimeiset kurssini oppisopimuksen muodossa.
 
 Aloitin alkuvuodesta Koodaaja-koulutusohjelman Helsinki Business Collegessa, jossa painotus on ollut Reactiin ja Nodeen. Olen lyhyessä ajassa päässyt rakentamaan useita applikaatioita MERN-stack pohjalta. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kyselypeliä, joka tarjosi pelin lopussa soittolistan käyttäjälle vastauksien perusteella. Tähän projektiin pääsimme soveltamaan Reactin ja Noden lisäksi MongoDB:ta, Spotifyita sekä Herokua saadaksemme julkaistua applikaation kokomaailman pelattavaksi.

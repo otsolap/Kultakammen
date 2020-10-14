@@ -48,7 +48,7 @@ const Services = () => {
     <section classname="services-page">
       {inventory.map((service) => (
         <div classname="service-card" key={service.sku} sx={{ mt: 3 }}>
-          <img
+          <img classname="service-image"
             src={service.image}
             alt={service.name}
           />

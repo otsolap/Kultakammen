@@ -39,7 +39,6 @@ class ProjectIndex extends React.Component {
   render() {
 
     const { data } = this.props
-
     const posts = data.allMarkdownRemark.edges
       .filter(edge => !!edge.node.frontmatter.date)
       .map(edge =>
@@ -50,7 +49,7 @@ class ProjectIndex extends React.Component {
       <Layout className="project-page">
         <SEO
           title={"Projektit"}
-          description={"Otso Lappalaisen tuorempia projekteja "}
+          description={"Kultakämmenen tuorempia projekteja "}
         />
         <h1>Projektit</h1>
         <div className="grids col-1 sm-2 lg-3">

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { RiArrowRightSLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
-import BlogListHome from "../components/blog-list-home"
+import ProjectListHome from "../components/project-list-home"
 import SEO from "../components/seo"
 
 export const pageQuery = graphql`
@@ -35,8 +35,7 @@ export const pageQuery = graphql`
 `
 
 const HomePage = ({ data }) => {
-  const { markdownRemark } = data
-  // data.markdownRemark holds your post data
+  const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const Image = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid : ""
   return (
@@ -50,14 +49,16 @@ const HomePage = ({ data }) => {
           <Link to={frontmatter.cta.ctaLink} className="button">{frontmatter.cta.ctaText}<span class="icon -right"><RiArrowRightSLine /></span></Link>
         </div>
         <div>
-          <Img
-            fluid={Image}
-            alt={frontmatter.title + 'Profiilikuva'}
-            className="featured-image"
-          />
+          {Image ? (
+            <Img
+              fluid={Image}
+              alt={frontmatter.title + ' - Featured image'}
+              className="featured-image"
+            />
+          ) : ""}
         </div>
       </div>
-      <BlogListHome />
+      <ProjectListHome />
     </Layout>
   )
 }

@@ -1,9 +1,6 @@
 @import "theme-variables";
 @import "defaults";
 @import "lib/css-grid-utility";
-@import "utility";
-// Libraries
-@import "lib/prism-default";
 
 // .primary-container {
 // 	display: grid;
@@ -150,9 +147,8 @@
 	padding-bottom: 100px;
 }
 .post-card {
-	width: 20vw;
-	padding: 20px;
-	border: 1px solid #111;
+	padding: 16px;
+	border: 1px ridge #050905;
 	background-color: #05090b;
 	box-shadow: 0 5px 10px #111;
 	border-radius: 12px;
@@ -173,7 +169,7 @@
 		}
 	}
 	&:hover {
-		border: 1px solid rgba(0, 0, 0, 0.12);
+		border: 1px ridge #faf7f2;
 		box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 		.title {
 			color: var(--button-alternate-color);
@@ -302,6 +298,7 @@ article img {
 // Page
 .page,
 .blog-page,
+.project-page,
 .contact-page,
 .thanks-page,
 .not-found-page {
@@ -451,6 +448,7 @@ article img {
 }
 
 .service-card img {
+	height: auto;
 	width: 100%;
 }
 
@@ -504,3 +502,7 @@ article img {
 	text-shadow: 0.05em 0.05em #4F4F4F99, 0.05em -0.05em #4F4F4F99, -0.05em 0.05em #4F4F4F99, -0.05em -0.05em #4F4F4F99;
 	text-transform: uppercase;
 }
+
+@import "utility";
+// Libraries
+@import "lib/prism-default";
