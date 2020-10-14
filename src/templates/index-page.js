@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { RiArrowRightSLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
-import ProjectListHome from "../components/project-list-home"
+import BlogListHome from "../components/blog-list-home"
 import SEO from "../components/seo"
 
 export const pageQuery = graphql`
@@ -50,16 +50,14 @@ const HomePage = ({ data }) => {
           <Link to={frontmatter.cta.ctaLink} className="button">{frontmatter.cta.ctaText}<span class="icon -right"><RiArrowRightSLine /></span></Link>
         </div>
         <div>
-          {Image ? (
-            <Img
-              fluid={Image}
-              alt={frontmatter.title + ' - Featured image'}
-              className="featured-image"
-            />
-          ) : ""}
+          <Img
+            fluid={Image}
+            alt={frontmatter.title + 'Profiilikuva'}
+            className="featured-image"
+          />
         </div>
       </div>
-      <ProjectListHome />
+      <BlogListHome />
     </Layout>
   )
 }

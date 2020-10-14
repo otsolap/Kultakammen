@@ -8,7 +8,6 @@ let env = process.env.NODE_ENV || 'development';
 require('dotenv').config({ path: `./.env.${env}` });
 
 
-
 const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
@@ -31,6 +30,7 @@ module.exports = {
         display: 'swap'
       }
     },
+    // Assets => kuvat.
     {
       resolve: `gatsby-source-filesystem`,
       options: {
