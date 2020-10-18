@@ -156,8 +156,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
 }
-
-
 // Noden avulla GraphQL Datalayer saa dataa.
 // luo uuden Noden, eli uuden datan layerin, jonka GraphQL voi kaivaa ja tonkia.
 exports.onCreateNode = ({ node, getNode, actions }) => {

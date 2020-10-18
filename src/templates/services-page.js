@@ -17,12 +17,22 @@ export const pageQuery = graphql`
     }
   }
 `
-const ServicesIndex = () => (
-  <Layout>
-    <SEO title="page" />
-    <h1>Palveluni:</h1>
-    <Services />
-  </Layout>
-)
+const ServicesIndex = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, excerpt } = markdownRemark
+
+  return (
+    <Layout>
+      <SEO
+        title={frontmatter.title}
+        description={excerpt} />
+      <div className="wrapper">
+        <h1>{frontmatter.title}</h1>
+        <Services />
+      </div>
+    </Layout>
+  )
+}
+
 
 export default ServicesIndex

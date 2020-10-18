@@ -3,7 +3,7 @@
 		"sku": "KK001",
 		"name": "Osta Nettisivut",
 		"description": "amazing site",
-		"image": "/assets/Avatar.png",
+		"image": "/assets/Avatar_sm.png",
 		"amount": "99900",
 		"currency": "EUR"
 	},
@@ -11,7 +11,7 @@
 		"sku": "KK002",
 		"name": "Osta Digimarkkinointiaspa",
 		"description": "amazing service",
-		"image": "/assets/Avatar.png",
+		"image": "/assets/Avatar_sm.png",
 		"amount": "99900",
 		"currency": "EUR"
 	}

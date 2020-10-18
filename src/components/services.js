@@ -47,13 +47,13 @@ const Services = () => {
   return (
     <section classname="services-page">
       {inventory.map((service) => (
-        <div classname="service-card" key={service.sku} sx={{ mt: 3 }}>
+        <div classname="service-card" key={service.sku}>
           <img classname="service-image"
             src={service.image}
             alt={service.name}
           />
-          <h2 sx={{ fontSize: 3 }}>{service.name}</h2>
-          <p sx={{ fontSize: 1 }}>{service.description}</p>
+          <h2>{service.name}</h2>
+          <p>{service.description}</p>
           <p classname="service-card-costs"
           >
             {format(service.amount, service.currency)}

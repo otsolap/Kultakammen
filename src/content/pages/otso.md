@@ -2,7 +2,7 @@
 template: about-page
 slug: /otso
 title:  Minusta
-featuredImage: /assets/Otso_Profiilikuva_032020.jpeg
+featuredImage: /assets/Otso_151020_ProfiiliKuva.png
 ---
 
 Haen Junior Web Developer työpaikkaa, sillä haluan syventää osaamistani ohjelmistokehityksen toteuttamisessa sekä olla osana asiakaskonsultointitiimiänne ja toteuttaa asiakaslähtöistä palvelua käyttäen avoimen teknologian työkaluja. Olen urani alussa ohjelmistokehittäjänä ja innokas tarjoamaan osaamiseni. Saan opintoni päätökseen tammikuussa mutta olen valmis aloittamaan työtehtäväni mahdollisimman nopeasti. Voin suorittaa viimeiset kurssini oppisopimuksen muodossa.
