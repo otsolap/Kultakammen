@@ -20,7 +20,6 @@ const Services = () => {
     // data => sku
     const data = {
       sku: form.get('sku'),
-      quantity: Number(form.get('quantity')),
     };
 
     // TODO send to serverless function
@@ -61,20 +60,6 @@ const Services = () => {
           <form classname="service-card-submit"
             onSubmit={handleSubmit}
           >
-            <label
-              classname="service-quantity"
-              htmlFor="quantity"
-            >
-              Quantity
-            </label>
-            <input classname="service-quantity-input"
-              type="number"
-              id="quantity"
-              name="quantity"
-              defaultValue={1}
-              min="1"
-              max="1"
-            />
             <input type="hidden" name="sku" value={service.sku} />
             <button classname="service-submit"            >
               Osta
