@@ -22,7 +22,7 @@ const ServicesIndex = ({ data }) => {
   const { frontmatter, excerpt } = markdownRemark
 
   return (
-    <Layout>
+    <Layout className="page">
       <SEO
         title={frontmatter.title}
         description={excerpt} />

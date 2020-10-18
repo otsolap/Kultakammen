@@ -301,6 +301,7 @@ article img {
 .project-page,
 .contact-page,
 .thanks-page,
+.services-page,
 .not-found-page {
 	padding: 50px 20px;
 	.wrapper {
@@ -435,14 +436,14 @@ article img {
 
 @media (min-width: 360px) {
 	.service-page {
-		margin-top: 5;
+		margin-top: 5em;
 		display: 'grid';
-		gap: 3;
-		grid-template-columns: repeat(2, 1fr);
+		gap: 3em;
+		grid-template-columns: repeat(1, 1fr);
 	}
 	@media (min-width: 500px) {
 		.service-page {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 }
@@ -457,52 +458,37 @@ article img {
 }
 
 .service-card h2 {
-	font-size: 3;
+	font-size: 3em;
 }
 
 .service-card p {
-	font-size: 1;
+	font-size: 1em;
 }
 
 .service-card-costs {
-	font-size: 3;
+	font-size: 3em;
 	font-weight: 700;
 	margin: 0;
-	margin-bottom: 2;
+	margin-bottom: 2em;
 	text-align: right;
 }
 
 .service-card-submit {
 	display: grid;
-	gap: 2;
+	gap: 2em;
 	grid-template-columns: auto 50px;
-}
-
-.service-quantity {
-	font-size: 1;
-	font-weight: 600;
-	padding: 2;
-	text-align: right;
-}
-
-.service-quantity-input {
-	border: 1px solid;
-	border-color: var(--primary-color);
-	border-radius: 2;
-	font-size: 1;
-	padding: 2;
 }
 
 .service-submit {
 	background-color: var(--primary-color);
 	border: none;
-	border-radius: 2;
+	border-radius: 2em;
 	color: var(--primary-color);
 	font-family: var(--font-family);
-	font-size: 2;
+	font-size: 2em;
 	font-weight: 800;
 	grid-column: 1/3;
-	padding: 2;
+	padding: 2em;
 	text-shadow: 0.05em 0.05em #4F4F4F99, 0.05em -0.05em #4F4F4F99, -0.05em 0.05em #4F4F4F99, -0.05em -0.05em #4F4F4F99;
 	text-transform: uppercase;
 }
