@@ -26,7 +26,10 @@ export const pageQuery = graphql`
 const Contact = ({ data }) => {
   const { markdownRemark, site } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-
+  // input type hidden on netlifytä varten, jotta netlify tietää mikä lomake kyseessä.
+  // contact on meidän lomake, niin kaikki viestit löytyy contact-lomakkeen alta.
+  // honeypot=bot-field on botteja varten.
+  // p hidden pitää kohdan piilossa, mutta console.logilla sen löytää. ;-)
   return (
     <Layout className="contact-page">
       <SEO
@@ -38,24 +41,24 @@ const Contact = ({ data }) => {
         <div className="description" dangerouslySetInnerHTML={{ __html: html }} />
         <form className="contact-form" action="/thanks" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
+          <p hidden><input name="bot-field" /></p>
           <p>
-            <label>Nimi<input type="text" name="name" /></label>
+            <label><input required placeholder="Nimi *" type="text" name="name" /></label>
           </p>
           <p>
-            <label>Sähköposti<input type="email" name="email" /></label>
+            <label><input required placeholder="Puhelin *" type="number" name="phone" /></label>
           </p>
           <p>
-            <label>Aihe<input type="text" name="subject" /></label>
+            <label><input required placeholder="Sähköposti *" type="email" name="email" /></label>
           </p>
           <p>
-            <label>Viesti<textarea name="message"></textarea></label>
+            <label><textarea placeholder="Viesti" name="message"></textarea></label>
           </p>
           <p className="text-align-right">
-            <button className="button" type="submit">Lähetä viesti <span className="icon -right"><RiSendPlane2Line /></span></button>
+            <button className="button" type="submit">Lähetä<span className="icon -right"><RiSendPlane2Line /></span></button>
           </p>
         </form>
       </div>
-
     </Layout>
   )
 }
