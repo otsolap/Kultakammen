@@ -19,7 +19,7 @@ export const pageQuery = graphql`
 `
 const ServicesIndex = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, excerpt } = markdownRemark
+  const { frontmatter, html, excerpt } = markdownRemark
 
   return (
     <Layout className="page">
@@ -28,6 +28,7 @@ const ServicesIndex = ({ data }) => {
         description={excerpt} />
       <div className="wrapper">
         <h1>{frontmatter.title}</h1>
+        <div className="description" dangerouslySetInnerHTML={{ __html: html }} />
         <Services />
       </div>
     </Layout>

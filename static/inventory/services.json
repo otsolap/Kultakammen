@@ -1,18 +1,18 @@
 [
 	{
 		"sku": "KK001",
-		"name": "Osta Nettisivut",
-		"description": "amazing site",
-		"image": "/assets/Avatar_sm.png",
+		"name": "Uudet kotisivut",
+		"description": "Tehdään sinulle uudet ja laadukkaat nettisivut alan parhailla metodeilla ja teknologioilla!",
+		"image": "/assets/Uudet_Nettisivut.png",
 		"quantity": 1,
 		"amount": "99900",
 		"currency": "EUR"
 	},
 	{
 		"sku": "KK002",
-		"name": "Osta Digimarkkinointiaspa",
-		"description": "amazing service",
-		"image": "/assets/Avatar_sm.png",
+		"name": "Hakukonemarkkinointi suunnitelma",
+		"description": "Suunnittelen ja luon Google Ads tilin, jotta saat parempaa näkyvyyttä kustannustehokkaammin.",
+		"image": "/assets/HakukoneMarkkinointi.png",
 		"quantity": 1,
 		"amount": "99900",
 		"currency": "EUR"

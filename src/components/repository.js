@@ -21,7 +21,7 @@ const Repository = () => {
     <div>
       {data.githubViewer.pinnedItems.nodes.map((repository, i) => (
         <Card
-          Style={{ width: '10rem' }}
+
           className="bg-dark text-white"
           border="warning"
           key={i} >

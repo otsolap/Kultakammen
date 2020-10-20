@@ -3,6 +3,6 @@ template: contact-page
 slug: /yhteydenotto
 title: Ota yhteyttä!
 ---
-Kysymyksiä **JAMstackista**, tai tarvitsetko uusia **Verkkosivuja** tai haluat muuten vain rupatella?
+Hei, tykkäsitkö nettisivustasi? Kiitos! Haluaisitko samanlaiset itsellesi? No eikun vain ottamaan yhteyttä! ;-D
 
-Lähetä minulle viesti käyttämällä allaolevaa lomaketta tai voit ottaa minuun suoraan yhteyttä:0 [LinkedIn](https://www.linkedin.com/in/otsolap/)
+Lähetä minulle viesti käyttämällä allaolevaa lomaketta tai voit ottaa minuun suoraan yhteyttä: [LinkedInissä](https://www.linkedin.com/in/otsolap/)

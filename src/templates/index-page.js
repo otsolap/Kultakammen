@@ -52,7 +52,7 @@ const HomePage = ({ data }) => {
           {Image ? (
             <Img
               fluid={Image}
-              alt={frontmatter.title + ' - Featured image'}
+              alt={frontmatter.title}
               className="featured-image"
             />
           ) : ""}
