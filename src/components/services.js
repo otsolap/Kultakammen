@@ -1,4 +1,5 @@
 import React from "react"
+import { Container, Row, Col } from 'react-bootstrap';
 import { loadStripe } from '@stripe/stripe-js';
 import inventory from '../../static/inventory/services.json';
 // Tällä varmistamme että Stripe on sivussamme ja lataantunut.
@@ -44,29 +45,35 @@ const Services = () => {
   };
 
   return (
-    <section classname="services-page">
-      {inventory.map((service) => (
-        <div classname="service-card" key={service.sku}>
-          <img classname="service-image"
-            src={service.image}
-            alt={service.name}
-          />
-          <h2>{service.name}</h2>
-          <p>{service.description}</p>
-          <p classname="service-card-costs"
-          >
-            {format(service.amount, service.currency)}
-          </p>
-          <form classname="service-card-submit"
-            onSubmit={handleSubmit}
-          >
-            <input type="hidden" name="sku" value={service.sku} />
-            <button classname="service-submit"            >
-              Osta
+    <section className="services-page">
+      <Container>
+        <Row md={2} sm={2}>
+          {inventory.map((service) => (
+            <Col>
+              <div className="service-card" key={service.sku}>
+                <img className="featured-image"
+                  src={service.image}
+                  alt={service.name}
+                />
+                <h2>{service.name}</h2>
+                <p>{service.description}</p>
+                <p className="service-card-costs"
+                >
+                  {format(service.amount, service.currency)}
+                </p>
+                <form className="service-card-submit"
+                  onSubmit={handleSubmit}
+                >
+                  <input type="hidden" name="sku" value={service.sku} />
+                  <button className="button" type="submit">
+                    Osta
             </button>
-          </form>
-        </div>
-      ))}
+                </form>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </section>
   );
 };

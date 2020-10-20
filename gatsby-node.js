@@ -64,7 +64,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   // Create blog-list pages
-  const blogPostsPerPage = 9
+  const blogPostsPerPage = 6
   const numBlogPages = Math.ceil(blogPostsCount / blogPostsPerPage)
 
   Array.from({ length: numBlogPages }).forEach((_, i) => {
@@ -139,7 +139,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   // Create project-list pages
-  const projectPostsPerPage = 9
+  const projectPostsPerPage = 3
   const numProjectPages = Math.ceil(projectPostsCount / projectPostsPerPage)
 
   Array.from({ length: numProjectPages }).forEach((_, i) => {

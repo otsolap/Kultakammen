@@ -3,16 +3,16 @@
 		"sku": "KK001",
 		"name": "Uudet kotisivut",
 		"description": "Tehdään sinulle uudet ja laadukkaat nettisivut alan parhailla metodeilla ja teknologioilla!",
-		"image": "/assets/Uudet_Nettisivut.png",
+		"image": "/assets/Nettisivujenteko_palvelu.png",
 		"quantity": 1,
 		"amount": "99900",
 		"currency": "EUR"
 	},
 	{
 		"sku": "KK002",
-		"name": "Hakukonemarkkinointi suunnitelma",
+		"name": "Google Ads suunnitelma",
 		"description": "Suunnittelen ja luon Google Ads tilin, jotta saat parempaa näkyvyyttä kustannustehokkaammin.",
-		"image": "/assets/HakukoneMarkkinointi.png",
+		"image": "/assets/Hakukonemarkkinointi_palvelu.png",
 		"quantity": 1,
 		"amount": "99900",
 		"currency": "EUR"

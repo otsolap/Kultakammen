@@ -7,6 +7,9 @@
 // 	grid-template-rows: 60px auto 60px;
 // 	min-height: 100vh;
 // }
+
+// Header, Nav ja Footer.
+
 .primary-container main {
 	min-height: calc(100vh - 60px - 81px);
 }
@@ -434,63 +437,27 @@ article img {
 
 // Services Page
 
-@media (min-width: 360px) {
-	.service-page {
-		margin-top: 5em;
-		display: 'grid';
-		gap: 3em;
-		grid-template-columns: repeat(1, 1fr);
-	}
-	@media (min-width: 500px) {
-		.service-page {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-}
-
-.services-card {
-	margin-top: 3;
-}
-
-.service-card img {
-	height: auto;
-	width: 100%;
-}
-
 .service-card h2 {
-	font-size: 3em;
+	font-size: 24px;
 }
 
 .service-card p {
-	font-size: 1em;
+	font-size: 16px;
+	margin: 0 0 5px;
 }
 
 .service-card-costs {
-	font-size: 3em;
-	font-weight: 700;
+	font-size: 20px;
+	font-weight: 600;
 	margin: 0;
-	margin-bottom: 2em;
-	text-align: right;
+	margin-bottom: 2px;
+	text-align: left;
 }
 
 .service-card-submit {
 	display: grid;
 	gap: 2em;
-	grid-template-columns: auto 50px;
-}
-
-.service-submit {
-	background-color: var(--primary-color);
-	border: none;
-	border-radius: 2em;
-	color: var(--primary-color);
-	font-family: var(--font-family);
-	font-size: 2em;
-	font-weight: 800;
-	grid-column: 1/3;
-	padding: 2em;
-	text-shadow: 0.05em 0.05em #4F4F4F99, 0.05em -0.05em #4F4F4F99, -0.05em 0.05em #4F4F4F99, -0.05em -0.05em #4F4F4F99;
-	text-transform: uppercase;
+	grid-template-columns: auto 1000px;
 }
 
 @import "utility";

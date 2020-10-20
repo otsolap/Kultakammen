@@ -54,6 +54,8 @@ const HomePage = ({ data }) => {
               fluid={Image}
               alt={frontmatter.title}
               className="featured-image"
+              objectFit="scale-down"
+              objectPosition="50% 50%"
             />
           ) : ""}
         </div>

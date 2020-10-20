@@ -22,14 +22,14 @@ export default function ProjectListHome() {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { template: { eq: "project-post" } } }
-            limit: 6
+            limit: 3
           ) {
             edges {
               node {
                 id
                 excerpt(pruneLength: 250)
                 frontmatter {
-                  date(formatString: "MMMM DD, YYYY")
+                  date(formatString: "DD MMMM, YYYY")
                   slug
                   title
                   featuredImage {
