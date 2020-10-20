@@ -54,7 +54,7 @@ const Contact = ({ data }) => {
           <p>
             <label><textarea placeholder="Viesti" name="message"></textarea></label>
           </p>
-          <p className="text-align-right">
+          <p className="text-align-center">
             <button className="button" type="submit">Lähetä<span className="icon -right"><RiSendPlane2Line /></span></button>
           </p>
         </form>
