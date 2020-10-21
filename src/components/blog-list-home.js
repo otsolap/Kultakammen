@@ -29,7 +29,7 @@ export default function ProjectListHome() {
                 id
                 excerpt(pruneLength: 250)
                 frontmatter {
-                  date(formatString: "DD MM, YYYY")
+                  date(formatString: "DD MMMM, YYYY", locale: "fi")
                   slug
                   title
                   featuredImage {
