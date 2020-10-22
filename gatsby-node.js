@@ -64,7 +64,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   // Create blog-list pages
-  const blogPostsPerPage = 6
+  const blogPostsPerPage = 9
   const numBlogPages = Math.ceil(blogPostsCount / blogPostsPerPage)
 
   Array.from({ length: numBlogPages }).forEach((_, i) => {

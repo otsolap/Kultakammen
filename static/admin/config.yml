@@ -32,9 +32,9 @@ collections:
           label: 'Publish Date',
           name: 'date',
           widget: 'datetime',
-          dateFormat: 'YYYY-DD-MM',
+          dateFormat: 'DD-MM-YYYY',
           timeFormat: 'HH:mm',
-          format: 'YYYY-DD-MM HH:mm',
+          format: 'DD-MM-YYYY HH:mm',
         }
       - { label: 'SEO Description', name: 'description', widget: 'text' }
       - {
