@@ -14,7 +14,7 @@ const SEO = ({ title, description, image, article }) => {
     defaultDescription,
     siteUrl,
     defaultImage,
-    LinkedInUsername,
+    linkedInUsername,
   } = site.siteMetadata
 
   const seo = {
@@ -47,8 +47,8 @@ const SEO = ({ title, description, image, article }) => {
 
       <meta name="LinkedIn:card" content="summary_large_image" />
 
-      {LinkedInUsername && (
-        <meta name="LinkedIn:creator" content={LinkedInUsername} />
+      {linkedInUsername && (
+        <meta name="LinkedIn:creator" content={linkedInUsername} />
       )}
 
       {seo.title && <meta name="LinkedIn:title" content={seo.title} />}
@@ -87,7 +87,7 @@ const query = graphql`
         defaultDescription: description
         siteUrl: siteUrl
         defaultImage: image
-        LinkedInUsername
+        linkedInUsername
       }
     }
   }
