@@ -30,6 +30,7 @@ const AboutPage = ({ data }) => {
 				<h1>{frontmatter.title}</h1>
 				<article dangerouslySetInnerHTML={{ __html: html }} />
 			</div>
+			<p>Tässä parhaat projektini:</p>
 			<Repository />
 		</Layout>
 	)

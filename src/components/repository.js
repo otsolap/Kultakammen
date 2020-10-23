@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Card } from 'react-bootstrap/';
+import { Link } from "gatsby"
 
 const Repository = () => {
   const data = useStaticQuery(graphql`
@@ -19,22 +19,18 @@ const Repository = () => {
 `)
   return (
     <div>
-      {data.githubViewer.pinnedItems.nodes.map((repository, i) => (
-        <Card
-
-          className="bg-dark text-white"
-          border="warning"
-          key={i} >
-          <Card.Body>
-            <Card.Title>{repository.name}</Card.Title>
-            <Card.Link href={repository.url} target="_blank"> GitHub URL</Card.Link>
-            <Card.Link href={repository.homepageUrl} target="_blank"> Appin URL</Card.Link>
-            <Card.Text>{repository.description}</Card.Text>
-          </Card.Body>
-        </Card>
-      ))
-      }
-    </div >
+      <div className="grids col-1 sm-2 lg-3">
+        {data.githubViewer.pinnedItems.nodes.map((repository, i) => (
+          <div className="repository-card">
+            <h2 className="title">{repository.name}</h2>
+            <p>{repository.description}</p>
+            <p> <Link href={repository.homepageUrl} className="button" target="_blank"> Appin URL</Link></p>
+            <p> <Link href={repository.url} className="button" target="_blank"> GitHub URL</Link></p>
+          </div>
+        ))
+        }
+      </div >
+    </div>
   )
 };
 export default Repository

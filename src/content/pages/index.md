@@ -8,4 +8,4 @@ cta:
   ctaText: Tutustu minuun
   ctaLink: /otso
 ---
-Olen vastavalmistuva Koodarivelho, jonka sydän pumppuaa verkkosivuista, kasvuhakkeroinnista ja asiakaspolkujen kehittämisestä.
+Olen vastavalmistuva Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen.

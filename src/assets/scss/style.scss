@@ -435,7 +435,23 @@ article img {
 	}
 }
 
+// Repository-component
+
+.repository-card {
+	background-color: #050905;
+	border-color: #faf7f2;
+	border-radius: 12px;
+	border: 1px ridge #faf7f2;
+	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+}
+
 // Services Page
+
+.service-card {
+	margin: 50px;
+}
 
 .service-card h2 {
 	font-size: 24px;
@@ -457,7 +473,6 @@ article img {
 .service-card-submit {
 	display: grid;
 	gap: 2em;
-	grid-template-columns: auto 1000px;
 }
 
 @import "utility";
