@@ -8,6 +8,7 @@ import Navigation from "./navigation";
 import "../assets/scss/style.scss"
 import Footer from "./footer";
 
+
 const query = graphql`
 query LayoutQuery {
   site {
