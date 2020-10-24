@@ -450,7 +450,12 @@ article img {
 // Services Page
 
 .service-card {
-	margin: 50px;
+	margin: 20px;
+}
+
+.service-card img {
+	height: auto;
+	width: 100%;
 }
 
 .service-card h2 {
