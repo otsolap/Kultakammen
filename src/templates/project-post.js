@@ -6,16 +6,11 @@ import { RiArrowLeftSLine } from "react-icons/ri"
 import Layout from "../components/layout"
 import SEO from '../components/seo';
 
-const Post = ({ data, pageContext }) => {
+const Post = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html, excerpt } = markdownRemark
   const Image = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid : ""
-  const { previous, next } = pageContext
 
-  let props = {
-    previous,
-    next
-  }
 
   return (
     <Layout className="page">
