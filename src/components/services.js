@@ -44,33 +44,31 @@ const Services = () => {
   };
 
   return (
-    <section className="services-page">
-      <div className="grids col-1 sm-2 lg-3">
-        {inventory.map((service) => (
+    <div className="grids col-1 sm-2 lg-3">
+      {inventory.map((service) => (
 
-          <div className="service-card" key={service.sku}>
-            <img className="featured-image"
-              src={service.image}
-              alt={service.name}
-            />
-            <h2 className="title">{service.name}</h2>
-            <p>{service.description}</p>
-            <p className="service-card-costs"
-            >
-              {format(service.amount, service.currency)}
-            </p>
-            <form className="service-card-submit"
-              onSubmit={handleSubmit}
-            >
-              <input type="hidden" name="sku" value={service.sku} />
-              <button className="button" type="submit">
-                Osta
+        <div className="service-card" key={service.sku}>
+          <img className="featured-image"
+            src={service.image}
+            alt={service.name}
+          />
+          <h2 className="title">{service.name}</h2>
+          <p>{service.description}</p>
+          <p className="service-card-costs"
+          >
+            {format(service.amount, service.currency)}
+          </p>
+          <form className="service-card-submit"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="sku" value={service.sku} />
+            <button className="button" type="submit">
+              Osta
             </button>
-            </form>
-          </div>
-        ))}
-      </div>
-    </section>
+          </form>
+        </div>
+      ))}
+    </div>
   );
 };
 
