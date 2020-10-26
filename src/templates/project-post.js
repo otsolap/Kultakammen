@@ -1,33 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
+import { RiArrowLeftSLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
 import SEO from '../components/seo';
-
-const Pagination = (props) => (
-  <div className="pagination -post">
-    <ul>
-      {(props.previous && props.previous.frontmatter.template === 'project-post') && (
-        <li>
-          <Link to={props.previous.frontmatter.slug} rel="prev">
-            <p><span className="icon -left"><RiArrowLeftLine /></span> Edellinen</p>
-            <span className="page-title">{props.previous.frontmatter.title}</span>
-          </Link>
-        </li>
-      )}
-      {(props.next && props.next.frontmatter.template === 'project-post') && (
-        <li>
-          <Link to={props.next.frontmatter.slug} rel="next">
-            <p>Seuraava <span className="icon -right"><RiArrowRightLine /></span></p>
-            <span className="page-title">{props.next.frontmatter.title}</span>
-          </Link>
-        </li>
-      )}
-    </ul>
-  </div>
-)
 
 const Post = ({ data, pageContext }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -70,9 +47,7 @@ const Post = ({ data, pageContext }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </article>
-      {(previous || next) && (
-        <Pagination {...props} />
-      )}
+      <Link to="/projektit" className="button"><RiArrowLeftSLine className="icon -left" />Palaa takaisin projektisivulle</Link>
     </Layout>
   )
 }

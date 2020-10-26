@@ -17,7 +17,7 @@ export const projectListQuery = graphql`
           id
           excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM, YYYY", locale: "fi")
             slug
 						title
 						featuredImage {
