@@ -6,25 +6,16 @@ date: 2020-09-19 09:15
 description: Mikä Jamstack on?
 featuredImage: /assets/Banner.png
 ---
-Tämä teksti esittelee projektin ja kertoo lukijalle, mistä projektissa oli kyse.
-
-
 ## Projektin esittely
-
-Tässä selitän kuinka opin React-Reduxista ja mihin Reduxia tarvitaan.
-
-1. Robot 1-X, save my friends! And Zoidberg!
-2. Soon enough.
-3. There's no part of that sentence I didn't like!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet quam pharetra, vulputate tellus non, venenatis ligula. In lacinia consequat magna sed congue. In ac iaculis arcu. In hac habitasse platea dictumst. Nunc porttitor hendrerit iaculis. Suspendisse hendrerit dictum sem ac consectetur. Maecenas nibh lorem, faucibus sed tincidunt id, condimentum eu nulla. Donec at tellus vel purus fermentum ultrices. Morbi eleifend gravida leo. Mauris dapibus, dolor sollicitudin facilisis placerat, tortor odio commodo lacus, at maximus magna metus sit amet est. Sed venenatis cursus purus, id ultricies lorem volutpat ac. Integer volutpat nibh id efficitur auctor. Class aptent taciti sociosqu.
 
 ### React20k
 
-Sitten selitän seuraavaksi mitä Firebase ja Firestore ovat ja tekevät.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet quam pharetra, vulputate tellus non, venenatis ligula. In lacinia consequat magna sed congue. In ac iaculis arcu. In hac habitasse platea dictumst. Nunc porttitor hendrerit iaculis. Suspendisse hendrerit dictum sem ac consectetur. Maecenas nibh lorem, faucibus sed tincidunt id, condimentum eu nulla. Donec at tellus vel purus fermentum ultrices. Morbi eleifend gravida leo. Mauris dapibus, dolor sollicitudin facilisis placerat, tortor odio commodo lacus, at maximus magna metus sit amet est. Sed venenatis cursus purus, id ultricies lorem volutpat ac. Integer volutpat nibh id efficitur auctor. Class aptent taciti sociosqu.
 
 ## Opit
 
-Yhteenveto projektista.
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet quam pharetra, vulputate tellus non, venenatis ligula. In lacinia consequat magna sed congue. In ac iaculis arcu. In hac habitasse platea dictumst. Nunc porttitor hendrerit iaculis. Suspendisse hendrerit dictum sem ac consectetur. Maecenas nibh lorem, faucibus sed tincidunt id, condimentum eu nulla. Donec at tellus vel purus fermentum ultrices. Morbi eleifend gravida leo. Mauris dapibus, dolor sollicitudin facilisis placerat, tortor odio commodo lacus, at maximus magna metus sit amet est. Sed venenatis cursus purus, id ultricies lorem volutpat ac. Integer volutpat nibh id efficitur auctor. Class aptent taciti sociosqu.
 
 [Github](https://github.com/otsolap/Portfolio-V2-Jam-Stack)
 
