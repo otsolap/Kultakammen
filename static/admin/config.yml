@@ -14,7 +14,7 @@ backend:
 media_folder: "static/assets" 
 public_folder: "/assets" 
 
-collections:
+sivut:
   - name: 'projektit' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Projektit' # Used in the UI
     label_singular: 'Projekti' # Used in the UI, ie: "New Post"
@@ -25,18 +25,18 @@ collections:
     summary: '{{title}} — {{year}}/{{day}}/{{month}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: 'Template', name: 'template', widget: 'hidden', default: 'blog-post'}
+      - { label: 'Template', name: 'template', widget: 'hidden', default: 'project-post'}
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'Slug', name: 'slug', widget: 'string', hint: 'Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.'}
       - {
           label: 'Publish Date',
-          name: 'date',
+          name: 'päivä',
           widget: 'datetime',
           dateFormat: 'DD-MM-YYYY',
           timeFormat: 'HH:mm',
           format: 'DD-MM-YYYY HH:mm',
         }
-      - { label: 'SEO Description', name: 'description', widget: 'text' }
+      - { label: 'Tekninen SEO', name: 'description', widget: 'text' }
       - {
           label: 'Featured Image',
           name: 'featuredImage',
@@ -45,7 +45,7 @@ collections:
           tagname: ''
         }
 
-      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Pääteksti tulee tänne.' }
   - label: "Sivut"
     name: "Sivut"
     files:
@@ -85,11 +85,11 @@ collections:
         - {label: "Slug", name: "slug", widget: "hidden", default: "/contact" }
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}
-  - name: settings
+  - name: Asetukset
     label: Settings
     files:
-      - name: general
-        label: General
+      - name: Yleiset
+        label: Yleiset
         file: "src/util/site.json"
         fields:
           - label: meta
