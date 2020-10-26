@@ -86,7 +86,7 @@ collections:
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}
   - name: Asetukset
-    label: Settings
+    label: Asetukset
     files:
       - name: Yleiset
         label: Yleiset
@@ -97,26 +97,26 @@ collections:
             widget: object
             fields:
               - widget: string
-                name: title
-                label: Site Title
+                name: Otsikko
+                label: Sivun Otsikko
                 required: true
               - widget: string
-                name: titleTemplate
-                label: Title Template
+                name: Otsikkomalli
+                label: Otsikkomalli
                 default: "%s"
                 required: true
               - widget: string
-                name: siteUrl
-                label: Website URL
+                name: sivun URL
+                label: sivun URL
                 required: true
               - widget: text
-                name: description
-                label: Description
+                name: kuvaus
+                label: kuvaus
                 default: ''
                 required: false
               - widget: image
-                name: image
-                label: image
+                name: kuva
+                label: kuva
                 default: '/assets/Banneri.png'
               - widget: string
                 name: linkedInUsername
@@ -126,4 +126,4 @@ collections:
           - label: "Google Analytics"
             name: ga
             widget: string
-            hint: "Add you tracking ID, for example UA-XXXXXXXXX-X"
+            hint: "Laita tähän tracking ID, esim UA-XXXXXXXXX-X"
