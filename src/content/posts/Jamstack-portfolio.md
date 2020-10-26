@@ -2,7 +2,7 @@
 template: project-post
 title: Jamstack portfoliosivuni.
 slug: /jamstack-portfolio
-date: 2020-09-19 09:15
+date: 2020-09-10 09:15
 description: Mikä Jamstack on?
 featuredImage: /assets/Banner.png
 ---
