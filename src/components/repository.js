@@ -25,7 +25,7 @@ const Repository = () => {
             <h2 className="title">{repository.name}</h2>
             <p>{repository.description}</p>
             <p> <Link href={repository.homepageUrl} className="button" target="_blank"> Appin URL</Link></p>
-            <p> <Link href={repository.url} className="button" target="_blank"> GitHub URL</Link></p>
+            <p> <Link href={repository.url} className="button repository" target="_blank"> GitHub URL</Link></p>
           </div>
         ))
         }
