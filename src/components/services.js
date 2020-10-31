@@ -62,7 +62,7 @@ const Services = () => {
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="sku" value={service.sku} />
-            <button className="button" type="submit">
+            <button className="button osta palveluni" type="submit">
               Osta
             </button>
           </form>

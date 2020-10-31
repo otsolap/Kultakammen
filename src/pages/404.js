@@ -19,7 +19,7 @@ const NotFound = () => (
         <h1>Oletko eksynyt?</h1>
         <p>Oletko tipahtanut kaninkoloon etkä pääse pois? Ei se mitään, näin pääset takaisin.</p>
       </header>
-      <Link to="/" className="button"><RiArrowLeftSLine className="icon -left" />Takaisin etusivulle.</Link>
+      <Link to="/" className="button palaa-takaisin-etusivulle"><RiArrowLeftSLine className="icon -left" />Takaisin etusivulle.</Link>
       <Link to="/contact" className="button -outline">Report this <RiBugLine className="icon -right" /></Link>
     </div>
   </Layout>

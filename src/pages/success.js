@@ -17,7 +17,7 @@ const Thanks = () => (
       }} />
       <h1>Tilauksesi vahvistettu</h1>
       <p>Kiitos tilauksestasi! Olen lähettänyt vahvistuksen sähköpostiisi ja olen yhteydessä sinuun mahdollisimman pian!</p>
-      <Link to="/" className="button"><RiArrowLeftSLine className="icon -left" />Palaa takaisin etusivulle.</Link>
+      <Link to="/" className="button palaa-takaisin-etusivulle"><RiArrowLeftSLine className="icon -left" />Palaa takaisin etusivulle.</Link>
     </div>
 
   </Layout>

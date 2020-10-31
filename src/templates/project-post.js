@@ -42,7 +42,7 @@ const Post = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </article>
-      <Link to="/projektit" className="button"><RiArrowLeftSLine className="icon -left" />Palaa takaisin projektisivulle</Link>
+      <Link to="/projektit" className="button takaisin projektisivulle"><RiArrowLeftSLine className="icon -left" />Palaa takaisin projektisivulle</Link>
     </Layout>
   )
 }
