@@ -22,7 +22,7 @@ exports.handler = async ({ body }) => {
         amount: service.amount,
       },
     ],
-    success_url: `${process.env.URL}/success/`,
+    success_url: `${process.env.URL}/tilausvahvistettu/`,
     cancel_url: `${process.env.URL}/palvelut/`,
   });
   console.log('session is:', session)
