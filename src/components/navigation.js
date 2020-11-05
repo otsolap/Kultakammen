@@ -52,7 +52,7 @@ class Navigation extends React.Component {
     )
     return (
       <nav className="site-navigation">
-        <button onClick={this.handleToggleClick} className={"menu-trigger" + (this.state.showMenu ? " is-active" : "")}>
+        <button onClick={this.handleToggleClick} className={"menu-trigger sivun navigaatio" + (this.state.showMenu ? " is-active" : "")}>
           <div className="icon-menu-line"><RiMenu3Line /></div>
           <div className="icon-menu-close"><RiCloseLine /></div>
         </button>
