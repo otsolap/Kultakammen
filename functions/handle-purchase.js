@@ -16,12 +16,14 @@ exports.handler = async ({ body, headers }) => {
       process.env.STRIPE_WEBHOOK_TEST_SECRET,
     );
     // Stripesta otettu
+    // koko funktio pyörii vain jos stripe menee läpi.
+    // hence => session.completed.
     if (stripeEvent.type === 'checkout.session.completed') {
       // session on stripe tapahtuma, ja items on suoraan
       // stripen dokumenteistä revitty termi.
       const session = stripeEvent.data.object
       const items = session.display_items;
-      const clientEmail = session.receipt_email;
+      const clientEmail = session.customer_email;
 
       const purchase = { items }
       const msg = {
