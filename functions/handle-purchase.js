@@ -21,10 +21,12 @@ exports.handler = async ({ body, headers }) => {
       // stripen dokumenteistä revitty termi.
       const session = stripeEvent.data.object
       const items = session.display_items;
+      const clientEmail = session.receipt_email;
 
       const purchase = { items }
       const msg = {
         from: process.env.KULTAKAMMEN_EMAIL_ADDRESS,
+        to: clientEmail,
         subject: 'Kiitos tilauksestasi! | Kultakämmen',
         text: JSON.stringify(purchase, null, 2),
       };
