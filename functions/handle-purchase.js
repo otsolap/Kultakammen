@@ -1,9 +1,9 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST_KEY, {
   maxNetworkRetries: 2,
 });
-const sendgridMail = require('@sendgrid/mail');
+const sgMail = require('@sendgrid/mail')
 
-sendgridMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 exports.handler = async ({ body, headers }) => {
   // stripe webhooks constructEvent varmistaa
@@ -27,12 +27,12 @@ exports.handler = async ({ body, headers }) => {
 
       const purchase = { items }
       const msg = {
-        from: process.env.KULTAKAMMEN_EMAIL_ADDRESS,
         to: clientEmail,
+        from: process.env.KULTAKAMMEN_EMAIL_ADDRESS,
         subject: 'Kiitos tilauksestasi! | Kultakämmen',
         text: JSON.stringify(purchase, null, 2),
       };
-      await sendgridMail.send(msg);
+      await sgMail.send(msg);
     }
 
     return {

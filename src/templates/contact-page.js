@@ -30,6 +30,27 @@ const Contact = ({ data }) => {
   // contact on meidän lomake, niin kaikki viestit löytyy contact-lomakkeen alta.
   // honeypot=bot-field on botteja varten.
   // p hidden pitää kohdan piilossa, mutta console.logilla sen löytää. ;-)
+
+  const handleSendEmail = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("/.netlify/functions/contact-form-email", {
+        method: "POST",
+      })
+
+      if (!response.ok) {
+        //not 200 response
+        return
+      }
+
+      //all OK
+
+    } catch (e) {
+      //error
+    }
+  }
+
   return (
     <Layout className="contact-page">
       <SEO
@@ -39,7 +60,7 @@ const Contact = ({ data }) => {
       <div className="wrapper">
         <h1>{frontmatter.title}</h1>
         <div className="description" dangerouslySetInnerHTML={{ __html: html }} />
-        <form className="contact-form" action="/kiitos" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form className="contact-form" action="/kiitos" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSendEmail}   >
           <input type="hidden" name="form-name" value="contact" />
           <p hidden><input name="bot-field" /></p>
           <p>
