@@ -1,6 +1,9 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST_KEY, {
   maxNetworkRetries: 2,
 });
+const sendgridMail = require('@sendgrid/mail');
+
+sendgridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async ({ body, headers }) => {
   // stripe webhooks constructEvent varmistaa
@@ -14,18 +17,29 @@ exports.handler = async ({ body, headers }) => {
     );
     // Stripesta otettu
     if (stripeEvent.type === 'checkout.session.completed') {
+      // session on stripe tapahtuma, ja items on suoraan
+      // stripen dokumenteistä revitty termi.
       const session = stripeEvent.data.object
-      console.log(session);
-    } return {
+      const items = session.display_items;
+
+      const purchase = { items }
+      const msg = {
+        from: process.env.KULTAKAMMEN_EMAIL_ADDRESS,
+        subject: 'Kiitos tilauksestasi! | Kultakämmen',
+        text: JSON.stringify(purchase, null, 2),
+      };
+      await sendgridMail.send(msg);
+    }
+
+    return {
       statusCode: 200,
       body: JSON.stringify({ received: true }),
     };
   } catch (error) {
     console.log(`Stripe webhook failed with ${err}`);
-
     return {
       statusCode: 400,
-      body: `WebHook error: ${error.message}`,
+      body: `WebHook error: ${error.message} `,
     };
   }
   // TODO read out the line items
