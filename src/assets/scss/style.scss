@@ -9,7 +9,6 @@
 // }
 
 // Header, Nav ja Footer.
-
 .primary-container main {
 	min-height: calc(100vh - 60px - 81px);
 }
@@ -152,7 +151,7 @@
 .post-card {
 	padding: 16px;
 	border: 1px ridge #050905;
-	background-color: #05090b;
+	background-color: #e39b41;
 	box-shadow: 0 5px 10px #111;
 	border-radius: 12px;
 	transition: box-shadow .3s linear;
@@ -168,7 +167,7 @@
 		font-size: 20px;
 		font-weight: 600;
 		a {
-			color: var(--post-link-color);
+			color: #faf7f2;
 		}
 	}
 	&:hover {
@@ -436,11 +435,10 @@ article img {
 // Repository-component
 
 .repository-card {
-	background-color: #050905;
-	border-color: #faf7f2;
-	border-radius: 12px;
-	border: 1px ridge #faf7f2;
-	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+	background-color: #faf7f2;
+	border-color: #050905;
+	border-radius: 2rem;
+	border: 1px solid #050905;
 	padding: 20px;
 	text-align: center;
 }

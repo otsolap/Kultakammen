@@ -21,15 +21,14 @@ module.exports = {
   siteMetadata: settings.meta,
   plugins: [
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Hind Guntur`,
-            variants: [`400`]
-          }
+          `Hind Guntur`,
+          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ],
-      },
+        display: 'swap'
+      }
     },
     // Assets => kuvat.
     {
