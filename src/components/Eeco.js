@@ -6,7 +6,7 @@ import Placeholder from '../../static/assets/Placeholder.jpg'
 const Eeco = () => {
   return (
     <section id="Eeco">
-      <h2 className="text-center">Full Stack Web Developer | Eeco</h2>
+      <h2 className="text-center">Portfolio</h2>
       <div className="Eeco-Otso grids col-1 sm-2">
         <div className="Eeco-img">
           {Image ? (
@@ -21,7 +21,7 @@ const Eeco = () => {
         </div>
         <div className="eeco-description-otso">
           <p>
-            Rakennan uusia verkkokauppoja ja päivitän nykyisiä mahtavan tiimin parissa.  Normiarkeeni kuuluu niin uusien sivujen luonti sekä nykyisten kaunistaminen. Erilaisten lisäosien rakentaminen tai yhteensovittaminen asiakkaan verkkokauppaan. Nämä toteutukset koostaan WooCommercen päälle! </p>
+            Rakennan uusia verkkokauppoja ja päivitän nykyisiä mahtavan tiimin parissa Eeco Oy:ssa, jossa olen vakkarina töissä.  Normiarkeeni kuuluu niin uusien sivujen luonti sekä nykyisten kaunistaminen. Erilaisten lisäosien rakentaminen tai yhteensovittaminen asiakkaan verkkokauppaan. Nämä toteutukset koostaan WooCommercen päälle! </p>
 
           <p> <strong>Työkaluvyöhöni kuuluu</strong>: React, JavaScript, Php, Sass, Boostrap, Wordpress, WooCommerce,   räätälöidyt lapsiteemat, WP-plugarit, Google Analytics ja Tag Manager.
           </p>

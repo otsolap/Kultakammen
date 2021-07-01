@@ -8,8 +8,8 @@ const AboutMe = () => {
     <section id="aboutme">
       <div className="home-banner grids col-1 sm-2">
         <div>
-          <h1 className="title">Otso Lappalainen</h1>
-          <p className="tagline">Kultakämmen</p>
+          <h1 className="title">Kultakämmen</h1>
+          <p className="tagline">Otso Lappalainen | Full Stack Web-devaaja</p>
           <div className="description" />
           <p>Olen Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen.</p>
           <Link to="#contact" className="button tutustu minuun"><span>Palkkaa minut</span></Link>
