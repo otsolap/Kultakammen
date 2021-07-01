@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { RiArrowRightSLine } from "react-icons/ri"
 import dev from '../../static/assets/OTSO.jpg'
 
 const AboutMe = () => {
@@ -13,7 +12,7 @@ const AboutMe = () => {
           <p className="tagline">Kultakämmen</p>
           <div className="description" />
           <p>Olen Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen.</p>
-          <Link to="#contact" className="button tutustu minuun"><span className="icon -right"><RiArrowRightSLine />Tutustu minuun</span></Link>
+          <Link to="#contact" className="button tutustu minuun"><span>Palkkaa minut</span></Link>
         </div>
         <div >
           {Image ? (

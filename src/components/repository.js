@@ -37,7 +37,8 @@ const Repository = () => {
   return (
     <section id="projects">
       <div>
-        <h2>Koodaus projekteja:</h2>
+        <h2 className="text-center">Vapaa-ajan projekteja:</h2>
+        Tubetan, kirjoitan, luen ja koodaan vapaa-ajallanikin. Videoitani on katsottu yhteensä 10 tuhatta kertaa. Tästä pääset perehtymään tuoreimpiin koodausprojekteihini: oma vapaa-ajan vlogisivustoni sekä Bare Necessities urheilupäiväkirja-applikaationi.
         <div className="grids col-1 sm-2 lg-3">
           {edges.map(({ node }) => (
             <div key={node.id} className="repository-card">
