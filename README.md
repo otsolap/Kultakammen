@@ -1,4 +1,4 @@
-# Kultakämmen
+# Kultakämmen v2
 
 Personal portfolio page done with modern technology and methods. Jamstack is a popular new stack to create modern websites. Tools used in this project include Gatsby, Netlify CMS, GraphQl, Stripe.
 

@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Logo from "./logo"
 import Navigation from "./navigation";
-// Layotista löytää meidän scss ja näin se saadaan jokaiseen sivuun.
 import "../assets/scss/style.scss"
 import Footer from "./footer";
 
@@ -20,7 +19,6 @@ query LayoutQuery {
 `
 
 const Layout = ({ children, className }) => {
-
   const { site } = useStaticQuery(query)
   const { siteTitle } = site.siteMetadata
 

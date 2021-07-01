@@ -11,9 +11,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // allmarkdown => kaikki markdown filet kuten nimi viittaa.
   const blogresult = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
+      allMarkdownRemark {
         edges {
           node {
             id
@@ -86,9 +84,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // allmarkdown => kaikki markdown filet kuten nimi viittaa.
   const projectresult = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
+      allMarkdownRemark {
         edges {
           node {
             id

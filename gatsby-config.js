@@ -20,16 +20,6 @@ const settings = require("./src/util/site.json")
 module.exports = {
   siteMetadata: settings.meta,
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Hind Guntur`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
-        ],
-        display: 'swap'
-      }
-    },
     // Assets => kuvat.
     {
       resolve: `gatsby-source-filesystem`,
@@ -53,7 +43,6 @@ module.exports = {
         gfm: true,
         plugins: [
           netlifyCmsPaths,
-          `gatsby-remark-reading-time`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -85,29 +74,20 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-source-stripe`,
-      options: {
-        objects: ['Product', 'Price'],
-        secretKey: process.env.STRIPE_SECRET_KEY,
-        downloadFiles: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-151881827-3",
-        head: true,
-      },
-    },
-    `gatsby-plugin-advanced-sitemap`,
+    //  {
+    //resolve: "gatsby-plugin-google-tagmanager",
+    // options: {
+    // id: "",
+    //   includeInDevelopment: false,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Kultakämmen`,
         short_name: `Kultakämmen`,
         start_url: `/`,
-        background_color: `#faf7f2`,
+        background_color: `#05090b`,
         theme_color: `#e39b41`,
         display: `standalone`,
         icon: `static/assets/Kultakammen_laatikko_logo.png`,
@@ -115,26 +95,25 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-source-github',
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        headers: {
-          Authorization: `Bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
-        },
-        queries: [
-          `{ 
-            viewer {                 
-                  pinnedItems(first: 5, types: REPOSITORY){
-                   nodes {
-                     ... on Repository {                     
-                    name
-                    url
-                    description
-                    homepageUrl
-                  }
-                 }
-                }}
-              }`,
+        fonts: [
+          `Hind Guntur`,
+          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: "Github",
+        fieldName: "github",
+        url: "https://api.github.com/graphql",
+        headers: {
+          Authorization: `bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
+        },
+        fetchOptions: {},
       },
     },
   ],

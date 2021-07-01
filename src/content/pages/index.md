@@ -2,10 +2,10 @@
 template: index-page
 slug: /
 title: Otso Lappalainen
-tagline: Junior Full Stack Developer
-featuredImage: /assets/Otso_Lappalainen_Kultakammen_sm.png
+tagline: Full Stack Web Developer
+featuredImage: /assets/Kultakammen_ympyra_logo.png
 cta:
-  ctaText: Tutustu minuun
-  ctaLink: /otso
+  ctaText: Ota yhteyttä
+  ctaLink: contact
 ---
 Olen vastavalmistuva Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen.

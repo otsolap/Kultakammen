@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Repository from '../components/repository'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -30,8 +29,6 @@ const AboutPage = ({ data }) => {
 				<h1>{frontmatter.title}</h1>
 				<article dangerouslySetInnerHTML={{ __html: html }} />
 			</div>
-			<p>Tässä parhaimpia projektejani:</p>
-			<Repository />
 		</Layout>
 	)
 }

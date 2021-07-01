@@ -4,27 +4,11 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 const MenuItems = [
   {
-    path: "/",
-    title: "Etusivu"
+    path: "#projects",
+    title: "Projekteja"
   },
   {
-    path: "/palvelut",
-    title: "Palvelut"
-  },
-  {
-    path: "/otso",
-    title: "Otso"
-  },
-  {
-    path: "/projektit",
-    title: "Projektit"
-  },
-  {
-    path: "/blogi",
-    title: "Blogi"
-  },
-  {
-    path: "/yhteydenotto",
+    path: "#contact",
     title: "Ota Yhteyttä"
   },
 ]
@@ -36,6 +20,7 @@ class Navigation extends React.Component {
   constructor(props) {
     super(props)
     this.state = { showMenu: false }
+
 
     this.handleToggleClick = this.handleToggleClick.bind(this);
   }
