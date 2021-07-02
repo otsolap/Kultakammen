@@ -5,6 +5,12 @@
 // Libraries
 @import "lib/prism-default";
 
+// SECTION
+section {
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+}
+
 // KUVAT
 .featured-image {
 	border-radius: 12px;
@@ -218,11 +224,28 @@
 }
 
 // EECO OSIO.
-.eeco-description {
-	display: flex;
-	align-items: center;
+#eeco {
+	.client-project {
+		.eeco-description {
+			h4 {
+				padding-top: 1rem;
+				@media (max-width: $breakpoint-sm) {
+					padding-top: .25rem;
+				}
+			}
+			@media (max-width: $breakpoint-sm) {
+				order: 2;
+			}
+		}
+		.eeco-img {
+			@media (max-width: $breakpoint-sm) {
+				order: 1;
+			}
+		}
+	}
 }
 
+// OTA YHTEYTTÄ LOMAKE
 #contact {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -360,6 +383,16 @@
 		.num {
 			display: none;
 		}
+	}
+}
+
+// Services-component
+.service-card {
+	border-color: var(tertiary-color);
+	border-radius: 2rem;
+	border: 1px solid #faf7f2;
+	text-align: center;
+	.featured-image {
 	}
 }
 

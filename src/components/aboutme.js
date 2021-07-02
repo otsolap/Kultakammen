@@ -11,7 +11,10 @@ const AboutMe = () => {
           <h1 className="title">Kultakämmen</h1>
           <p className="tagline">Otso Lappalainen | Full Stack Web-devaaja</p>
           <div className="description" />
-          <p>Olen Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen.</p>
+          <p>
+            Koodaan verkkokauppoja <a href="https://eeco.fi/">Eecossa</a> ja tubetan <a href="https://www.metsanotus.fi/">Metsän Otus</a> kanavassa. Olen Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen. </p>
+          <p>
+            Kiinnostuksen kohteenani ovat verkkosivut, joissa pääsen työskentelemään asiakaskokemuksien parissa sekä soveltamaan asiakaspoluista saatua web-analytiikka dataa.</p>
           <Link to="#contact" className="button tutustu minuun"><span>Palkkaa minut</span></Link>
         </div>
         <div >

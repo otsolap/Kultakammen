@@ -6,6 +6,7 @@ import Logo from "./logo"
 import Navigation from "./navigation";
 import "../assets/scss/style.scss"
 import Footer from "./footer";
+import { useNetlifyIdentity } from "react-netlify-identity";
 
 
 const query = graphql`
@@ -21,6 +22,7 @@ query LayoutQuery {
 const Layout = ({ children, className }) => {
   const { site } = useStaticQuery(query)
   const { siteTitle } = site.siteMetadata
+  const identity = useNetlifyIdentity();
 
   return (
     <div className="primary-container">
