@@ -8,13 +8,6 @@ let env = process.env.NODE_ENV || 'development';
 require('dotenv').config({ path: `./.env.${env}` });
 
 
-const netlifyCmsPaths = {
-  resolve: `gatsby-plugin-netlify-cms-paths`,
-  options: {
-    cmsConfig: `/static/admin/config.yml`,
-  },
-}
-
 const settings = require("./src/util/site.json")
 
 module.exports = {
@@ -42,7 +35,6 @@ module.exports = {
       options: {
         gfm: true,
         plugins: [
-          netlifyCmsPaths,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -73,7 +65,6 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
     //  {
     //resolve: "gatsby-plugin-google-tagmanager",
     // options: {
@@ -114,6 +105,12 @@ module.exports = {
           Authorization: `bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
         },
         fetchOptions: {},
+      },
+    },
+    {
+      resolve: "gatsby-plugin-compile-es6-packages",
+      options: {
+        modules: ["react-netlify-identity-widget"],
       },
     },
   ],
