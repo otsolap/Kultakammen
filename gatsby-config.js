@@ -90,7 +90,7 @@ module.exports = {
         background_color: `#05090b`,
         theme_color: `#e39b41`,
         display: `standalone`,
-        icon: `static/assets/Kultakammen_laatikko_logo.png`,
+        icon: `static/assets/Kultakammen_laatikko.png`,
       },
     },
     'gatsby-plugin-offline',
