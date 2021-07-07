@@ -11,6 +11,8 @@ import {
   IdentityContextProvider,
 } from "react-netlify-identity-widget"
 import "react-netlify-identity-widget/styles.css"
+const { Identity_URL } = process.env
+
 
 const query = graphql`
 query LayoutQuery {
@@ -28,7 +30,7 @@ const Layout = ({ children, className }) => {
   const identity = useNetlifyIdentity('https://kultakammen.fi/.netlify/identity');
 
   return (
-    <IdentityContextProvider value={identity}>
+    < IdentityContextProvider value={identity}>
       <div className="primary-container">
         <Header>
           <Logo title={siteTitle} />

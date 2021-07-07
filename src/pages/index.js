@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import AboutMe from '../components/aboutme'
@@ -8,25 +7,7 @@ import Repository from '../components/repository';
 import Services from '../components/services';
 import Contact from '../components/contact';
 
-export const pageQuery = graphql`
-query HomeQuery($id: String!){
-  markdownRemark(id: { eq: $id }) {
-    id
-    html
-    frontmatter {
-      title
-      tagline
-      cta {
-        ctaText
-        ctaLink
-      }
-      }
-    }
-  }
-`
-
-const HomePage = () => {
-
+const Home = () => {
 
   return (
     <Layout>
@@ -40,4 +21,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default Home;

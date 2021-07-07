@@ -1,10 +1,10 @@
 import React from "react"
 import { useNetlifyIdentity } from "react-netlify-identity-widget"
+const { Identity_URL } = process.env
+
 
 const Identity = () => {
-  const identity = useNetlifyIdentity(
-    "https://kultakammen.fi/.netlify/identity"
-  )
+  const identity = useNetlifyIdentity('https://kultakammen.fi/.netlify/identity');
 
   return identity && identity.user ? (
     <>

@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const PortfolioPage = () => (
+const Portfolio = () => (
   <Layout>
     <SEO title="Page two" />
     <h1>Hi from the second page</h1>
@@ -13,4 +13,4 @@ const PortfolioPage = () => (
   </Layout>
 )
 
-export default PortfolioPage
+export default Portfolio
