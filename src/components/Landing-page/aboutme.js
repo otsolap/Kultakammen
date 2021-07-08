@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import dev from '../../static/assets/OTSO.jpg'
+import dev from '../../../static/assets/OTSO.jpg'
 
 const AboutMe = () => {
   return (

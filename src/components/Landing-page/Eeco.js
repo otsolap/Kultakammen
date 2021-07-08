@@ -1,8 +1,8 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import EecoDev from '../../static/assets/OtsoEeco.png'
-import Placeholder from '../../static/assets/Placeholder.jpg'
-import GTM from '../../static/assets/GTM.png'
+import EecoDev from '../../../static/assets/OtsoEeco.png'
+import Placeholder from '../../../static/assets/Placeholder.jpg'
+import GTM from '../../../static/assets/GTM.png'
 
 const Eeco = () => {
   return (

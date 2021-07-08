@@ -1,7 +1,7 @@
 import React from "react"
 import { RiSendPlane2Line } from "react-icons/ri";
 import { GatsbyImage } from "gatsby-plugin-image"
-import Round_Logo from '../../static/assets/Avatar_sm.png'
+import Round_Logo from '../../../static/assets/Avatar_sm.png'
 
 const Contact = () => {
   return (

@@ -21,13 +21,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/`,
-        name: `content`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -113,5 +106,6 @@ module.exports = {
         modules: ["react-netlify-identity-widget"],
       },
     },
+    'gatsby-plugin-image',
   ],
 }

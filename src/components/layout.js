@@ -6,12 +6,6 @@ import Logo from "./logo"
 import Navigation from "./navigation";
 import "../assets/scss/style.scss"
 import Footer from "./footer";
-import {
-  useNetlifyIdentity,
-  IdentityContextProvider,
-} from "react-netlify-identity-widget"
-import "react-netlify-identity-widget/styles.css"
-const { Identity_URL } = process.env
 
 
 const query = graphql`
@@ -23,26 +17,21 @@ query LayoutQuery {
   }
 }
 `
-
 const Layout = ({ children, className }) => {
   const { site } = useStaticQuery(query)
   const { siteTitle } = site.siteMetadata
-  const identity = useNetlifyIdentity('https://kultakammen.fi/.netlify/identity');
 
   return (
-    < IdentityContextProvider value={identity}>
-      <div className="primary-container">
-        <Header>
-          <Logo title={siteTitle} />
-          <Navigation />
-        </Header>
-
-        <main className={"container " + className}>
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </IdentityContextProvider>
+    <div className="primary-container">
+      <Header>
+        <Logo title={siteTitle} />
+        <Navigation />
+      </Header>
+      <main className={"container " + className}>
+        {children}
+      </main>
+      <Footer />
+    </div>
   )
 }
 
