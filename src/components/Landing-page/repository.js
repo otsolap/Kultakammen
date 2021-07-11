@@ -35,7 +35,7 @@ const Repository = () => {
       }
 `)
   return (
-    <section id="projects">
+    <section id="projektit">
       <div>
         <h2 className="text-center">Vapaa-ajan projekteja:</h2>
         <p className="text-center">

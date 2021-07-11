@@ -5,15 +5,15 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 const MenuItems = [
   {
-    path: "#projects",
+    path: "#projektit",
     title: "Projekteja"
   },
   {
-    path: "#contact",
+    path: "#yhteydenotto",
     title: "Ota Yhteyttä"
   },
   {
-    path: "/portfolio",
+    path: "/login",
     title: "Kirjaudu"
   }
 ]

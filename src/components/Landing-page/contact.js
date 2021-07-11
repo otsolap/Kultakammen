@@ -5,7 +5,7 @@ import Round_Logo from '../../../static/assets/Avatar_sm.png'
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <section id="yhteydenotto">
       <h2 className="text-center">Ota yhteyttä!</h2>
       <div className="grids col-1 sm-2">
         <div className="form-container">

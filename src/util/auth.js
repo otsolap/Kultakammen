@@ -15,6 +15,7 @@ export const isAuthenticated = () => {
 
 // Auth-0 aktivoituu vain verkkoselaimissa. 
 // Ei sivunrakennuksen aikana.
+// responsetype => Json, koska Gatsby on SPA.
 const auth = isBrowser
   ? new auth0.WebAuth({
     domain: process.env.AUTH0_DOMAIN,
@@ -25,7 +26,9 @@ const auth = isBrowser
   })
   : {}
 
+// Login metodi.
 export const login = () => {
+  // Safety protokolli. Periaatteessa turha?
   if (!isBrowser) {
     return
   }
@@ -44,12 +47,15 @@ export const logout = () => {
   })
 }
 
+// luodaan sisäänkirjautumis sessio.
+// cb => callback. Pitää olla tyhjä objekti.
 const setSession = (cb = () => { }) => (err, authResult) => {
   if (err) {
-    if (err.error === "login_required") {
+    if (err.error === "sisäänkirjautuminen_vaadittu") {
       login()
     }
   }
+  // Jos kaikki löytyy niin kaikki toimii!
   if (authResult && authResult.accessToken && authResult.idToken) {
     tokens.idToken = authResult.idToken
     tokens.accessToken = authResult.accessToken
@@ -63,6 +69,7 @@ const setSession = (cb = () => { }) => (err, authResult) => {
   }
 }
 
+// Tarkistetaan onko user logged.
 export const checkSession = callback => {
   const isLoggedIn = window.localStorage.getItem("isLoggedIn")
   if (isLoggedIn === "false" || isLoggedIn === null) {
