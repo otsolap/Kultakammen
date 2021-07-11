@@ -17,11 +17,11 @@ const Portfolio = () => {
     <Layout>
       <SEO title="Page two" />
       <h1>Hi from the second page</h1>
-      <pre>{JSON.stringify(user, null, 2)}</pre>
       <p>Welcome to page 2</p>
       <Link to="/">Takaisin etusivulle</Link>
       <a
         href="#logout"
+        className="button"
         onClick={e => {
           logout()
           e.preventDefault()
@@ -29,7 +29,7 @@ const Portfolio = () => {
       >
         Kirjaudu ulos.
       </a>
-    </Layout>
+    </Layout >
   )
 }
 

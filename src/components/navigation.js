@@ -13,7 +13,7 @@ const MenuItems = [
     title: "Ota Yhteyttä"
   },
   {
-    path: "/login",
+    path: "/portfolio",
     title: "Kirjaudu"
   }
 ]
