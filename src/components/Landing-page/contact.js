@@ -1,7 +1,7 @@
 import React from "react"
 import { RiSendPlane2Line } from "react-icons/ri";
-import { GatsbyImage } from "gatsby-plugin-image"
-import Round_Logo from '../../../static/assets/Avatar_sm.png'
+import { StaticImage } from "gatsby-plugin-image"
+
 
 const Contact = () => {
   return (
@@ -43,17 +43,14 @@ const Contact = () => {
           </form>
         </div>
         <div className="contact-img">
-          {Image ? (
-            <GatsbyImage
-              src={Round_Logo}
-              image={Image}
-              alt="Kultakämmen logoa"
-              className="featured-image"
-              objectFit="cover"
-              objectPosition="50% 50%"
-              fluid="fluid"
-            />
-          ) : ""}
+          <StaticImage
+            src="../../../static/assets/Avatar_sm.png"
+            alt="Kultakämmen logoa"
+            className="featured-image"
+            objectFit="cover"
+            objectPosition="50% 50%"
+            fluid="fluid"
+          />
         </div>
       </div>
     </section >

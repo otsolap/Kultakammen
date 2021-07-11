@@ -1,8 +1,6 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
-import EecoDev from '../../../static/assets/OtsoEeco.png'
-import Placeholder from '../../../static/assets/Placeholder.jpg'
-import GTM from '../../../static/assets/GTM.png'
+import { StaticImage } from "gatsby-plugin-image"
+
 
 const Eeco = () => {
   return (
@@ -10,15 +8,12 @@ const Eeco = () => {
       <h2 className="text-center">Portfolio</h2>
       <div className="eeco-dev grids col-1 sm-2">
         <div className="eeco-img">
-          {Image ? (
-            <GatsbyImage
-              src={EecoDev}
-              image={Image}
-              alt="Kultakämmen profiilikuva"
-              className="featured-image"
-              objectFit="cover"
-            />
-          ) : ""}
+          <StaticImage
+            src="../../../static/assets/OtsoEeco.png"
+            alt="Kultakämmen profiilikuva"
+            className="featured-image"
+            objectFit="cover"
+          />
         </div>
         <div className="eeco-description-otso">
           <p>
@@ -37,28 +32,22 @@ const Eeco = () => {
           </p>
         </div>
         <div className="eeco-img">
-          {Image ? (
-            <GatsbyImage
-              src={Placeholder}
-              image={Image}
-              alt="Kultakämmen profiilikuva"
-              className="featured-image"
-              objectFit="fit"
-            />
-          ) : ""}
+          <StaticImage
+            src="../../../static/assets/Placeholder.jpg"
+            alt="Kultakämmen profiilikuva"
+            className="featured-image"
+            objectFit="fit"
+          />
         </div>
       </div>
       <div className="client-project grids col-1 sm-2">
         <div className="eeco-img">
-          {Image ? (
-            <GatsbyImage
-              src={Placeholder}
-              image={Image}
-              alt="Kultakämmen profiilikuva"
-              className="featured-image"
-              objectFit="fit"
-            />
-          ) : ""}
+          <StaticImage
+            src="../../../static/assets/Placeholder.jpg"
+            alt="Kultakämmen profiilikuva"
+            className="featured-image"
+            objectFit="fit"
+          />
         </div>
         <div className="eeco-description">
           <h4>Placeholder otsikko</h4>
@@ -75,15 +64,12 @@ const Eeco = () => {
           </p>
         </div>
         <div className="eeco-img">
-          {Image ? (
-            <GatsbyImage
-              src={GTM}
-              image={Image}
-              alt="Kultakämmen profiilikuva"
-              className="featured-image"
-              objectFit="fit"
-            />
-          ) : ""}
+          <StaticImage
+            src="../../../static/assets/GTM.png"
+            alt="Kultakämmen profiilikuva"
+            className="featured-image"
+            objectFit="fit"
+          />
         </div>
       </div>
     </section >

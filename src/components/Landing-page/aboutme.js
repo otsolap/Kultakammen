@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import dev from '../../../static/assets/OTSO.jpg'
+import { StaticImage } from "gatsby-plugin-image"
 
 const AboutMe = () => {
   return (
@@ -18,15 +17,12 @@ const AboutMe = () => {
           <Link to="#contact" className="button tutustu minuun"><span>Palkkaa minut</span></Link>
         </div>
         <div >
-          {Image ? (
-            <GatsbyImage
-              src={dev}
-              image={Image}
-              alt="Kultakämmen profiilikuva"
-              className="featured-image portfolio"
-              objectFit="cover"
-            />
-          ) : ""}
+          <StaticImage
+            src="../../../static/assets/OTSO.jpg"
+            alt="Kultakämmen profiilikuva"
+            className="featured-image portfolio"
+            objectFit="cover"
+          />
         </div>
       </div>
     </section>
