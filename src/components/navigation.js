@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { login, isAuthenticated, getProfile } from "../util/auth"
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 const MenuItems = [

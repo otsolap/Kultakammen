@@ -7,8 +7,8 @@ import Repository from '../components/Landing-page/repository';
 import Services from '../components/Landing-page/services';
 import Contact from '../components/Landing-page/contact';
 
-const Home = () => {
 
+const Home = () => {
   return (
     <Layout>
       <SEO />
