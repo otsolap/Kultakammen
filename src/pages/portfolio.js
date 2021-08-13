@@ -25,18 +25,18 @@ const Portfolio = () => {
       </div>
       <div class="CV-container">
         <div className="profile-introduction">
-          <h1>Otso <span className="honeypaw">Lappalainen</span></h1>
+          <h1>Otso <span className="gold">Lappalainen</span></h1>
           <table className="roles">
             <tr>
-              <td className="role">Full-Stack ohjelmistokehittäjä</td>
-              <td className="role">Webdevaus</td>
-              <td className="role">Analytiikka</td>
+              <td className="role gold">Full-Stack ohjelmistokehittäjä</td>
+              <td className="role gold">Webdevaus</td>
+              <td className="role gold">Analytiikka</td>
             </tr>
           </table>
           <div className="address-container">
             <p className="address">Helsinginkatu 9A 19, 00500 Helsinki Finland</p>
           </div>
-          <table className="contact-container">
+          <table className="contact-table">
             <tr>
               <td className="contact-details">
                 <a href="mailto:otso@kultakammen.fi">
@@ -67,7 +67,7 @@ const Portfolio = () => {
           </table>
         </div>
         <div className="profile-container">
-          <h2>Profiili</h2>
+          <h2 className="gold">Profiili</h2>
           <p>Olen kiinnostunut webkehityksestä, jossa pääsen työskentelemään asiakaskokemuksien parissa sekä soveltamaan asiakaspoluista saatua web-analytiikka dataa. Työkokemukseni on kehittynyt keskikokoisessa verkkokaupparatkaisu keskeisessä yrityksessä. Olen viimeisen vuoden aikana kehittänyt ohjelmistokehittäjän avaintaitoja ja haluan tarjota rautaisen työmoraalini ja intohimoni tiimillinne.</p>
         </div>
       </div>
@@ -75,7 +75,7 @@ const Portfolio = () => {
         <table>
           <thead>
             <tr>
-              <th className="core-skills-title">
+              <th className="core-skills-title gold">
                 Ydinosaaminen
               </th>
             </tr>
@@ -110,7 +110,7 @@ const Portfolio = () => {
         </table>
       </div>
       <div class="job-experience-container">
-        <h2>Työkokemus</h2>
+        <h2 className="gold">Työkokemus</h2>
         <div className="employer-container">
           <p>Eeco Oy | Helsinki, Suomi</p>
           <p>Marraskuu 2020 - Nykyinen</p>
@@ -129,7 +129,7 @@ const Portfolio = () => {
         </ul>
       </div>
       <div class="educational-experience-container">
-        <h2>Koulutus</h2>
+        <h2 className="gold">Koulutus</h2>
         <div className="educational-institute-container">
           <p>Business College Helsinki</p>
           <p>Tammikuu 2020 - Kesäkuu 2021</p>
