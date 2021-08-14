@@ -420,60 +420,38 @@ section {
 
 // PROFILE INTRODUCTION
 .profile-introduction {
-	text-align: center;
-	// ROLES
-	table.roles {
+	// ROLES & CONTACT
+	div.contact-container,
+	div {
 		width: 100%;
-		text-align: center;
-		tr {
-			td.role:not(:last-child) {
-				&::after {
-					margin-left: .5rem;
-					content: "\007C";
-					font-weight: 700;
-				}
-				padding-right: 0.5rem;
-			}
-			td.role:not(:first-child) {
-				padding-left: 0.5rem;
-			}
-		}
-	}
+		display: flex;
+		justify-content: flex-start;
 
-	// CONTACT
-	table.contact-table {
-		width: 100%;
-		text-align: center;
-		tr {
-			td.contact-details:not(:last-child) {
-				&::after {
-					margin-left: .25rem;
-					content: "\007C";
-					font-weight: 700;
-					color: var(--primary-color);
-				}
-				padding-right: 0.5rem;
+		p:not(:last-child) {
+			&::after {
+				margin-left: .25rem;
+				content: "\007C";
+				font-weight: 700;
+				color: var(--primary-color);
 			}
-			td.contact-details:not(:first-child) {
-				padding-left: 0.5rem;
-			}
-			td.contact-details {
-				width: 0px;
-				a {
-					color: var(--primary-color);
-				}
+			padding-right: 0.5rem;
+		}
+		p:not(:first-child) {
+			padding-left: 0.5rem;
+		}
+		p {
+			a {
+				color: var(--primary-color);
 			}
 		}
 	}
 }
 
 // CORE SKILLS
-div.core-skills-container {
-	th.core-skills-title {
-		font-size: 27px;
-	}
 
-	th {
-		text-align: left;
-	}
+// REFERRALS
+
+.logout-container {
+	margin-top: 3rem;
+	padding-bottom: 1rem;
 }

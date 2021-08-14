@@ -16,7 +16,7 @@ const AboutMe = () => {
             Kiinnostuksen kohteenani ovat verkkosivut, joissa pääsen työskentelemään asiakaskokemuksien parissa sekä soveltamaan asiakaspoluista saatua web-analytiikka dataa.</p>
           <Link to="#contact" className="button tutustu minuun"><span>Palkkaa minut</span></Link>
         </div>
-        <div >
+        <div>
           <StaticImage
             src="../../../static/assets/OTSO.jpg"
             alt="Kultakämmen profiilikuva"

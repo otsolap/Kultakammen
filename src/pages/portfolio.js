@@ -18,53 +18,40 @@ const Portfolio = () => {
     <Layout>
       <SEO title="Portfolio | Otso Lappalainen" />
       <div className="introduction-container">
-        <p>Tervetuloa <span className="auth-user">{user.nickname}</span> Tässä CV:ni olkaapi hyvä:</p>
-      </div>
-      <div class="Cover-letter-container">
-
+        <p>Tervetuloa <span className="gold">{user.nickname}</span> Tässä CV:ni olkaapi hyvä:</p>
       </div>
       <div class="CV-container">
         <div className="profile-introduction">
           <h1>Otso <span className="gold">Lappalainen</span></h1>
-          <table className="roles">
-            <tr>
-              <td className="role gold">Full-Stack ohjelmistokehittäjä</td>
-              <td className="role gold">Webdevaus</td>
-              <td className="role gold">Analytiikka</td>
-            </tr>
-          </table>
+          <div className="roles">
+            <p className="role gold">Full-Stack ohjelmistokehittäjä</p>
+            <p className="role gold">Webdevaus</p>
+            <p className="role gold">Analytiikka</p>
+          </div>
           <div className="address-container">
             <p className="address">Helsinginkatu 9A 19, 00500 Helsinki Finland</p>
           </div>
-          <table className="contact-table">
-            <tr>
-              <td className="contact-details">
-                <a href="mailto:otso@kultakammen.fi">
-                  otso@kultakammen.fi
-                </a>
-              </td>
-              <td className="contact-details">
-                <a href="tel:0503244139" data-telegram="telegram">
-                  <span className="contact-details">
-                    +358503244138
-                  </span>
-                </a>
-              </td>
-              <td className="contact-details">
-                <a target="_blank" href="https://github.com/otsolap">
-                  <span className="contact-details">
-                    Github
-                  </span>
-                </a>
-              </td>
-              <td className="contact-details">
-                <a target="_blank" href="https://www.linkedin.com/in/otsolap/">
-                  <span className="contact-details">
-                    LinkedIn
-                  </span></a>
-              </td>
-            </tr>
-          </table>
+          <div id="contact" className="contact-container">
+            <p className="contact-details">
+              <a href="mailto:otso@kultakammen.fi">
+                otso@kultakammen.fi
+              </a>
+            </p>
+            <p className="contact-details">
+              <a href="tel:0503244139" data-telegram="telegram">
+                +358503244138
+              </a>
+            </p>
+            <p className="contact-details">
+              <a target="_blank" href="https://github.com/otsolap">
+                Github
+              </a>
+            </p>
+            <p className="contact-details">
+              <a target="_blank" href="https://www.linkedin.com/in/otsolap/">
+                LinkedIn</a>
+            </p>
+          </div>
         </div>
         <div className="profile-container">
           <h2 className="gold">Profiili</h2>
@@ -72,50 +59,43 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="core-skills-container">
-        <table>
-          <thead>
-            <tr>
-              <th className="core-skills-title gold">
-                Ydinosaaminen
-              </th>
-            </tr>
-            <tbody>
-              <tr>
-                <th>Ohjelmointi</th>
-                <td>React</td>
-                <td>React-Redux</td>
-                <td>NodeJS</td>
-              </tr>
-              <tr>
-                <th>Analytiikka</th>
-                <td>Google Tag Manager</td>
-                <td>Google Analytics</td>
-                <td>SQL</td>
-
-              </tr>
-              <tr>
-                <th>Web/Media</th>
-                <td>HTML/CSS/PHP/Javascript</td>
-                <td>Photoshop</td>
-                <td>Sony Vegas Pro</td>
-              </tr>
-              <tr>
-                <th>Projektihallinta</th>
-                <td>Täsmällinen & Määrätietoinen</td>
-                <td>Agile</td>
-                <td>Scrum</td>
-              </tr>
-            </tbody>
-          </thead>
-        </table>
+        <h2 className="core-skills-title gold">
+          Ydinosaaminen
+        </h2>
+        <div className="rowwy">
+          <div className="core-skill">
+            <strong>Ohjelmointi</strong>
+            <span>React</span>
+            <span>React-Redux</span>
+            <span>NodeJS</span>
+          </div>
+          <div className="core-skill">
+            <strong>Analytiikka</strong>
+            <span>Google Tag Manager</span>
+            <span>Google Analytics</span>
+            <span>SQL</span>
+          </div>
+          <div className="core-skill">
+            <strong>Web/Media</strong>
+            <span>HTML/CSS/PHP/Javascript</span>
+            <span>Photoshop</span>
+            <span>Sony Vegas Pro</span>
+          </div>
+          <div className="core-skill">
+            <strong>Projektihallinta</strong>
+            <span>Täsmällinen & Määrätietoinen</span>
+            <span>Agile</span>
+            <span>Scrum</span>
+          </div>
+        </div>
       </div>
       <div class="job-experience-container">
         <h2 className="gold">Työkokemus</h2>
         <div className="employer-container">
-          <p>Eeco Oy | Helsinki, Suomi</p>
-          <p>Marraskuu 2020 - Nykyinen</p>
+          <p><strong>Eeco Oy </strong>| Helsinki, Suomi</p>
+          <p><strong>Marraskuu 2020 - Nykyinen</strong></p>
         </div>
-        <p>Full Stack Developer</p>
+        <p><strong>Full Stack Developer</strong></p>
         <ul className="job-experience-list-container">
           <li>
             Rakennan frontend-devaajana uusia verkkokauppoja mahtavan tiimin kanssa. Uusasiakkuuksiin kuuluu mm roh.to, lennol.fi, equestrianshop.fi.
@@ -131,8 +111,8 @@ const Portfolio = () => {
       <div class="educational-experience-container">
         <h2 className="gold">Koulutus</h2>
         <div className="educational-institute-container">
-          <p>Business College Helsinki</p>
-          <p>Tammikuu 2020 - Kesäkuu 2021</p>
+          <p><strong> Business College Helsinki</strong></p>
+          <p><strong> Tammikuu 2020 - Kesäkuu 2021</strong></p>
         </div>
         <p>
           Koodaajakoulutus, Tieto- ja viestintätekniikan tutkinto.
@@ -142,22 +122,16 @@ const Portfolio = () => {
             Painotus JavaScriptiin, React- ja Redux-kirjastoihin sekä Nodeen.
           </li>
           <li>
-            Ylläpidän ja päivitän Eecon Google Datalayeria.
-          </li>
-          <li>
             Ohjelmistokehittäjänä toimiminen yritysmaailmassa.
           </li>
           <li>
-            Rakensin react-redux firebasea soveltavan SoMe-applikaation, Spotifyta hyödyntävän monivalinta-verkkopelin sekä oman henkilökohtaisen portfoliosivun.
-          </li>
-          <li>
-            Työkalut: React, Node, MongoDB, Firebase, Bootstrap, REST API.
+            Työkalut:<i> React, Node, MongoDB, Firebase, Bootstrap, REST API.</i>
           </li>
         </ul>
 
         <div className="educational-institute-container">
-          <p>Tradenomin kaksoistutkinto, Eurooppalainen Johtaminen.</p>
-          <p>2014 - 2018</p>
+          <p><strong>Tradenomin kaksoistutkinto, Eurooppalainen Johtaminen.</strong></p>
+          <p><strong>2014 - 2018</strong></p>
         </div>
         <ul>
           <li>
@@ -168,16 +142,63 @@ const Portfolio = () => {
           </li>
         </ul>
       </div>
-      <a
-        className="button"
-        href="#logout"
-        onClick={e => {
-          logout()
-          e.preventDefault()
-        }}
-      >
-        Log Out
-      </a>
+      <h2 className="gold">Suosittelijat</h2>
+      <div className="referrals-container grids col-1 sm-2">
+        <div class="referee-one">
+          <p><strong>Navid Nosrati</strong>, JobGo International</p>
+          <p>UI/UX-Suunnittelija, Front-end devaaja.</p>
+          <p>
+            <a className="gold" href="tel:0451225770" data-telegram="telegram">
+              +358451225770
+            </a>
+          </p>
+          <p>
+            <a className="gold" href="mailto:navid.nosrati@axelhealth.com	">
+              navid.nosrati@axelhealth.com
+            </a>
+          </p>
+        </div>
+        <div class="referee-two">
+          <p><strong>Margit Tennosaar</strong>, Helsinki Business College</p>
+          <p>Ohjelmistokehitys opettaja.</p>
+          <p> <a className="gold" href="tel:0447756416" data-telegram="telegram">
+            +358447756416
+          </a></p>
+          <p>
+            <a className="gold" href="mailto:margit.tennosaar@bc.fi">
+              margit.tennosaar@bc.fi
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="Cover-letter-container">
+        <h2>Lyhyesti minusta:</h2>
+        <p>
+          Olen toiminut markkinointiassistenttina ja työkokemukseeni kuuluu monenlaista mieleenpainuvaa työtehtävää erilaisissa asiakasprojekteissa. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kansainvälisen mediatalon bisnesanalyytikon kanssa lisäpalvelua asiakkaillemme, jossa asiakas pystyi saamaan paremman ymmärryksen omasta digitaalisesta markkinatilanteestaan. Kaikki vastuualueeni ovat vahvistaneet minun analyyttistä ja strategista osaamistani sekä taitoani palvella asiakkaitamme. Nautin tuoda esille vahvasti perusteltuja suunnitelmia tuleviin asiakasprojekteihin, joissa myynti sekä kustannustehokkuus parantuisivat.
+        </p>
+        <p>
+          Aloitin alkuvuodesta Koodaaja-koulutusohjelman Helsinki Business Collegessa, jossa painotus on ollut Reactiin ja Nodeen. Olen lyhyessä ajassa päässyt rakentamaan useita applikaatioita MERN-stack pohjalta. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kyselypeliä, joka tarjosi pelin lopussa soittolistan käyttäjälle vastauksien perusteella. Tähän projektiin pääsimme soveltamaan Reactin ja Noden lisäksi MongoDB:ta, Spotifyita sekä Herokua saadaksemme julkaistua applikaation kokomaailman pelattavaksi. Tällä hetkellä olen osa pientä tiimiä, jota johtaa PHZ:n senioridevaaja. Olemme rakentamassa MERN-stack applikaatiota PHZ:n sisäiseen käyttöön.
+          Viimeiset vuodet olen kasvattanut osaamistani projektitehtävien soveltamisessa ja asiakassuhteiden hallinnassa.
+        </p>
+      </div>
+      <div className="logout-container">
+        <a
+          className="button"
+          href="#contact"
+        >
+          Ota yhteyttä
+        </a>
+        <a
+          className="button"
+          href="#logout"
+          onClick={e => {
+            logout()
+            e.preventDefault()
+          }}
+        >
+          Kirjaudu ulos.
+        </a>
+      </div>
     </Layout >
   )
 }
