@@ -22,7 +22,7 @@ const Layout = ({ children, className }) => {
   const { siteTitle } = site.siteMetadata
 
   return (
-    <div className="primary-container">
+    <div className={"primary-container "}>
       <Header>
         <Logo title={siteTitle} />
         <Navigation />

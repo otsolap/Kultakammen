@@ -29,6 +29,7 @@ class Navigation extends React.Component {
     this.handleToggleClick = this.handleToggleClick.bind(this);
   }
 
+
   handleToggleClick() {
     this.setState(state => ({
       showMenu: !state.showMenu
@@ -40,15 +41,15 @@ class Navigation extends React.Component {
       <ListLink key={index} to={menuItem.path}>{menuItem.title}</ListLink>
     )
     return (
-      <nav className="site-navigation">
-        <button onClick={this.handleToggleClick} className={"menu-trigger sivun navigaatio button" + (this.state.showMenu ? " is-active" : "")}>
+      <nav className="site-navigation" >
+        <button onClick={this.handleToggleClick} className={"menu-trigger button" + (this.state.showMenu ? " is-active" : "")}>
           <div className="icon-menu-line"><RiMenu3Line /></div>
           <div className="icon-menu-close"><RiCloseLine /></div>
         </button>
         <ul>
           {listMenuItems}
         </ul>
-      </nav>
+      </ nav>
     )
   }
 }

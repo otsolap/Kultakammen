@@ -15,7 +15,7 @@ const Portfolio = () => {
 
 
   return (
-    <Layout>
+    <Layout className="portfoli-page">
       <SEO title="Portfolio | Otso Lappalainen" />
       <div className="introduction-container">
         <p>Tervetuloa <span className="gold">{user.nickname}</span>. Tässä CV:ni olkaapi hyvä:</p>

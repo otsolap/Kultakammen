@@ -9,7 +9,7 @@ const Callback = () => {
   handleAuthentication()
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title="Auth" />
       <h1>Odota hetki.</h1>
       <p>Ladataan..... Pieni hetki.</p>
       <Link to="/portfolio" className="button palaa-takaisin-etusivulle">Klikkaa tästä, jos sivu ei lataudu.</Link>
