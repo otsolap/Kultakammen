@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Portfolio = () => {
-  /*  if (!isAuthenticated()) {
-     login()
-     return <p>Siirrytään sisäänkirjautumiseen.</p>
-   } */
+  if (!isAuthenticated()) {
+    login()
+    return <p>Siirrytään sisäänkirjautumiseen.</p>
+  }
 
   // Käytä Auth0 Raw JSON ja saat kaiken kivan tiedon.
   const user = getProfile();
