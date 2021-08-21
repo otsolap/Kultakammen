@@ -26,7 +26,7 @@ const Eeco = () => {
       <h3 className="text-center">Työtehtäväni</h3>
       <div className="client-project grids col-1 sm-2">
         <div className="eeco-description">
-          <h4>Placeholder otsikko</h4>
+          <h4>Verkkokauppojen jatkuvakehitys</h4>
           <p>
             Ylläpidän ja rakennan uusia ominaisuuksia nykyisille asiakkaille kuten Four Reasons. Kauneusalan kapinallisille olen osana tiimiä kehittänyt heidän verkkovalmennusalustaa, parantanut toiminnallisuuksia eri asiakaskohderyhmille sekä kehittänyt google analytics-seurantaa.
           </p>
@@ -36,7 +36,7 @@ const Eeco = () => {
             src="../../../static/assets/Placeholder.jpg"
             alt="Kultakämmen profiilikuva"
             className="featured-image"
-            objectFit="fit"
+            objectFit="cover"
           />
         </div>
       </div>
@@ -46,11 +46,11 @@ const Eeco = () => {
             src="../../../static/assets/Placeholder.jpg"
             alt="Kultakämmen profiilikuva"
             className="featured-image"
-            objectFit="fit"
+            objectFit="cover"
           />
         </div>
         <div className="eeco-description">
-          <h4>Placeholder otsikko</h4>
+          <h4>Konsultointi & Uudet projektit</h4>
           <p>
             Ymmärrän mitkä ovat verkkokauppaan tärkeimmät tekijät niin verkkokauppiaan kuin kuluttajan näkökulmasta. Luomme WooCommercen parhaista paloista sekä Eecon omasta WordPress--teemasta myyvän verkkokaupan, jossa mobiilikäyttäjät ovat kaiken keskiössä. Verkkokauppamme ovat myös valmiiksi yhteen sopivia Google Shopping sekä Schemaan. Teemamme edesauttaa hakukoneoptimoinnin huomiontiin sekä kuukkelin analytiikkaan.
           </p>
@@ -58,7 +58,7 @@ const Eeco = () => {
       </div>
       <div className="client-project grids col-1 sm-2">
         <div className="eeco-description">
-          <h4>Kuukkelin kutsu</h4>
+          <h4>Pintaa syvemmälle asiakaspolun ymmärtämiseen</h4>
           <p>
             Haamujengimme ylläpitää Eeco-teemaa ajan tasalla. Noudatamme WordPress teemastandardeja tarjotessamme modernia verkkokauppaa, jossa performanssi on valmiiksi optimoitu. Olen lyhyessä ajassa päässyt kehittämään ja päivittämään Eecon teema, varsinkin asiakaskäyttäytymisen seuranta google analyticsia soveltamalla.  Olen myös osana Eecon Google datalayer tiimiä, jossa tarjoamme asiakkaille Google Tag Managerin kautta analytiikkapalvelua.
           </p>
@@ -68,7 +68,7 @@ const Eeco = () => {
             src="../../../static/assets/GTM.png"
             alt="Kultakämmen profiilikuva"
             className="featured-image"
-            objectFit="fit"
+            objectFit="contain"
           />
         </div>
       </div>

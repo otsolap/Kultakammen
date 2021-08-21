@@ -13,7 +13,6 @@ section {
 
 // KUVAT
 .featured-image {
-	border-radius: 12px;
 	width: 585px;
 	height: 439px;
 	@media (max-width: $breakpoint-sm) {
@@ -23,6 +22,7 @@ section {
 	img {
 		display: block;
 		margin: 0;
+		border-radius: 1rem;
 	}
 }
 
@@ -116,7 +116,8 @@ section {
 			padding: 20px;
 		}
 		a:hover {
-			background-color: #29121d;
+			color: var(--secondary-color);
+			background-color: var(--tertiary-color);
 		}
 	}
 }
@@ -472,6 +473,7 @@ section {
 	padding-bottom: .5rem;
 
 	.price {
+		margin-top: auto;
 		&::after {
 			font-style: italic;
 			font-size: 12px;
@@ -592,8 +594,8 @@ section {
 	.button:last-of-type {
 		margin-left: 0px;
 		background-color: transparent;
-		&::hover {
-			background-color: var(--primary-color);
+		&:hover {
+			color: var(--primary-color);
 		}
 	}
 }

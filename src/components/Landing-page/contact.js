@@ -45,11 +45,9 @@ const Contact = () => {
         <div className="contact-img">
           <StaticImage
             src="../../../static/assets/Avatar_sm.png"
-            alt="Kultakämmen logoa"
+            alt="Kultakämmen logo"
             className="featured-image"
-            objectFit="cover"
-            objectPosition="50% 50%"
-            fluid="fluid"
+            objectFit="contain"
           />
         </div>
       </div>

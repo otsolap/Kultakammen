@@ -17,7 +17,7 @@ const Services = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="title">Kotisivut</h3>
+            <h3 className="title">Verkkosivut</h3>
             <p>Tehdään sinulle uudet ja laadukkaat nettisivut alan parhailla metodeilla ja teknologioilla. Koodaan moderneille menetelmillä, jotta nettisivusi olisivat entistä toimivampia, turvallisempia ja kustannustehokkaampia.</p>
             <span className="price"><strong>Lähtöhinta:</strong> 999€</span>
           </div>
@@ -30,7 +30,7 @@ const Services = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="title">Google Markkinointi <p>SEO & SEM</p></h3>
+            <h3 className="title">Google Markkinointi: SEO & SEM</h3>
             <p>Suunnittelen ja luon Google Ads tilin, jotta saat parempaa näkyvyyttä kustannustehokkaammin.</p>
             <span className="price"><strong>Lähtöhinta:</strong> 999€</span>
           </div>

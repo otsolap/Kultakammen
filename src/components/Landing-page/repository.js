@@ -14,7 +14,7 @@ const Repository = () => {
       {
         github {
           viewer {
-            topRepositories(first: 3, orderBy: { field: UPDATED_AT, direction: DESC }) {
+            topRepositories(first: 2, orderBy: { field: UPDATED_AT, direction: DESC }) {
               edges {
                 node {
                   id
@@ -40,7 +40,7 @@ const Repository = () => {
         <h2 className="gold text-center">Vapaa-ajan projekteja:</h2>
         <p className="text-center">
           Tubetan, kirjoitan, luen ja koodaan vapaa-ajallanikin. Videoitani on katsottu yhteensä 10 tuhatta kertaa. Tästä pääset perehtymään tuoreimpiin koodausprojekteihini: oma vapaa-ajan vlogisivustoni sekä Bare Necessities urheilupäiväkirja-applikaationi.</p>
-        <div className="grids col-1 sm-2 lg-3">
+        <div className="grids col-1 sm-2 lg-2">
           {edges.map(({ node }) => (
             <div key={node.id} className="repository-card">
               <h2 className="title">{node.name}</h2>
