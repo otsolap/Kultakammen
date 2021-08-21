@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Eeco = () => {
   return (
     <section id="eeco">
-      <h2 className="text-center">Portfolio</h2>
+      <h2 className="text-center gold">Portfolio</h2>
       <div className="eeco-dev grids col-1 sm-2">
         <div className="eeco-img">
           <StaticImage

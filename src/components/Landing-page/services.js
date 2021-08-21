@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section id="services">
       <div className="wrapper">
-        <h2 className="text-center">Palveluni</h2>
+        <h2 className="gold text-center">Palveluni</h2>
         <div className="grids col-1 sm-2">
           <div className="service-card">
             <div className="service-img">
@@ -18,8 +18,8 @@ const Services = () => {
               />
             </div>
             <h3 className="title">Kotisivut</h3>
-            <p>Tehdään sinulle uudet ja laadukkaat nettisivut alan parhailla metodeilla ja teknologioilla!</p>
-            <span><strong>Lähtöhinta:</strong> 999€</span>
+            <p>Tehdään sinulle uudet ja laadukkaat nettisivut alan parhailla metodeilla ja teknologioilla. Koodaan moderneille menetelmillä, jotta nettisivusi olisivat entistä toimivampia, turvallisempia ja kustannustehokkaampia.</p>
+            <span className="price"><strong>Lähtöhinta:</strong> 999€</span>
           </div>
           <div className="service-card">
             <div className="service-img">
@@ -30,9 +30,9 @@ const Services = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="title">SEO</h3>
+            <h3 className="title">Google Markkinointi <p>SEO & SEM</p></h3>
             <p>Suunnittelen ja luon Google Ads tilin, jotta saat parempaa näkyvyyttä kustannustehokkaammin.</p>
-            <span><strong>Lähtöhinta:</strong> 999€</span>
+            <span className="price"><strong>Lähtöhinta:</strong> 999€</span>
           </div>
         </div>
       </div>

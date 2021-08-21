@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Contact = () => {
   return (
     <section id="yhteydenotto">
-      <h2 className="text-center">Ota yhteyttä!</h2>
+      <h2 className="text-center gold">Ota yhteyttä!</h2>
       <div className="grids col-1 sm-2">
         <div className="form-container">
           <form

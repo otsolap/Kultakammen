@@ -18,7 +18,7 @@ const Portfolio = () => {
     <Layout>
       <SEO title="Portfolio | Otso Lappalainen" />
       <div className="introduction-container">
-        <p>Tervetuloa <span className="gold">{user.nickname}</span> Tässä CV:ni olkaapi hyvä:</p>
+        <p>Tervetuloa <span className="gold">{user.nickname}</span>. Tässä CV:ni olkaapi hyvä:</p>
       </div>
       <div class="CV-container">
         <div className="profile-introduction">
@@ -89,14 +89,14 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div class="job-experience-container">
+      <div class="experience-container">
         <h2 className="gold">Työkokemus</h2>
         <div className="employer-container">
           <p><strong>Eeco Oy </strong>| Helsinki, Suomi</p>
           <p><strong>Marraskuu 2020 - Nykyinen</strong></p>
         </div>
         <p><strong>Full Stack Developer</strong></p>
-        <ul className="job-experience-list-container">
+        <ul className="experience-list-container">
           <li>
             Rakennan frontend-devaajana uusia verkkokauppoja mahtavan tiimin kanssa. Uusasiakkuuksiin kuuluu mm roh.to, lennol.fi, equestrianshop.fi.
           </li>
@@ -104,11 +104,11 @@ const Portfolio = () => {
             Ylläpidän ja päivitän Eecon Google Datalayeria.
           </li>
           <li>
-            Työkalut: Wordpress, WooCommerce, Sensei, php, Sass, Boostrap, JavaScript, jQuery, räätälöidyt lapsiteemat, WP-plugarit, Google Analytics ja Tag Manager.
+            Työkalut: <i>Wordpress, WooCommerce, Php, Sass, Boostrap, JavaScript, Wordpress teemat ja plugarit, Google Analytics sekä Tag Manager.</i>
           </li>
         </ul>
       </div>
-      <div class="educational-experience-container">
+      <div class="experience-container">
         <h2 className="gold">Koulutus</h2>
         <div className="educational-institute-container">
           <p><strong> Business College Helsinki</strong></p>
@@ -117,7 +117,7 @@ const Portfolio = () => {
         <p>
           Koodaajakoulutus, Tieto- ja viestintätekniikan tutkinto.
         </p>
-        <ul className="educational-experience-list-container">
+        <ul className="experience-list-container">
           <li>
             Painotus JavaScriptiin, React- ja Redux-kirjastoihin sekä Nodeen.
           </li>
@@ -133,7 +133,7 @@ const Portfolio = () => {
           <p><strong>Tradenomin kaksoistutkinto, Eurooppalainen Johtaminen.</strong></p>
           <p><strong>2014 - 2018</strong></p>
         </div>
-        <ul>
+        <ul className="experience-list-container">
           <li>
             Kaksoistutkinto, jossa painotus oli markkinointiin ja rahoitukseen
           </li>

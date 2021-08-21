@@ -37,7 +37,7 @@ const Repository = () => {
   return (
     <section id="projektit">
       <div>
-        <h2 className="text-center">Vapaa-ajan projekteja:</h2>
+        <h2 className="gold text-center">Vapaa-ajan projekteja:</h2>
         <p className="text-center">
           Tubetan, kirjoitan, luen ja koodaan vapaa-ajallanikin. Videoitani on katsottu yhteensä 10 tuhatta kertaa. Tästä pääset perehtymään tuoreimpiin koodausprojekteihini: oma vapaa-ajan vlogisivustoni sekä Bare Necessities urheilupäiväkirja-applikaationi.</p>
         <div className="grids col-1 sm-2 lg-3">
@@ -45,7 +45,7 @@ const Repository = () => {
             <div key={node.id} className="repository-card">
               <h2 className="title">{node.name}</h2>
               <p>{node.description}</p>
-              <p> <Link href={node.url} className="button github repository" target="_blank"> GitHub URL</Link></p>
+              <p> <Link href={node.url} className="button github repository" target="_blank"> Lähdekoodi</Link></p>
               <p className="repository-languages">
                 {
                   node.languages.nodes.map(({ id, name }) => (
