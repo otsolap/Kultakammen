@@ -1,5 +1,6 @@
 const sgMail = require('@sendgrid/mail')
-const { SENDGRID_API_KEY,
+const {
+  SENDGRID_API_KEY,
   KULTAKAMMEN_EMAIL_NAME,
   KULTAKAMMEN_EMAIL_ADDRESS }
   = process.env
