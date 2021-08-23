@@ -472,6 +472,11 @@ section {
 	overflow: hidden;
 	padding-bottom: .5rem;
 
+	p {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
 	.price {
 		margin-top: auto;
 		&::after {
@@ -479,7 +484,7 @@ section {
 			font-size: 12px;
 			font-weight: 300;
 			padding-left: .5rem;
-			content: "(sis. alv)";
+			content: "(+alv)";
 		}
 	}
 

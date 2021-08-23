@@ -64,25 +64,25 @@ const Portfolio = () => {
         </h2>
         <div className="rowwy">
           <div className="core-skill">
-            <strong>Ohjelmointi</strong>
+            <strong>Ohjelmointi:</strong>
             <span>React</span>
             <span>React-Redux</span>
             <span>NodeJS</span>
           </div>
           <div className="core-skill">
-            <strong>Analytiikka</strong>
+            <strong>Analytiikka:</strong>
             <span>Google Tag Manager</span>
             <span>Google Analytics</span>
             <span>SQL</span>
           </div>
           <div className="core-skill">
-            <strong>Web/Media</strong>
+            <strong>Web/Media:</strong>
             <span>HTML/CSS/PHP/Javascript</span>
             <span>Photoshop</span>
             <span>Sony Vegas Pro</span>
           </div>
           <div className="core-skill">
-            <strong>Projektihallinta</strong>
+            <strong>Projektihallinta:</strong>
             <span>Täsmällinen & Määrätietoinen</span>
             <span>Agile</span>
             <span>Scrum</span>
@@ -174,12 +174,12 @@ const Portfolio = () => {
       <div class="Cover-letter-container">
         <h2>Lyhyesti minusta:</h2>
         <p>
-          Olen toiminut markkinointiassistenttina ja työkokemukseeni kuuluu monenlaista mieleenpainuvaa työtehtävää erilaisissa asiakasprojekteissa. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kansainvälisen mediatalon bisnesanalyytikon kanssa lisäpalvelua asiakkaillemme, jossa asiakas pystyi saamaan paremman ymmärryksen omasta digitaalisesta markkinatilanteestaan. Kaikki vastuualueeni ovat vahvistaneet minun analyyttistä ja strategista osaamistani sekä taitoani palvella asiakkaitamme. Nautin tuoda esille vahvasti perusteltuja suunnitelmia tuleviin asiakasprojekteihin, joissa myynti sekä kustannustehokkuus parantuisivat.
+          Olen toiminut markkinointiassistenttina ja työkokemukseeni kuuluu monenlaista mieleenpainuvaa työtehtävää erilaisissa asiakasprojekteissa. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kansainvälisen mediatalon bisnesanalyytikon kanssa lisäpalvelua asiakkaillemme, jossa asiakas pystyi saamaan paremman ymmärryksen omasta digitaalisesta markkinatilanteestaan. Kaikki vastuualueeni ovat vahvistaneet minun analyyttistä ja strategista osaamista sekä taitoani palvella asiakkaita. Nautin tuoda esille vahvasti perusteltuja suunnitelmia tuleviin asiakasprojekteihin, joissa myynti sekä kustannustehokkuus parantuvat.
         </p>
         <p>
-          Aloitin alkuvuodesta Koodaaja-koulutusohjelman Helsinki Business Collegessa, jossa painotus on ollut Reactiin ja Nodeen. Olen lyhyessä ajassa päässyt rakentamaan useita applikaatioita MERN-stack pohjalta. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kyselypeliä, joka tarjosi pelin lopussa soittolistan käyttäjälle vastauksien perusteella. Tähän projektiin pääsimme soveltamaan Reactin ja Noden lisäksi MongoDB:ta, Spotifyita sekä Herokua saadaksemme julkaistua applikaation kokomaailman pelattavaksi. Tällä hetkellä olen osa pientä tiimiä, jota johtaa PHZ:n senioridevaaja. Olemme rakentamassa MERN-stack applikaatiota PHZ:n sisäiseen käyttöön.
-          Viimeiset vuodet olen kasvattanut osaamistani projektitehtävien soveltamisessa ja asiakassuhteiden hallinnassa.
+          Aloitin vuosikymmenen alussa Koodaaja-koulutusohjelman Helsinki Business Collegessa, jossa painotus oli Reactiin ja Nodeen. Lyhyessä ajassa pääsin rakentamaan useita applikaatioita MERN-stack pohjalta. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kyselypeliä, joka tarjosi pelin lopussa soittolistan vastauksien perusteella käyttäjälle. Tähän projektiin pääsimme soveltamaan Reactin ja Noden lisäksi MongoDB:ta, Spotifyita sekä Herokua saadaksemme julkaistua applikaation kokomaailman pelattavaksi. Pääset pelaamaan Playlist of the Play peliä <a target="_blank" rel="noreferrer" href="https://daily-playlist-frontend.herokuapp.com/">tästä.</a>
         </p>
+        <p>Nykyään toimin Eecolla full-stack web developerina.</p>
       </div>
       <div className="logout-container">
         <a

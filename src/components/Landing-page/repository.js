@@ -39,7 +39,9 @@ const Repository = () => {
       <div>
         <h2 className="gold text-center">Vapaa-ajan projekteja:</h2>
         <p className="text-center">
-          Tubetan, kirjoitan, luen ja koodaan vapaa-ajallanikin. Videoitani on katsottu yhteensä 10 tuhatta kertaa. Tästä pääset perehtymään tuoreimpiin koodausprojekteihini: oma vapaa-ajan vlogisivustoni sekä Bare Necessities urheilupäiväkirja-applikaationi.</p>
+          Tubetan, kirjoitan, luen ja koodaan vapaa-ajallanikin. Videoitani on katsottu yhteensä 10 tuhatta kertaa.</p>
+        <p className="text-center">Tästä pääset perehtymään tuoreimpiin
+          koodausprojekteihini: oma vapaa-ajan vlogisivustoni sekä Bare Necessities urheilupäiväkirja-applikaationi.</p>
         <div className="grids col-1 sm-2 lg-2">
           {edges.map(({ node }) => (
             <div key={node.id} className="repository-card">

@@ -16,12 +16,12 @@ const AboutMe = () => {
             Koodaan verkkokauppoja <a href="https://eeco.fi/">Eecossa</a> ja tubetan <a href="https://www.metsanotus.fi/">Metsän Otus</a> kanavassa. Olen Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen. </p>
           <p>
             Kiinnostuksen kohteenani ovat verkkosivut, joissa pääsen työskentelemään asiakaskokemuksien parissa sekä soveltamaan asiakaspoluista saatua web-analytiikka dataa.</p>
-          <p>Pääset sivun navigoinnista myös kirjautumaan CV-sivulleni perehtymään syvemmin osaamiseeni.</p>
+          <p>Jos haluat nähdä CV:ni voit kirjautua <Link to="/portfolio">tästä</Link> sisään portfoliosivulleni.</p>
           <Link to="#yhteydenotto" className="button tutustu"><span>Palkkaa minut</span></Link>
         </div>
         <div>
           <StaticImage
-            src="../../../static/assets/Otso.png"
+            src="../../../static/assets/OtsoEeco.png"
             alt="Kultakämmen profiilikuva"
             className="featured-image portfolio"
             objectFit="cover"
