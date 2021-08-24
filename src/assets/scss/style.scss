@@ -13,16 +13,23 @@ section {
 
 // KUVAT
 .featured-image {
-	width: 585px;
-	height: 439px;
+	max-width: 585px;
+	max-height: 439px;
 	@media (max-width: $breakpoint-sm) {
-		width: 292.5px;
-		height: 219.5px;
+		max-width: 292.5px;
+		max-height: 219.5px;
 	}
 	img {
 		display: block;
 		margin: 0;
 		border-radius: 1rem;
+	}
+}
+.eeco-img {
+	max-width: 680px;
+	@media (max-width: $breakpoint-sm) {
+		display: flex;
+		justify-content: center;
 	}
 }
 
@@ -33,7 +40,7 @@ section {
 
 // Header, Nav ja Footer.
 .primary-container main {
-	min-height: calc(100vh - 60px - 81px);
+	min-height: calc(100vh - 141px);
 }
 .site-header {
 	display: flex;
@@ -123,7 +130,7 @@ section {
 }
 .container {
 	margin: 0 auto;
-	max-width: 1400px;
+	max-width: 1440px;
 	padding: 0 20px;
 }
 .site-logo {
@@ -265,7 +272,7 @@ section {
 				display: block;
 				font-size: 1rem;
 				padding-left: 0rem;
-				margin-top: 0;
+				margin-top: .5rem;
 			}
 		}
 		.tutustu {
@@ -281,12 +288,19 @@ section {
 #eeco {
 	.client-project {
 		.eeco-description {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
 			h4 {
+				text-align: start;
+				width: 100%;
 				padding-top: 1rem;
 				@media (max-width: $breakpoint-sm) {
 					padding-top: .25rem;
+					text-align: center;
 				}
 			}
+
 			@media (max-width: $breakpoint-sm) {
 				order: 2;
 			}
@@ -489,7 +503,7 @@ section {
 	}
 
 	.featured-image {
-		width: 690px;
+		max-width: 690px;
 		//	overflow: hidden;
 	}
 	@media (max-width: $breakpoint-sm) {
@@ -565,6 +579,22 @@ section {
 
 // CORE SKILLS
 .core-skills-container {
+	.rowwy {
+		max-width: 700px;
+	}
+	.core-skill {
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+		strong {
+			padding-right: 1.25rem;
+		}
+		p {
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+	}
+
 	@media (max-width: $breakpoint-sm) {
 		display: flex;
 		flex-direction: column;
@@ -572,7 +602,12 @@ section {
 			display: flex;
 			flex-direction: column;
 			strong {
+				padding-right: 0;
 				color: var(--primary-color);
+			}
+			p {
+				flex: initial;
+				max-width: initial;
 			}
 		}
 	}

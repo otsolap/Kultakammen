@@ -12,7 +12,8 @@ const Eeco = () => {
             src="../../../static/assets/Eeco.png"
             alt="Kultakämmen profiilikuva"
             className="featured-image"
-            objectFit="contain"
+            objectFit="cover"
+
           />
         </div>
         <div className="eeco-description-otso">
@@ -28,12 +29,12 @@ const Eeco = () => {
         <div className="eeco-description">
           <h4>Verkkokauppojen jatkuva kehitys</h4>
           <p>
-            Ylläpidän ja rakennan uusia ominaisuuksia nykyisille asiakkaille kuten Four Reasons. Olen kehittänyt kauneusalan kapinallisen verkkovalmennusalustaa, parantanut kaupan toiminnallisuuksia sekä kehittänyt heidän Google Analytics-seurantaa.
+            Ylläpidän ja rakennan uusia ominaisuuksia nykyisille asiakkaille. Olen esimerkiksi kehittänyt verkkovalmennusalustaa, parantanut kaupan toiminnallisuuksia sekä kehittänyt Google Analytics-seurantaa.
           </p>
         </div>
         <div className="eeco-img">
           <StaticImage
-            src="../../../static/assets/Placeholder.jpg"
+            src="../../../static/assets/Eeco-Continous-Development.jpg"
             alt="Kultakämmen profiilikuva"
             className="featured-image"
             objectFit="cover"
@@ -43,7 +44,7 @@ const Eeco = () => {
       <div className="client-project grids col-1 sm-2">
         <div className="eeco-img">
           <StaticImage
-            src="../../../static/assets/Placeholder.jpg"
+            src="../../../static/assets/Eeco-New-Clients.jpg"
             alt="Kultakämmen profiilikuva"
             className="featured-image"
             objectFit="cover"

@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Portfolio = () => {
-  /*   if (!isAuthenticated()) {
-      login()
-      return <p>Siirrytään sisäänkirjautumiseen.</p>
-    } */
+  if (!isAuthenticated()) {
+    login()
+    return <p>Siirrytään sisäänkirjautumiseen.</p>
+  }
 
   // Käytä Auth0 Raw JSON ja saat kaiken kivan tiedon.
   const user = getProfile();
@@ -65,27 +65,31 @@ const Portfolio = () => {
         <div className="rowwy">
           <div className="core-skill">
             <strong>Ohjelmointi:</strong>
-            <span>React</span>
-            <span>React-Redux</span>
-            <span>NodeJS</span>
+            <p>React</p>
+            <p>React-Redux</p>
+            <p>React Native</p>
+            <p>NodeJS</p>
           </div>
           <div className="core-skill">
             <strong>Analytiikka:</strong>
-            <span>Google Tag Manager</span>
-            <span>Google Analytics</span>
-            <span>SQL</span>
+            <p>Google Tag Manager</p>
+            <p>Google Analytics</p>
+            <p>Google Ads</p>
+            <p>SQL</p>
           </div>
           <div className="core-skill">
             <strong>Web/Media:</strong>
-            <span>HTML/CSS/PHP/Javascript</span>
-            <span>Photoshop</span>
-            <span>Sony Vegas Pro</span>
+            <p>Javascript</p>
+            <p>Php</p>
+            <p>Photoshop</p>
+            <p>Sony Vegas Pro</p>
           </div>
           <div className="core-skill">
             <strong>Projektihallinta:</strong>
-            <span>Täsmällinen & Määrätietoinen</span>
-            <span>Agile</span>
-            <span>Scrum</span>
+            <p>Määrätietoinen</p>
+            <p>Agile</p>
+            <p>Täsmällinen</p>
+            <p>Scrum</p>
           </div>
         </div>
       </div>
@@ -98,7 +102,7 @@ const Portfolio = () => {
         <p><strong>Full Stack Developer</strong></p>
         <ul className="experience-list-container">
           <li>
-            Rakennan frontend-devaajana uusia verkkokauppoja mahtavan tiimin kanssa. Uusasiakkuuksiin kuuluu mm roh.to, lennol.fi, equestrianshop.fi.
+            Rakennan uusia verkkokauppoja mahtavan tiimin kanssa. Uusasiakkuuksiin kuuluu mm <a rel="noopener" target="_blank" href="https://www.roh.to/">roh.to</a>, <a rel="noopener" target="_blank" href="https://lennol.fi/">lennol.fi</a>, <a rel="noopener" target="_blank" href="https://equestrianshop.fi/">equestrianshop.fi</a>.
           </li>
           <li>
             Ylläpidän ja päivitän Eecon Google Datalayeria.

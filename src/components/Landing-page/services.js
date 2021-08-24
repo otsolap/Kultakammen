@@ -12,7 +12,7 @@ const Services = () => {
           <div className="service-card">
             <div className="service-img">
               <StaticImage
-                src="../../../static/assets/Placeholder.jpg"
+                src="../../../static/assets/Kultakammen-New-Website.jpg"
                 alt="Kultakämmen palvelut"
                 className="featured-image"
                 objectFit="cover"
@@ -25,7 +25,7 @@ const Services = () => {
           <div className="service-card">
             <div className="service-img">
               <StaticImage
-                src="../../../static/assets/Placeholder.jpg"
+                src="../../../static/assets/Kultakammen-Google.jpg"
                 alt="Kultakämmen palvelut"
                 className="featured-image"
                 objectFit="cover"
