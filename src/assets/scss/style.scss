@@ -26,9 +26,11 @@ section {
 	}
 }
 .eeco-img {
+	display: flex;
+	align-items: center;
+	align-content: center;
 	max-width: 680px;
 	@media (max-width: $breakpoint-sm) {
-		display: flex;
 		justify-content: center;
 	}
 }
@@ -462,11 +464,16 @@ section {
 	border: 1px solid #faf7f2;
 	// padding: 20px;
 	text-align: center;
-	.languages {
-		margin-left: 7px;
-		margin-right: 7px;
-		font-weight: 700;
+	.repository-languages {
+		display: flex;
+		justify-content: center;
+		.languages {
+			margin-left: 7px;
+			margin-right: 7px;
+			font-weight: 700;
+		}
 	}
+
 	@media (max-width: $breakpoint-sm) {
 		.title {
 			font-size: 1.5rem;

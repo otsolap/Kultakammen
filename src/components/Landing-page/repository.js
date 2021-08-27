@@ -50,9 +50,9 @@ const Repository = () => {
               <p className="repository-languages">
                 {
                   node.languages.nodes.map(({ id, name }) => (
-                    <span className="languages" key={id}>
+                    <p className="languages" key={id}>
                       {name}
-                    </span>
+                    </p>
                   ))
                 }
               </p>
