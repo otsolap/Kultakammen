@@ -46,7 +46,7 @@ const Repository = () => {
             <div key={node.id} className="repository-card">
               <h2 className="title">{node.name}</h2>
               <p>{node.description}</p>
-              <p> <Link href={node.url} className="button github repository" target="_blank"> Lähdekoodi</Link></p>
+              <p> <Link href={node.url} className="button github repository" rel="noopener noreferrer" target="_blank"> Lähdekoodi</Link></p>
               <p className="repository-languages">
                 {
                   node.languages.nodes.map(({ id, name }) => (

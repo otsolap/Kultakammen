@@ -21,6 +21,13 @@ module.exports = {
         name: `assets`,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-WF4F93Z",
+        includeInDevelopment: false,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

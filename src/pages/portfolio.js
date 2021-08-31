@@ -43,12 +43,12 @@ const Portfolio = () => {
               </a>
             </p>
             <p className="contact-details">
-              <a target="_blank" href="https://github.com/otsolap">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/otsolap">
                 Github
               </a>
             </p>
             <p className="contact-details">
-              <a target="_blank" href="https://www.linkedin.com/in/otsolap/">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/otsolap/">
                 LinkedIn</a>
             </p>
           </div>
@@ -102,7 +102,7 @@ const Portfolio = () => {
         <p><strong>Full Stack Developer</strong></p>
         <ul className="experience-list-container">
           <li>
-            Rakennan uusia verkkokauppoja mahtavan tiimin kanssa. Uusasiakkuuksiin kuuluu mm <a rel="noopener" target="_blank" href="https://www.roh.to/">roh.to</a>, <a rel="noopener" target="_blank" href="https://lennol.fi/">lennol.fi</a>, <a rel="noopener" target="_blank" href="https://equestrianshop.fi/">equestrianshop.fi</a>.
+            Rakennan uusia verkkokauppoja mahtavan tiimin kanssa. Uusasiakkuuksiin kuuluu mm <a rel="noopener noreferrer" target="_blank" href="https://www.roh.to/">roh.to</a>, <a rel="noopener noreferrer" target="_blank" href="https://lennol.fi/">lennol.fi</a>, <a rel="noopener noreferrer" target="_blank" href="https://equestrianshop.fi/">equestrianshop.fi</a>.
           </li>
           <li>
             Ylläpidän ja päivitän Eecon Google Datalayeria.

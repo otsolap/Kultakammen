@@ -18,7 +18,7 @@ const Eeco = () => {
         </div>
         <div className="eeco-description-otso">
           <p>
-            Rakennan uusia verkkokauppoja ja päivitän nykyisiä mahtavan tiimin parissa. Normiarkeeni kuuluu niin uusien sivujen luonti sekä nykyisten kaunistaminen. Nämä toteutukset koostaan WooCommercen päälle. Työtehtäviini kuuluu myös erilaisten lisäosien rakentaminen tai yhteensovittaminen asiakkaiden verkkokauppoihin.
+            Rakennan uusia verkkokauppoja ja päivitän nykyisiä mahtavan tiimin parissa. Normiarkeeni kuuluu niin uusien sivujen luonti sekä nykyisten kaunistaminen. Nämä toteutukset koostaan <a rel="noopener noreferrer" target="_blank" href="https://eeco.fi/woocommerce-verkkokauppa/">WooCommercen</a> päälle. Työtehtäviini kuuluu myös erilaisten lisäosien rakentaminen tai yhteensovittaminen asiakkaiden verkkokauppoihin.
           </p>
           <p>
             Ylläpidän ja rakennan uusia ominaisuuksia nykyisille asiakkaille. Olen esimerkiksi kehittänyt verkkovalmennusalustaa, parantanut kaupan toiminnallisuuksia sekä kehittänyt Google Analytics-seurantaa.
@@ -30,7 +30,7 @@ const Eeco = () => {
         <div className="eeco-description">
           <h4>Pintaa syvemmälle asiakaspolun ymmärtämisessä</h4>
           <p>
-            Palveluluihimme kuuluu myös asiakkaiden verkkokäyttäytymisen seuranta. Olen lyhyessä ajassa päässyt kehittämään ja päivittämään Eecon Google Analytics sekä Tag Manager koodipohjaa. Aiemmassa elämässäni olin digimarkkinoija, joten Googlen palvelut ja parhaat käytännöt ovat jo minulle entuudestaan tuttuja.
+            Eecon palveluihin kuuluu myös asiakkaiden verkkokäyttäytymisen seuranta. Olen lyhyessä ajassa päässyt kehittämään ja päivittämään Eecon Google Analytics sekä Tag Manager koodipohjaa. Aiemmassa elämässäni olin digimarkkinoija, joten Googlen palvelut ja parhaat käytännöt ovat jo minulle entuudestaan tuttuja.
           </p>
           <p> <strong>Työkaluvyöhöni kuuluu</strong>: <em>React, JavaScript, Php, Sass, Boostrap, Wordpress, WooCommerce,   räätälöidyt teemat, WP-plugarit, Google Analytics ja Tag Manager.</em>
           </p>
