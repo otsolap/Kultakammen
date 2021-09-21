@@ -1,8 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import { login, logout, isAuthenticated, getProfile } from "../util/auth"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+
 
 const Portfolio = () => {
   if (!isAuthenticated()) {
@@ -12,7 +14,6 @@ const Portfolio = () => {
 
   // Käytä Auth0 Raw JSON ja saat kaiken kivan tiedon.
   const user = getProfile();
-
 
   return (
     <Layout className="portfoli-page">
@@ -188,7 +189,7 @@ const Portfolio = () => {
       <div className="logout-container">
         <a
           className="button"
-          href="#contact"
+          href={(window.location.host) + "/#yhteydenotto"}
         >
           Ota yhteyttä
         </a>

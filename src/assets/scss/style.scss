@@ -63,11 +63,8 @@ section {
 		margin-left: 20px;
 	}
 	a {
-		color: rgba(255, 255, 255, 0.6);
+		color: var(--tertiary-color);
 		text-decoration: none;
-		&:hover {
-			color: rgba(255, 255, 255, 0.8);
-		}
 	}
 	a[aria-current="page"] {
 		color: rgba(255, 255, 255, 1);
