@@ -189,7 +189,9 @@ const Portfolio = () => {
       <div className="logout-container">
         <a
           className="button"
-          href={(window.location.host) + "/#yhteydenotto"}
+          href="/#yhteydenotto"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Ota yhteyttä
         </a>
