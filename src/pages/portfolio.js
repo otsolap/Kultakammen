@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import { login, logout, isAuthenticated, getProfile } from "../util/auth"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -187,14 +187,14 @@ const Portfolio = () => {
         <p>Nykyään toimin Eecolla full-stack web developerina.</p>
       </div>
       <div className="logout-container">
-        <a
+        <Link
           className="button"
           href="/#yhteydenotto"
           rel="noopener noreferrer"
           target="_blank"
         >
           Ota yhteyttä
-        </a>
+        </Link>
         <a
           className="button"
           href="#logout"
