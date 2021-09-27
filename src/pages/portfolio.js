@@ -189,7 +189,7 @@ const Portfolio = () => {
       <div className="logout-container">
         <Link
           className="button"
-          href="/#yhteydenotto"
+          to="/#yhteydenotto"
           rel="noopener noreferrer"
           target="_blank"
         >
