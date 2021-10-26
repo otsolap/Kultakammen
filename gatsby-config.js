@@ -7,13 +7,6 @@
 let env = process.env.NODE_ENV || 'development';
 require('dotenv').config({ path: `./.env.${env}` });
 
-const netlifyCmsPaths = {
-  resolve: `gatsby-plugin-netlify-cms-paths`,
-  options: {
-    cmsConfig: `/static/admin/config.yml`,
-  },
-}
-
 
 
 const settings = require("./src/util/site.json")
@@ -22,8 +15,6 @@ module.exports = {
   siteMetadata: settings.meta,
   plugins: [
     // Assets => kuvat.
-    netlifyCmsPaths,
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -115,12 +106,6 @@ module.exports = {
           Authorization: `bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
         },
         fetchOptions: {},
-      },
-    },
-    {
-      resolve: "gatsby-plugin-compile-es6-packages",
-      options: {
-        modules: ["react-netlify-identity-widget"],
       },
     },
     'gatsby-plugin-image',
