@@ -24,7 +24,7 @@ const Portfolio = () => {
       <div className="introduction-container">
         <p>Tervetuloa <span className="gold">hello mom</span>. Tässä CV:ni olkaapi hyvä:</p>
       </div>
-      <div class="CV-container">
+      <div className="CV-container">
         <div className="profile-introduction">
           <h1>Otso <span className="gold">Lappalainen</span></h1>
           <div className="roles">
@@ -97,7 +97,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div class="experience-container">
+      <div className="experience-container">
         <h2 className="gold">Työkokemus</h2>
         <div className="employer-container">
           <p><strong>Eeco Oy </strong>| Helsinki, Suomi</p>
@@ -116,7 +116,7 @@ const Portfolio = () => {
           </li>
         </ul>
       </div>
-      <div class="experience-container">
+      <div className="experience-container">
         <h2 className="gold">Koulutus</h2>
         <div className="educational-institute-container">
           <p><strong> Business College Helsinki</strong></p>
@@ -152,7 +152,7 @@ const Portfolio = () => {
       </div>
       <h2 className="gold">Suosittelijat</h2>
       <div className="referrals-container grids col-1 sm-2">
-        <div class="referee-one">
+        <div className="referee-one">
           <p><strong>Navid Nosrati</strong>, JobGo International</p>
           <p>UI/UX-Suunnittelija, Front-end devaaja.</p>
           <p>
@@ -166,7 +166,7 @@ const Portfolio = () => {
             </a>
           </p>
         </div>
-        <div class="referee-two">
+        <div className="referee-two">
           <p><strong>Margit Tennosaar</strong>, Helsinki Business College</p>
           <p>Ohjelmistokehitys opettaja.</p>
           <p> <a className="gold" href="tel:0447756416" data-telegram="telegram">
@@ -179,7 +179,7 @@ const Portfolio = () => {
           </p>
         </div>
       </div>
-      <div class="Cover-letter-container">
+      <div className="Cover-letter-container">
         <h2>Lyhyesti minusta:</h2>
         <p>
           Olen toiminut markkinointiassistenttina ja työkokemukseeni kuuluu monenlaista mieleenpainuvaa työtehtävää erilaisissa asiakasprojekteissa. Yksi mielenkiintoisimmista projekteista oli olla mukana kehittämässä kansainvälisen mediatalon bisnesanalyytikon kanssa lisäpalvelua asiakkaillemme, jossa asiakas pystyi saamaan paremman ymmärryksen omasta digitaalisesta markkinatilanteestaan. Kaikki vastuualueeni ovat vahvistaneet minun analyyttistä ja strategista osaamista sekä taitoani palvella asiakkaita. Nautin tuoda esille vahvasti perusteltuja suunnitelmia tuleviin asiakasprojekteihin, joissa myynti sekä kustannustehokkuus parantuvat.

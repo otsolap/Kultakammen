@@ -8,7 +8,7 @@ const AboutMe = () => {
       <div className="home-banner grids col-1 sm-2">
         <div>
           <h1 className="title">Kultakämmen</h1>
-          <div class="tag-container">
+          <div className="tag-container">
             <p className="tagline">Otso Lappalainen</p>
             <p className="tagline">Full Stack web-devaaja</p>
           </div>
