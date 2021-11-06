@@ -9,8 +9,8 @@ export default () => {
     <Layout>
       <PrivateContent
         as={Portfolio}
-        callbackPath="/user/"
-        rolesAllowed={['user']}
+        callbackPath="/member/"
+        rolesAllowed={['member']}
       />
     </Layout>
   )
