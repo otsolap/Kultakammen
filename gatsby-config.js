@@ -109,5 +109,17 @@ module.exports = {
       },
     },
     'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-netlify-identity-gotrue',
+      options: {
+        url: 'https://kultakammen.fi'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-force-trailing-slashes`,
+      options: {
+        excludedPaths: [`/404.html`],
+      },
+    },
   ],
 }

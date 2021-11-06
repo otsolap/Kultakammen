@@ -6,6 +6,11 @@
 [build.environment]
   NODE_VERSION = "12"
 
+  [[redirects]]
+  from = "/api/*"
+  to = "/portfolio"
+  status = 200
+
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
 

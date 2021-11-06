@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
 import Logo from "./logo"
 import Navigation from "./navigation";
 import "../assets/scss/style.scss"
+import AuthOverlay from './Auth/AuthOverlay'
 import Footer from "./footer";
 
 
@@ -24,6 +24,7 @@ const Layout = ({ children, className }) => {
   return (
     <div className={"primary-container "}>
       <Header>
+        <AuthOverlay />
         <Logo title={siteTitle} />
         <Navigation />
       </Header>

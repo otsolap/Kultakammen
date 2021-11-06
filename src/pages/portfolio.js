@@ -1,25 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
-import { login, logout, isAuthenticated, getProfile } from "../util/auth"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PrivateContent from '../components/Auth/PrivateContent'
 
+export default () => {
+  return (
+    <Layout>
+      <PrivateContent
+        as={Portfolio}
+        callbackPath="/user/"
+        rolesAllowed={['user']}
+      />
+    </Layout>
+  )
+}
 
 
 const Portfolio = () => {
-  if (!isAuthenticated()) {
-    login()
-    return <p>Siirrytään sisäänkirjautumiseen.</p>
-  }
-
-  // Käytä Auth0 Raw JSON ja saat kaiken kivan tiedon.
-  const user = getProfile();
-
   return (
     <Layout className="portfoli-page">
       <SEO title="Portfolio | Otso Lappalainen" />
       <div className="introduction-container">
-        <p>Tervetuloa <span className="gold">{user.nickname}</span>. Tässä CV:ni olkaapi hyvä:</p>
+        <p>Tervetuloa <span className="gold">hello mom</span>. Tässä CV:ni olkaapi hyvä:</p>
       </div>
       <div class="CV-container">
         <div className="profile-introduction">
@@ -198,10 +201,6 @@ const Portfolio = () => {
         <a
           className="button"
           href="#logout"
-          onClick={e => {
-            logout()
-            e.preventDefault()
-          }}
         >
           Kirjaudu ulos.
         </a>
@@ -209,7 +208,3 @@ const Portfolio = () => {
     </Layout >
   )
 }
-
-
-
-export default Portfolio;
