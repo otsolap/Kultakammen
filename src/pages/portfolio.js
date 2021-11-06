@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PrivateContent from '../components/Auth/PrivateContent'
+import { useIdentityContext } from 'react-netlify-identity-gotrue'
+
 
 export default () => {
   return (
@@ -18,11 +20,13 @@ export default () => {
 
 
 const Portfolio = () => {
+  const identity = useIdentityContext()
+
   return (
     <Layout className="portfoli-page">
       <SEO title="Portfolio | Otso Lappalainen" />
       <div className="introduction-container">
-        <p>Tervetuloa <span className="gold">hello mom</span>. Tässä CV:ni olkaapi hyvä:</p>
+        <p>Tervetuloa <span className="gold">{identity.user}</span>. Tässä CV:ni olkaapi hyvä:</p>
       </div>
       <div className="CV-container">
         <div className="profile-introduction">
@@ -201,6 +205,7 @@ const Portfolio = () => {
         <a
           className="button"
           href="#logout"
+          onClick={identity.logout}
         >
           Kirjaudu ulos.
         </a>
