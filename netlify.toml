@@ -6,9 +6,9 @@
 [build.environment]
   NODE_VERSION = "12"
 
-  [[redirects]]
+[[redirects]]
   from = "/api/*"
-  to = "/portfolio"
+  to = "/.netlify/functions/:splat"
   status = 200
 
 [[plugins]]

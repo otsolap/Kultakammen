@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import { useIdentityContext } from 'react-netlify-identity-gotrue'
 import { useForm } from "react-hook-form";
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 export default () => {
   const identity = useIdentityContext()

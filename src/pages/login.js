@@ -1,6 +1,6 @@
 import React from "react"
 import { useIdentityContext } from 'react-netlify-identity-gotrue'
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import LoginForm from '../components/Auth/LoginForm'
 
 export default ({ location }) => {
