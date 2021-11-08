@@ -8,25 +8,26 @@ import { useIdentityContext } from 'react-netlify-identity-gotrue'
 
 export default () => {
   return (
-    <Layout>
-      <PrivateContent
-        as={Portfolio}
-        callbackPath="/member/"
-        rolesAllowed={['member']}
-      />
-    </Layout>
+    <PrivateContent
+      as={Portfolio}
+      callbackPath="/portfolio/"
+      rolesAllowed={['user']}
+    />
   )
 }
 
 
 const Portfolio = () => {
   const identity = useIdentityContext()
+  console.log(identity);
 
   return (
     <Layout className="portfoli-page">
       <SEO title="Portfolio | Otso Lappalainen" />
       <div className="introduction-container">
-        <p>Tervetuloa <span className="gold">{identity.user}</span>. Tässä CV:ni olkaapi hyvä:</p>
+        <p>Tervetuloa <span className="gold">
+          {`${identity.user?.user_metadata?.full_name?.split(' ')[0]}!`}
+        </span>Tässä CV:ni olkaapi hyvä:</p>
       </div>
       <div className="CV-container">
         <div className="profile-introduction">

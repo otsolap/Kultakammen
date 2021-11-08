@@ -167,12 +167,11 @@ section {
 		color: var(--secondary-color);
 	}
 	&.-outline {
-		color: var(--primary-color);
+		background-color: var(--primary-color);
 		box-shadow: 0 0 1px #fff(0, 0, 0, 0.6);
-		background: var (--tertiary-color);
+		color: var (--tertiary-color);
 		&:hover {
 			box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-			background: var (--tertiary-color);
 		}
 	}
 	& + .button {
@@ -527,6 +526,7 @@ section {
 }
 
 .gold {
+	text-transform: capitalize;
 	color: var(--primary-color);
 }
 

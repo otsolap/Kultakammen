@@ -27,7 +27,7 @@ const PrivateContent = ({ as: Comp, rolesAllowed, callbackPath, ...props }) => {
 const Unauthorized = ({ callbackPath }) => {
 
   useEffect(() => {
-    callbackPath && navigate('/login', { state: { navigateTarget: callbackPath } })
+    callbackPath && navigate('/kirjaudu', { state: { navigateTarget: callbackPath } })
   }, [callbackPath])
 
   return (

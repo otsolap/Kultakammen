@@ -13,14 +13,14 @@ export default ({ location }) => {
         <div className="sm:flex sm:flex-row-reverse sm:items-center">
           <div className="sm:px-2">
             <h1 className="px-4 pt-5 text-2xl text-left text-teal-500 font-bold sm:text-3xl">
-              Login
+              Kirjaudu sisään
             </h1>
             {identity.provisionalUser
               ? <EmailConfirmation />
               : <LoginForm navigateTarget={navigateTarget} />
             }
           </div>
-          <p>Not registered yet? Sign-up <a href="/sign-up">here</a>.</p>
+          <p>Eikö sinulla ole vielä vierailija tiliä? Rekisteröidy <a href="/rekisteroidy">täällä</a>.</p>
         </div>
       </main>
     </Layout>
