@@ -22,7 +22,7 @@ export default () => {
 
   // Current users don't need to confuse themselves
   useEffect(() => {
-    identity.user && navigate('/members')
+    identity.user && navigate('/portfolio')
   }, [identity.user])
 
   return (

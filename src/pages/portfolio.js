@@ -11,7 +11,7 @@ export default () => {
     <PrivateContent
       as={Portfolio}
       callbackPath="/portfolio/"
-      rolesAllowed={['user']}
+      rolesAllowed={['user', 'admin']}
     />
   )
 }
@@ -26,8 +26,8 @@ const Portfolio = () => {
       <SEO title="Portfolio | Otso Lappalainen" />
       <div className="introduction-container">
         <p>Tervetuloa <span className="gold">
-          {`${identity.user?.user_metadata?.full_name?.split(' ')[0]}!`}
-        </span>Tässä CV:ni olkaapi hyvä:</p>
+          {`${identity.user?.user_metadata?.full_name}! `}
+        </span> Tässä CV:ni olkaapi hyvä:</p>
       </div>
       <div className="CV-container">
         <div className="profile-introduction">
@@ -205,7 +205,7 @@ const Portfolio = () => {
         </Link>
         <a
           className="button"
-          href="#logout"
+          href="/"
           onClick={identity.logout}
         >
           Kirjaudu ulos.
