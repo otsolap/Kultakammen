@@ -13,7 +13,7 @@ const MenuItems = [
   },
   {
     path: "/portfolio",
-    title: "Portfolio (vaatii sisäänkirjautumisen)"
+    title: "Portfolio (vaatii rekisteröinnin)"
   }
 ]
 

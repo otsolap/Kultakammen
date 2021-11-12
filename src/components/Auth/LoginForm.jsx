@@ -36,54 +36,55 @@ export default function LoginForm({ navigateTarget }) {
 
   return (
     identity.user
-      ? <div className="w-full max-w-xs">
-        <p>You are already signed in</p>
-        <p>You may need to change accounts if you're looking to access further private data</p>
+      ? <div>
+        <p>Olet jo sisäänkirjautunut!</p>
       </div>
       : identity.provisionalUser ?
-        <div className="w-full max-w-xs">
-          <p>Your account has not yet been confirmed. Please check your email</p>
+        <div>
+          <p>Tilisi ei ole vielä vahvistettu. Tarkista sähköpostisi</p>
         </div>
-        : <div className="w-full max-w-xs">
-          <form className="pt-6 pb-8 mb-4" onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-                Email
+        : <div>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="input-container">
+              <label htmlFor="email">
+                Sähköposti
             </label>
               <input
                 ref={register({ required: true, pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
-                className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${loggingIn && 'disabled'}`}
+                className={`${loggingIn && 'disabled'}`}
                 type="text"
-                placeholder="jane@doe.com"
+                placeholder="Sähköposti*"
                 name="email">
               </input>
-              {errors.email && <p className="text-red-500 text-xs italic">Email is required</p>}
+              {errors.email && <p className="text-red-500 text-xs italic">Sähköposti on pakollinen kenttä</p>}
             </div>
-            <div className="mb-6">
-              <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-                Password
+            <div className="input-container">
+              <label htmlFor="password">
+                Salasana
             </label>
               <input
                 ref={register({ required: true })}
-                className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${loggingIn && 'disabled'}`}
+                className={`${loggingIn && 'disabled'}`}
                 name="password"
                 type="password"
-                placeholder="******************">
+                placeholder="Salasana*">
               </input>
-              {errors.password && <p className="text-red-500 text-xs italic">Password is required</p>}
+              {errors.password && <p>Salasana on pakollinen kenttä</p>}
             </div>
-            <div className="flex items-center justify-between">
+            <div>
               <button
-                className={`bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${loggingIn && 'opacity-50 cursor-not-allowed'}`}
+                className={`button ${loggingIn}`}
                 type="submit">
-                Sign In
+                Kirjaudu sisään
               </button>
-              <Link className="inline-block align-baseline font-bold text-sm text-blue-700 hover:text-blue-800 ml-2" to="/forgot-password/">
-                Forgot Password?
-              </Link>
             </div>
-            <div className="pt-2">
-              {formError && <p className="text-red-500 text-xs italic">{formError}</p>}
+            <div className="forgot-password" >
+            <Link to="/salasana-unohtunut/">
+                Unohditko salasanan? :-D
+              </Link>
+              </div>
+            <div>
+              {formError && <p>{formError}</p>}
             </div>
           </form>
         </div>

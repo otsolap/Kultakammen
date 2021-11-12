@@ -649,3 +649,22 @@ section {
 		}
 	}
 }
+
+/* Netlify Identity Pages */
+.netlify-identity-page {
+	div {
+		max-width: 600px;
+	}
+	.input-container {
+		display: flex;
+		flex-direction: column;
+		margin: 1rem 0;
+		input {
+			padding: .5rem;
+			max-width: 300px;
+		}
+	}
+	.forgot-password {
+		margin-top: .5rem;
+	}
+}

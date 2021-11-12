@@ -8,21 +8,18 @@ export default ({ location }) => {
   const navigateTarget = location.state?.navigateTarget || '/'
 
   return (
-    <Layout>
-      <main className="max-w-2xl flex-grow mx-auto flex flex-col justify-around">
-        <div className="sm:flex sm:flex-row-reverse sm:items-center">
-          <div className="sm:px-2">
-            <h1 className="px-4 pt-5 text-2xl text-left text-teal-500 font-bold sm:text-3xl">
-              Kirjaudu sisään
-            </h1>
-            {identity.provisionalUser
-              ? <EmailConfirmation />
-              : <LoginForm navigateTarget={navigateTarget} />
-            }
-          </div>
-          <p>Eikö sinulla ole vielä vierailija tiliä? Rekisteröidy <a href="/rekisteroidy">täällä</a>.</p>
-        </div>
-      </main>
+    <Layout className="netlify-identity-page login-page">
+      <div>
+        <h1>
+          Kirjaudu sisään
+        </h1>
+        {identity.provisionalUser
+          ? <EmailConfirmation />
+          : <LoginForm navigateTarget={navigateTarget} />
+        }
+
+        <p>Eikö sinulla ole vielä vierailija tiliä? Rekisteröidy <a href="/rekisteroidy">täällä</a>.</p>
+      </div>
     </Layout>
   )
 }
