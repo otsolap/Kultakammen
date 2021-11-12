@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { navigate } from 'gatsby'
 import { useIdentityContext } from 'react-netlify-identity-gotrue'
 
@@ -25,10 +25,28 @@ const PrivateContent = ({ as: Comp, rolesAllowed, callbackPath, ...props }) => {
 
 
 const Unauthorized = ({ callbackPath }) => {
+  const identity = useIdentityContext()
+  const [processing, setProcessing] = useState(false)
+
+  const updateRoles = ({ add, remove }) => {
+    setProcessing(true)
+    identity.authorizedFetch('/api/update-role', {
+      method: 'POST',
+      body: JSON.stringify({
+        action: add ? 'add' : 'remove',
+        role: add || remove
+      })
+    })
+      .then(identity.refreshUser)
+      .finally(() => setProcessing(false))
+  }
 
   useEffect(() => {
     callbackPath && navigate('/kirjaudu', { state: { navigateTarget: callbackPath } })
   }, [callbackPath])
+
+
+
 
   return (
     callbackPath
@@ -39,6 +57,21 @@ const Unauthorized = ({ callbackPath }) => {
             <h1 className="px-4 pt-5 text-2xl text-left text-teal-500 font-bold sm:text-3xl">
               Unauthorized
               </h1>
+
+              {identity.user &&
+              <div className="pt-8 flex justify-around">
+                {!identity.user.app_metadata?.roles?.includes('user') &&
+                  <button
+                    className={`bg-blue-500 text-white p-2 m-2 rounded text-m font-bold ${processing && 'opacity-50'}`}
+                    disabled={processing}
+                    onClick={() => updateRoles({ add: 'user' })}
+                  >
+                    Grant me access!
+                  </button>
+                }
+                
+              </div>
+            }
             </div>
         </div>
       </main>
