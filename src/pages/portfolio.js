@@ -19,7 +19,6 @@ export default () => {
 
 const Portfolio = () => {
   const identity = useIdentityContext()
-  console.log(identity);
 
   return (
     <Layout className="portfoli-page">
