@@ -27,10 +27,10 @@ export default ({ location }) => {
 const EmailConfirmation = () => {
   return (
     <>
-      <p className="px-4 mt-8 text-xl text-gray-700 sm:mt-8">
+      <p>
         You're almost there!
       </p>
-      <p className="px-4 mt-8 text-xl text-gray-700 sm:mt-8">
+      <p>
         Please confirm your email and click the link
       </p>
     </>

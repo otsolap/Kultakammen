@@ -33,7 +33,7 @@ export default () => {
           Rekisteröidy
         </h1>
         {identity.user ?
-          <div className="w-full max-w-xs">
+          <div>
             <p>Olet jo sisäänkirjautunut</p>
           </div>
           : <div>
@@ -42,104 +42,104 @@ export default () => {
               onSubmit={handleSubmit(onSubmit)}>
 
               <div className="input-container">
-                <label htmlFor="user_metadata.full_name" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="user_metadata.full_name">
                   Etu- ja sukunimi
                 </label>
                 <input
                   ref={register({ required: true })}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${signingUp && 'disabled'}`}
+                  className={`${signingUp && 'disabled'}`}
                   type="text"
                   placeholder="Etu- ja sukunimi*"
                   name="user_metadata.full_name">
                 </input>
-                {errors.user_metadata?.full_name && <p className="text-red-500 text-xs italic">Etu- ja sukunimi on pakollinen kenttä</p>}
+                {errors.user_metadata?.full_name && <p className="warning">Etu- ja sukunimi on pakollinen kenttä</p>}
               </div>
 
               <div className="input-container">
-                <label htmlFor="user_metadata.phone_number" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="user_metadata.phone_number">
                   Puhelinnumero
                 </label>
                 <input
                   ref={register({ pattern: /^[0-9]{10}$/ })}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${signingUp && 'disabled'}`}
-                  type="text"
+                  className={`${signingUp && 'disabled'}`}
+                  type="tel"
                   placeholder="Puhelinnumero*"
                   name="user_metadata.phone_number">
                 </input>
-                {errors.user_metadata?.phone_number && <p className="text-red-500 text-xs italic">Kaikki yhteen putkeen, esim: 0401234567</p>}
+                {errors.user_metadata?.phone_number && <p className="warning">Kaikki yhteen putkeen, esim: 0401234567</p>}
               </div>
 
               <div className="input-container">
-                <label htmlFor="user_metadata.address.street" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="user_metadata.address.street">
                   Osoite
                 </label>
                 <input
                   ref={register({ required: true })}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${signingUp && 'disabled'}`}
+                  className={`${signingUp && 'disabled'}`}
                   type="text"
                   placeholder="Osoite*"
                   name="user_metadata.address.street">
                 </input>
-                {errors.user_metadata?.address?.street && <p className="text-red-500 text-xs italic">Osoite on pakollinen tieto</p>}
+                {errors.user_metadata?.address?.street && <p className="warning">Osoite on pakollinen tieto</p>}
               </div>
 
               <div className="input-container">
-                <label htmlFor="user_metadata.address.city" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="user_metadata.address.city">
                   Kaupunki
                 </label>
                 <input
                   ref={register({ required: true })}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${signingUp && 'disabled'}`}
+                  className={`${signingUp && 'disabled'}`}
                   type="text"
                   placeholder="Kaupunki*"
                   name="user_metadata.address.city">
                 </input>
-                {errors.user_metadata?.address?.city && <p className="text-red-500 text-xs italic">Kaupunki on pakollinen kenttä</p>}
+                {errors.user_metadata?.address?.city && <p className="warning">Kaupunki on pakollinen kenttä</p>}
               </div>
 
               <div className="input-container">
-                <label htmlFor="user_metadata.address.state" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="user_metadata.address.state">
                   Postitoimipaikka
                 </label>
                 <input
                   ref={register({ required: true })}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${signingUp && 'disabled'}`}
+                  className={`${signingUp && 'disabled'}`}
                   type="text"
                   placeholder="Postitoimipaikka*"
                   name="user_metadata.address.state">
                 </input>
-                {errors.user_metadata?.address?.state && <p className="text-red-500 text-xs italic">Postitoimipaikka</p>}
+                {errors.user_metadata?.address?.state && <p className="warning">Postitoimipaikka</p>}
               </div>
 
               <div className="input-container">
-                <label htmlFor="user_metadata.address.zip" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="user_metadata.address.zip">
                   Postinumero
                 </label>
                 <input
                   ref={register({ required: true })}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${signingUp && 'disabled'}`}
+                  className={`${signingUp && 'disabled'}`}
                   type="text"
                   placeholder="Postinumero*"
                   name="user_metadata.address.zip">
                 </input>
-                {errors.user_metadata?.address?.zip && <p className="text-red-500 text-xs italic">Postinumero on pakollinen tieto</p>}
+                {errors.user_metadata?.address?.zip && <p className="warning">Postinumero on pakollinen tieto</p>}
               </div>
 
               <div className="input-container">
-                <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="email">
                   Sähköposti
                 </label>
                 <input
                   ref={register({ required: true, pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${signingUp && 'disabled'}`}
-                  type="text"
+                  className={`${signingUp && 'disabled'}`}
+                  type="email"
                   placeholder="Sähköposti*"
                   name="email">
                 </input>
-                {errors.email && <p className="text-red-500 text-xs italic">Sähköposti on pakollinen kenttä</p>}
+                {errors.email && <p className="warning">Sähköposti on pakollinen kenttä</p>}
               </div>
               <div className="input-container">
-                <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="password">
                   Salasana
                 </label>
                 <input
@@ -149,10 +149,10 @@ export default () => {
                   type="password"
                   placeholder="Salasana*">
                 </input>
-                {errors.password && <p className="text-red-500 text-xs italic">Salasana on pakollinen kenttä</p>}
+                {errors.password && <p className="warning">Salasana on pakollinen kenttä</p>}
               </div>
 
-              <div className="flex items-center justify-between">
+              <div class="register-btn-container">
                 <button
                   className={`button ${signingUp}`}
                   type="submit">
@@ -161,7 +161,7 @@ export default () => {
               </div>
 
               <div className="pt-2">
-                {formError && <p className="text-red-500 text-xs italic">Jotain meni pieleen.</p>}
+                {formError && <p className="warning">Jotain meni pieleen.</p>}
               </div>
             </form>
           </div>
