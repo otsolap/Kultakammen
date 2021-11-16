@@ -28,10 +28,10 @@ const EmailConfirmation = () => {
   return (
     <>
       <p>
-        You're almost there!
+        Kohta siellä!
       </p>
       <p>
-        Please confirm your email and click the link
+        Vahvista sähköpostisi avaamalla sähköpostistasi löytyvä linkki.
       </p>
     </>
   )

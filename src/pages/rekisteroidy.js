@@ -152,7 +152,7 @@ export default () => {
                 {errors.password && <p className="warning">Salasana on pakollinen kenttä</p>}
               </div>
 
-              <div class="register-btn-container">
+              <div class="netlify-identity-btn-container">
                 <button
                   className={`button ${signingUp}`}
                   type="submit">

@@ -13,7 +13,7 @@ const AuthOverlay = () => {
 
   useEffect(() => {
     if (identity.provisionalUser) {
-      setForceShowOverlay('Please check your email for an account confirmation email!')
+      setForceShowOverlay('Tarkista sähköpostistasi varmistus viesti!')
       const timeoutId = setTimeout(() => setForceShowOverlay(false), 5000)
       return () => clearTimeout(timeoutId)
     }
@@ -24,7 +24,7 @@ const AuthOverlay = () => {
     setFormError()
 
     await identity.completeUrlTokenTwoStep(data)
-      .catch(_ => setFormError('Having an issue.. please try later'))
+      .catch(_ => setFormError('Teknisiä ongelmia... Kokeile myöhemmin uudestaan kiitos.'))
 
     setFormProcessing(false)
   }
@@ -32,8 +32,8 @@ const AuthOverlay = () => {
   return (
     <>
       {(identity.urlToken || forceShowOverlay) &&
-        <div className="w-full h-full fixed block top-0 left-0 bg-gray-200 bg-opacity-75 z-50 flex justify-center items-center">
-          <div className="w-full p-4 max-w-xs opacity-100 bg-white shadow-xl rounded-lg">
+        <div>
+          <div>
 
             {identity.urlToken?.type === "confirmation" &&
               <p>Confirming User...</p>
@@ -60,48 +60,48 @@ const AuthOverlay = () => {
                     <p className="mb-0">Let's complete the rest of your account info</p>
                   </>
                 }
-                <form className="pt-6" onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   {identity.urlToken.type === "invite" &&
-                    <div className="mb-2">
-                      <label htmlFor="user_metadata.full_name" className="block text-gray-700 text-sm font-bold mb-2">
-                        Name
+                    <div className="input-container">
+                      <label htmlFor="user_metadata.full_name">
+                        Etu-j ja sukunimi
                       </label>
                       <input
                         ref={register({ required: true })}
-                        className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${formProcessing && 'opacity-75'}`}
+                        className={`${formProcessing}`}
                         disabled={formProcessing}
                         name="user_metadata.full_name"
                         type="text"
-                        placeholder="Jane Doe">
+                        placeholder="Etu- ja sukunimi">
                       </input>
-                      {errors.password && <p className="text-red-500 text-xs italic">Password is required</p>}
+                      {errors.password && <p className="warning">Salasana on pakollinen kenttä</p>}
                     </div>
                   }
-                  <div className="mb-6">
-                    <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-                      New Password
+                  <div className="input-container">
+                    <label htmlFor="password">
+                     Uusi Salasana
                     </label>
                     <input
                       ref={register({ required: true })}
-                      className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${formProcessing && 'opacity-75'}`}
+                      className={`${formProcessing}`}
                       disabled={formProcessing}
                       name="password"
                       type="password"
-                      placeholder="******************">
+                      placeholder="Salasana*">
                     </input>
-                    {errors.password && <p className="text-red-500 text-xs italic">Password is required</p>}
+                    {errors.password && <p className="warning">Password is required</p>}
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="netlify-identity-btn-container">
                     <button
-                      className={`bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${formProcessing ? 'opacity-75 cursor-not-allowed' : 'hover:bg-blue-700'}`}
+                      className={`button ${formProcessing}`}
                       disabled={formProcessing}
                       type="submit">
-                      Set New Password
+                      Aseta uusi salasana
                 </button>
                   </div>
                   {formError &&
-                    <div className="pt-2">
-                      <p className="text-red-500 text-xs italic">Oops! We're having trouble right now.</p>
+                    <div>
+                      <p className="warning">Öööh. Teknisia ongelmia. Pahoittelut.</p>
                     </div>
                   }
                 </form>

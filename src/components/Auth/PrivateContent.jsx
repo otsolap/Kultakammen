@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { navigate } from 'gatsby'
 import { useIdentityContext } from 'react-netlify-identity-gotrue'
+import Layout from '../../components/layout';
 
 // Component wrapper with optional role-specificity and optional redirect (otherwise
 // just shows the unauthorized message)
@@ -51,30 +52,33 @@ const Unauthorized = ({ callbackPath }) => {
   return (
     callbackPath
       ? <> </>
-      : <main className="max-w-2xl flex-grow mx-auto flex flex-col justify-around">
-        <div className="sm:flex sm:flex-row-reverse sm:items-center">
-          <div className="sm:px-2">
-            <h1 className="px-4 pt-5 text-2xl text-left text-teal-500 font-bold sm:text-3xl">
-              Unauthorized
+      : 
+      <Layout>
+      <main className="netlify-identity-page">
+          <div>
+            <h1>
+              Ei pääsyoikeutta
               </h1>
-
+              <p>Hei! Olen vahvistanut sinun olevasi oikea käyttäjä. Kiitoksia kärsivällisyydestäni.</p>
+              <p> Nyt enää sinun tarvitsee vain lähettää pyyntö painamalla alla olevaa nappia.
+                Sen jälkeen lambda-funktioni antaa sinulle oikeudet nähdä Portfolio-sivun. Kiitos!
+              </p>
               {identity.user &&
-              <div className="pt-8 flex justify-around">
+              <div className="netlify-identity-btn-container">
                 {!identity.user.app_metadata?.roles?.includes('user') &&
                   <button
-                    className={`bg-blue-500 text-white p-2 m-2 rounded text-m font-bold ${processing && 'opacity-50'}`}
+                    className={`button ${processing}`}
                     disabled={processing}
                     onClick={() => updateRoles({ add: 'user' })}
                   >
-                    Grant me access!
+                   Salli minulle pääsy
                   </button>
                 }
-                
               </div>
             }
             </div>
-        </div>
       </main>
+      </Layout>
   )
 }
 

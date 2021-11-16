@@ -53,7 +53,7 @@ export default () => {
                       </input>
                       {errors.email && <p className="warning">Sähköposti on pakollinen kenttä</p>}
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="netlify-identity-btn-container">
                       <button
                         className={`button ${formProcessing}`}
                         type="submit">

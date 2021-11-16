@@ -25,8 +25,8 @@ const Layout = ({ children, className }) => {
     <div className={"primary-container "}>
       <Header>
         <Logo title={siteTitle} />
-        <Navigation />
         <AuthOverlay />
+        <Navigation />
       </Header>
       <main className={"container " + className}>
         {children}
