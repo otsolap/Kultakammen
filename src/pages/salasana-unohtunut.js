@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 import Layout from "../components/layout"
 
-export default () => {
+const ForgotPassword = () => {
   const identity = useIdentityContext()
   const { register, handleSubmit, errors } = useForm()
   const [formProcessing, setFormProcessing] = useState(false)
@@ -70,3 +70,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default ForgotPassword;

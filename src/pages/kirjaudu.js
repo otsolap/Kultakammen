@@ -3,7 +3,7 @@ import { useIdentityContext } from 'react-netlify-identity-gotrue'
 import Layout from "../components/layout"
 import LoginForm from '../components/Auth/LoginForm'
 
-export default ({ location }) => {
+const Login = ({ location }) => {
   const identity = useIdentityContext()
   const navigateTarget = location.state?.navigateTarget || '/'
 
@@ -36,3 +36,5 @@ const EmailConfirmation = () => {
     </>
   )
 }
+
+export default Login;

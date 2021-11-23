@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { navigate } from 'gatsby';
 import Layout from "../components/layout"
 
-export default () => {
+const Register = () => {
   const identity = useIdentityContext()
   const { register, handleSubmit, errors } = useForm()
   const [formError, setFormError] = useState(false)
@@ -170,3 +170,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Register;

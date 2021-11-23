@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation } from "@reach/router"
 
 const Header = ({ children }) => {

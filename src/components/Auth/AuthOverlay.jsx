@@ -52,7 +52,7 @@ const AuthOverlay = () => {
             {(identity.urlToken?.type === "passwordRecovery" || identity.urlToken?.type === "invite") &&
               <>
                 {identity.urlToken.type === "passwordRecovery" &&
-                  <h2>Reset Password</h2>
+                  <h2>Uusi Salasana</h2>
                 }
                 {identity.urlToken.type === "invite" &&
                   <>

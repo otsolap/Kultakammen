@@ -10,7 +10,6 @@ import Contact from '../components/Landing-page/contact';
 
 const Home = () => {
 
-
   return (
     <Layout>
       <SEO />

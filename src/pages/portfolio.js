@@ -6,7 +6,7 @@ import PrivateContent from '../components/Auth/PrivateContent'
 import { useIdentityContext } from 'react-netlify-identity-gotrue'
 
 
-export default () => {
+const PortfolioPage = () => {
   return (
     <PrivateContent
       as={Portfolio}
@@ -213,3 +213,5 @@ const Portfolio = () => {
     </Layout >
   )
 }
+
+export default PortfolioPage;

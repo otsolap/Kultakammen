@@ -1,12 +1,21 @@
 {
   "meta": {
+    "iconimage": "/assets/Avatar_sm.png",
     "title": "Kultakämmen",
-    "titleTemplate": "%s",
+    "titleTemplate": "Web Wizard | Web Development / Design / Analytics & Marketing",
     "description": "Koodaan moderneilla menetelmillä jotta nettisivusi olisivat entistä toimivampia, turvallisempia ja kustannustehokkaampia",
     "siteUrl": "https://kultakammen.fi/",
     "image": "/assets/Banner_v2.png",
-    "linkedInUsername": "https://www.linkedin.com/in/otsolap/"
+    "linkedInUsername": "https://www.linkedin.com/in/otsolap/",
+    "instagram": "@MetsanOtus",
+    "twitter": "@MetsanOtus"
   },
-  "ga": "UA-151881827-3",
-  "gtm": "GTM-WF4F93Z"
+  "footer": {
+    "CTA": "Seuraa minua:",
+    "companyName": "Metsän Otus"
+  },
+  "google": {
+    "ga": "",
+    "gtm": "GTM-TBFDWT8"
+  }
 }

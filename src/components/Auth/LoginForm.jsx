@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { navigate, Link } from 'gatsby';
 
 
-export default function LoginForm({ navigateTarget }) {
+function LoginForm({ navigateTarget }) {
 
   const identity = useIdentityContext()
   const { register, handleSubmit, errors } = useForm()
@@ -91,3 +91,5 @@ export default function LoginForm({ navigateTarget }) {
 
   )
 }
+
+export default LoginForm;

@@ -11,6 +11,14 @@ require('dotenv').config({ path: `./.env.${env}` });
 
 const settings = require("./src/util/site.json")
 
+const netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
+
 module.exports = {
   siteMetadata: settings.meta,
   plugins: [
@@ -22,6 +30,7 @@ module.exports = {
         name: `assets`,
       },
     },
+    netlifyCmsPaths,
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
