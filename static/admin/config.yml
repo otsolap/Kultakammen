@@ -10,75 +10,77 @@ backend:
 
 # Uncomment local_backend when you need to develop in your local
 local_backend: true # run npx netlify-cms-proxy-server for local testing
-
 media_folder: "static/assets" 
 public_folder: "/assets" 
 
 collections:
   - name: settings
-  - label: Yleiset
-  - file: "/src/util.site.json"
-fields:
-          - label: meta
-            name: meta
-            widget: object
-            fields:
-              - widget: string
-                name: title
-                label: Sivun otsikko
-                required: true
-              - widget: string
-                name: titleTemplate
-                label: Otsikon template
-                default: "%s"
-                required: true
-              - widget: string
-                name: siteUrl
-                label: Sivun URL
-                required: true
-              - widget: text
-                name: description
-                label: Kuvaus
-                default: ''
-                required: false
-              - widget: image
-                name: image
-                label: Kuva
-                default: '/assets/MetsanOtusLogo_Cover.png'
-              - widget: image
-                name: iconimage
-                label: favicon
-              - widget: string
-                name: twitterUsername
-                label: Twitter
-                required: false
+    label: Asetukset
+    files: 
+    - name: general
+      label: Yleiset
+      file: "/src/util/site.json"
+      fields:
+            - label: meta
+              name: meta
+              widget: object
+              fields:
+                - widget: string
+                  name: title
+                  label: Sivun otsikko
+                  required: true
+                - widget: string
+                  name: titleTemplate
+                  label: Otsikon template
+                  default: "%s"
+                  required: true
+                - widget: string
+                  name: siteUrl
+                  label: Sivun URL
+                  required: true
+                - widget: text
+                  name: description
+                  label: Kuvaus
+                  default: ''
+                  required: false
+                - widget: image
+                  name: image
+                  label: Kuva
+                  default: '/assets/MetsanOtusLogo_Cover.png'
+                - widget: image
+                  name: iconimage
+                  label: favicon
+                - widget: string
+                  name: twitterUsername
+                  label: Twitter
+                  required: false
 
-          - label: "Google"
-            name: google
-            file: "src/util/site.json"
-            widget: object
-            fields:
-              - widget: string
-                name: analytics
-                label: Google Analytics
-                hint: "laita joko Google Analytics koodi tähän tai GTM. Älä molempia!"
-                required: false
-              - widget: string
-                name: gtm
-                label: Google Tag Manager
-                hint: "laita joko GTM koodi tähän tai GA. Älä molempia!"
-                required: false
-                
-          - label: "Footer"
-            name: footer
-            file: "src/util/site.json"
-            widget: "object"
-            fields: 
-              - name: "CTA"
-                label: "CTA Someikonoiden yllä"
-                widget: "string"
-                required: true
-              - name: "companyName"
-                label: "Yrityksen nimi"
-                widget: "string"
-                required: true
+            - label: "Google"
+              name: google
+              file: "src/util/site.json"
+              widget: object
+              fields:
+                - widget: string
+                  name: analytics
+                  label: Google Analytics
+                  hint: "laita joko Google Analytics koodi tähän tai GTM. Älä molempia!"
+                  required: false
+                - widget: string
+                  name: gtm
+                  label: Google Tag Manager
+                  hint: "laita joko GTM koodi tähän tai GA. Älä molempia!"
+                  required: false
+                  
+            - label: "Footer"
+              name: footer
+              file: "src/util/site.json"
+              widget: "object"
+              fields: 
+                - name: "CTA"
+                  label: "CTA Someikonoiden yllä"
+                  widget: "string"
+                  required: true
+                - name: "companyName"
+                  label: "Yrityksen nimi"
+                  widget: "string"
+                  required: true

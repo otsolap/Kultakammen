@@ -7,10 +7,6 @@
 let env = process.env.NODE_ENV || 'development';
 require('dotenv').config({ path: `./.env.${env}` });
 
-
-
-const settings = require("./src/util/site.json")
-
 const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
@@ -18,6 +14,7 @@ const netlifyCmsPaths = {
   },
 }
 
+const settings = require("./src/util/site.json")
 
 module.exports = {
   siteMetadata: settings.meta,
@@ -30,7 +27,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    netlifyCmsPaths,
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
@@ -38,6 +34,8 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+    netlifyCmsPaths,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
