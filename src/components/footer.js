@@ -15,11 +15,17 @@ query FooterQuery {
     siteMetadata {
       footer_company_name
       footer_cta
+      footer_company_id
     }
   }
 }
 `
+/*
+ "CTA": "Seuraa minua:",
+    "companyName": "Kultakämmen",
+    "companyID": "3162360-6"
 
+*/
 
 const Footer = () => {
 
@@ -28,47 +34,47 @@ const Footer = () => {
     footer_company_name,
     footer_cta,
     footer_company_id
-  } = site.
+  } = site.siteMetadata
 
-    return(
-      <footer className="site-footer">
-        <div className="container">
-          <div className="footer-social">
-            <div className="footer-social-text"><p>{footer_cta}</p></div>
-            <div className="footer-social-icons">
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/otsolap/"
-                rel="noopener noreferrer"
-              >
-                <span className="icon-container" id="linkedin-icon">
-                  <TiSocialLinkedin className="footer-social-icon" />
-                </span>
-              </a>
-              <a
-                target="_blank"
-                href="https://github.com/otsolap"
-                rel="noopener noreferrer"
-              >
-                <span className="icon-container" id="github-icon">
-                  <TiSocialGithub className="footer-social-icon" />
-                </span>
-              </a>
-              <a
-                target="_blank"
-                href="https://stackoverflow.com/users/13285496/kultak%c3%a4mmen/"
-                rel="noopener noreferrer"
-              >
-                <span className="icon-container" id="stackoverflow-icon">
-                  <RiStackOverflowFill className="footer-social-icon" />
-                </span>
-              </a>
-            </div>
+  return (
+    <footer className="site-footer">
+      <div className="container">
+        <div className="footer-social">
+          <div className="footer-social-text"><p>{footer_cta}</p></div>
+          <div className="footer-social-icons">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/otsolap/"
+              rel="noopener noreferrer"
+            >
+              <span className="icon-container" id="linkedin-icon">
+                <TiSocialLinkedin className="footer-social-icon" />
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/otsolap"
+              rel="noopener noreferrer"
+            >
+              <span className="icon-container" id="github-icon">
+                <TiSocialGithub className="footer-social-icon" />
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://stackoverflow.com/users/13285496/kultak%c3%a4mmen/"
+              rel="noopener noreferrer"
+            >
+              <span className="icon-container" id="stackoverflow-icon">
+                <RiStackOverflowFill className="footer-social-icon" />
+              </span>
+            </a>
           </div>
-          <p>{footer_company_name}©{new Date().getFullYear()} | Y-tunnus:{footer_company_id}</p>
         </div>
-      </footer>
-    )
+        <p>{footer_company_name}©{new Date().getFullYear()} | Y-tunnus:{footer_company_id}</p>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer

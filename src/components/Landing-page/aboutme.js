@@ -1,35 +1,75 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { Component } from "react"
+import { Link, StaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const AboutMe = () => {
-  return (
-    <section id="aboutMe">
-      <div className="home-banner grids col-1 sm-2">
-        <div>
-          <h1 className="title">Kultakämmen</h1>
-          <div className="tag-container">
-            <p className="tagline">Otso Lappalainen</p>
-            <p className="tagline">Full Stack web-devaaja</p>
+class AboutMeTemplate extends Component {
+  render() {
+    const { data } = this.props
+    const { frontmatter } = data.markdownRemark
+    return (
+      <section id="aboutMe">
+        <div className="home-banner grids col-1 sm-2">
+          <div>
+            <h1 className="title">{frontmatter.title}</h1>
+            <div className="tag-container">
+              <p className="tagline">{frontmatter.subtitle}</p>
+              <p className="tagline">{frontmatter.profession}</p>
+            </div>
+            <p>
+              {frontmatter.salesPitch.description}
+            </p>
+            <Link to="#yhteydenotto" className="button tutustu"><span> {frontmatter.salesPitch.cta.CtaText}</span></Link>
           </div>
-          <p>
-            Koodaan verkkokauppoja <a rel="noopener noreferrer" target="_blank" href="https://eeco.fi/">Eecossa</a> ja tubetan <a rel="noopener noreferrer" target="_blank" href="https://www.metsanotus.fi/">Metsän Otus</a> kanavassa. Olen Koodarivelho, jonka sydän pumppaa intoa verkkosivuihin, kasvuhakkerointiin ja asiakaspolkujen kehitykseen. </p>
-          <p>
-            Kiinnostuksen kohteenani ovat verkkosivut, joissa pääsen työskentelemään asiakaskokemuksien parissa sekä soveltamaan asiakaspoluista saatua web-analytiikka dataa.</p>
-          <p>Jos haluat nähdä CV:ni voit kirjautua <Link to="/portfolio">tästä</Link> sisään portfoliosivulleni.</p>
-          <Link to="#yhteydenotto" className="button tutustu"><span>Palkkaa minut</span></Link>
+          <div>
+            <StaticImage
+              src="../../../static/assets/OtsoEeco.png"
+              alt="Kultakämmen profiilikuva"
+              className="featured-image portfolio"
+              objectFit="cover"
+            />
+          </div>
         </div>
-        <div>
-          <StaticImage
-            src="../../../static/assets/OtsoEeco.png"
-            alt="Kultakämmen profiilikuva"
-            className="featured-image portfolio"
-            objectFit="cover"
-          />
-        </div>
-      </div>
-    </section>
-  )
+      </section>
+    )
+  }
 }
 
-export default AboutMe;
+export default function AboutMe() {
+  return (
+    <StaticQuery
+      query={graphql`
+      query AboutMeQuery {
+      allMarkDownRemark (
+        filter: { frontmatter: { templateKey: { eq: "index-page" } } } 
+      ) {
+        edges {
+          node {
+            frontmatter {
+              templateKey
+              title
+              subtitle
+              profession
+              featuredImage {
+                childImageSharp {
+                  gatsbyImageData(
+
+                  )
+                }
+              }
+              salesPitch {
+                description
+                cta {
+                  ctaText
+                  ctaLink
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    `}
+      render={(data) => <AboutMeTemplate data={data} />}
+    />
+  );
+}
