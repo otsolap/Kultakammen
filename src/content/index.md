@@ -30,7 +30,7 @@ Eeco:
     Työkaluvyöhöni kuuluu:React, JavaScript, Php, Sass, Boostrap, Wordpress, WooCommerce, räätälöidyt teemat, WP-plugarit, Google Analytics ja Tag Manager.
   featuredImageTwo: /assets/Eeco-New-Clients.jpg
 
-  Servicices:
+  Services:
     webDescription:
     Koodaan moderneille menetelmillä, jotta nettisivusi olisivat entistä toimivampia, turvallisempia ja kustannustehokkaampia. Tehdään sinulle uudet ja laadukkaat nettisivut parhailla menetelmillä.
     webFeaturedImage: /assets/Kultakammen-New-Website.jpg
@@ -39,3 +39,7 @@ Eeco:
     analyticsFeaturedImage: /assets/Kultakammen-Google.jpg
     analyticsPrice: 999€
  
+  Footer:
+    CTA: Seuraa minua
+    companyName: Kultakämmen
+    companyID: 3162360-6

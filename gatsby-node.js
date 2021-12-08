@@ -12,9 +12,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       edges {
         node {
           id
-          fields {
-            slug
-          }
           frontmatter {
             templateKey
           }
@@ -37,7 +34,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({ node, getNode, basepath: `sivut` })
     createNodeField({
       node,
-      name: `slug`,
+      name: `templateKey`,
       value: slug,
     })
   }

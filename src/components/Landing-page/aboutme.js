@@ -52,7 +52,9 @@ export default function AboutMe() {
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-
+                    layout: CONSTRAINED
+                    width: 690
+                    height: 520
                   )
                 }
               }

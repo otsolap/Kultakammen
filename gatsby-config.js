@@ -17,19 +17,7 @@ const netlifyCmsPaths = {
 const settings = require("./src/util/site.json")
 
 module.exports = {
-  siteMetadata: {
-    title: settings.meta.title,
-    description: settings.meta.description,
-    siteUrl: settings.meta.siteUrl,
-    image: settings.meta.image,
-    iconimage: settings.meta.iconimage,
-    youtube: settings.meta.youtube,
-    twitter: settings.meta.twitter,
-    instagram: settings.meta.instagram,
-    footer_cta: settings.footer.CTA,
-    footer_company_name: settings.footer.companyName,
-    footer_company_id: settings.footer.companyID
-  },
+  siteMetadata: settings.meta,
   plugins: [
     // Assets => kuvat.
     {
