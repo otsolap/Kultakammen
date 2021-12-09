@@ -1,11 +1,13 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import careerCMS from '../../util/frontend.json'
 
+const { career } = careerCMS
 
 const Eeco = () => {
   return (
     <section id="eeco">
-      <h2 className="text-center gold">Verkkokauppojen haamukuiskaaja</h2>
+      <h2 className="text-center gold">{career.title}</h2>
       <div className="eeco-dev grids col-1 sm-2">
         <div className="eeco-img">
           <StaticImage
@@ -17,23 +19,13 @@ const Eeco = () => {
           />
         </div>
         <div className="eeco-description-otso">
-          <p>
-            Rakennan uusia verkkokauppoja ja päivitän nykyisiä mahtavan tiimin parissa. Normiarkeeni kuuluu niin uusien sivujen luonti sekä nykyisten kaunistaminen. Nämä toteutukset koostaan <a rel="noopener noreferrer" target="_blank" href="https://eeco.fi/woocommerce-verkkokauppa/">WooCommercen</a> päälle. Työtehtäviini kuuluu myös erilaisten lisäosien rakentaminen tai yhteensovittaminen asiakkaiden verkkokauppoihin.
-          </p>
-          <p>
-            Ylläpidän ja rakennan uusia ominaisuuksia nykyisille asiakkaille. Olen esimerkiksi kehittänyt verkkovalmennusalustaa, parantanut kaupan toiminnallisuuksia sekä kehittänyt Google Analytics-seurantaa.
-          </p>
-
+          {career.DescriptionOne}
         </div>
       </div>
       <div className="client-project grids col-1 sm-2">
         <div className="eeco-description">
-          <h4>Pintaa syvemmälle asiakaspolun ymmärtämisessä</h4>
-          <p>
-            Eecon palveluihin kuuluu myös asiakkaiden verkkokäyttäytymisen seuranta. Olen lyhyessä ajassa päässyt kehittämään ja päivittämään Eecon Google Analytics sekä Tag Manager koodipohjaa. Aiemmassa elämässäni olin digimarkkinoija, joten Googlen palvelut ja parhaat käytännöt ovat jo minulle entuudestaan tuttuja.
-          </p>
-          <p> <strong>Työkaluvyöhöni kuuluu</strong>: <em>React, JavaScript, Php, Sass, Boostrap, Wordpress, WooCommerce,   räätälöidyt teemat, WP-plugarit, Google Analytics ja Tag Manager.</em>
-          </p>
+          <h4>{career.subtitle}</h4>
+          {career.DescriptionTwo}
         </div>
 
         <div className="eeco-img">

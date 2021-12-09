@@ -1,77 +1,36 @@
-import React, { Component } from "react"
-import { Link, StaticQuery } from "gatsby"
+import React from "react"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import aboutMeCMS from "../../util/frontend.json";
 
-class AboutMeTemplate extends Component {
-  render() {
-    const { data } = this.props
-    const { frontmatter } = data.markdownRemark
-    return (
-      <section id="aboutMe">
-        <div className="home-banner grids col-1 sm-2">
-          <div>
-            <h1 className="title">{frontmatter.title}</h1>
-            <div className="tag-container">
-              <p className="tagline">{frontmatter.subtitle}</p>
-              <p className="tagline">{frontmatter.profession}</p>
-            </div>
-            <p>
-              {frontmatter.salesPitch.description}
-            </p>
-            <Link to="#yhteydenotto" className="button tutustu"><span> {frontmatter.salesPitch.cta.CtaText}</span></Link>
-          </div>
-          <div>
-            <StaticImage
-              src="../../../static/assets/OtsoEeco.png"
-              alt="Kultakämmen profiilikuva"
-              className="featured-image portfolio"
-              objectFit="cover"
-            />
-          </div>
-        </div>
-      </section>
-    )
-  }
-}
+const { aboutMe } = aboutMeCMS
 
-export default function AboutMe() {
+const AboutMe = () => {
   return (
-    <StaticQuery
-      query={graphql`
-      query AboutMeQuery {
-      allMarkDownRemark (
-        filter: { frontmatter: { templateKey: { eq: "index-page" } } } 
-      ) {
-        edges {
-          node {
-            frontmatter {
-              templateKey
-              title
-              subtitle
-              profession
-              featuredImage {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 690
-                    height: 520
-                  )
-                }
-              }
-              salesPitch {
-                description
-                cta {
-                  ctaText
-                  ctaLink
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    `}
-      render={(data) => <AboutMeTemplate data={data} />}
-    />
-  );
+    <section id="aboutMe">
+      <div className="home-banner grids col-1 sm-2">
+        <div>
+          <h1 className="title">{aboutMe.title}</h1>
+          <div className="tag-container">
+            <p className="tagline">{aboutMe.subtitle}</p>
+            <p className="tagline">{aboutMe.profession}</p>
+          </div>
+          <p>
+            {aboutMe.salesPitch}</p>
+          <p>Jos haluat nähdä CV:ni voit kirjautua <Link to="/portfolio">tästä</Link> sisään portfoliosivulleni.</p>
+          <Link to={aboutMe.CtaLink} className="button tutustu"><span>{aboutMe.CTA}t</span></Link>
+        </div>
+        <div>
+          <StaticImage
+            src="../../../static/assets/OtsoEeco.png"
+            alt="Kultakämmen profiilikuva"
+            className="featured-image portfolio"
+            objectFit="cover"
+          />
+        </div>
+      </div>
+    </section>
+  )
 }
+
+export default AboutMe;

@@ -1,12 +1,14 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import servicesCMS from '../../util/frontend.json'
 
+const { services } = servicesCMS
 
 const Services = () => {
   return (
     <section id="services">
       <div className="wrapper">
-        <h2 className="gold text-center">Palveluni</h2>
+        <h2 className="gold text-center">{services.title}</h2>
         <p className="text-center"></p>
         <div className="grids col-1 sm-2">
           <div className="service-card">
@@ -18,9 +20,9 @@ const Services = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="title">Verkkosivut</h3>
-            <p>Koodaan moderneille menetelmillä, jotta nettisivusi olisivat entistä toimivampia, turvallisempia ja kustannustehokkaampia. Tehdään sinulle uudet ja laadukkaat nettisivut parhailla menetelmillä.</p>
-            <span className="price"><strong>Lähtöhinta:</strong> 999€</span>
+            <h3 className="title">{services.webTitle}</h3>
+            <p>{services.webDescription}</p>
+            <span className="price"><strong>Lähtöhinta:</strong>{services.webPrice}</span>
           </div>
           <div className="service-card">
             <div className="service-img">
@@ -31,9 +33,8 @@ const Services = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="title">Google Markkinointi: SEO & SEM</h3>
-            <p>Suunnittelen ja luon Google Ads tilin, jotta saat parempaa näkyvyyttä kustannustehokkaammin. Käyn myös läpi nettisivun hakukoneoptimoinnin parhaat menetelmät.</p>
-            <span className="price"><strong>Lähtöhinta:</strong> 999€</span>
+            <h3 className="title">{services.analyticsDescription}</h3>
+            <span className="price"><strong>Lähtöhinta:</strong> {services.analyticsPrice}</span>
           </div>
         </div>
       </div>
