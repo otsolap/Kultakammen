@@ -27,6 +27,14 @@ module.exports = {
         name: `assets`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `util`,
+        path: `${__dirname}/src/util/`,
+      },
+    },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {

@@ -1,10 +1,39 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import servicesCMS from '../../util/frontend.json'
 
-const { services } = servicesCMS
 
 const Services = () => {
+
+  const data = useStaticQuery(graphql`
+  query ServicesQuery {
+    portfolioJson {
+      services {
+        analyticsDescription
+        analyticsPrice
+        title
+        webDescription
+        webPrice
+        webTitle
+        analyticsFeaturedImage {
+          childrenImageSharp {
+            gatsbyImageData(
+              layout: CONSTRAINED,
+            width: 585
+            height: 439)
+          }
+        }
+      }
+    }
+  }  
+  `)
+
+  const { services } = data.portfolioJson
+
+
+
+
+
   return (
     <section id="services">
       <div className="wrapper">

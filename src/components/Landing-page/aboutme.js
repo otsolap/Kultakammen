@@ -1,11 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import aboutMeCMS from "../../util/frontend.json";
-
-const { aboutMe } = aboutMeCMS
 
 const AboutMe = () => {
+  const data = useStaticQuery(graphql`
+  query aboutMeQuery {
+    portfolioJson {
+      aboutMe {
+        CTA
+        CtaLink
+        profession
+        salesPitch
+        title
+        subtitle
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(
+              layout: CONSTRAINED, 
+              width: 585
+              height: 439
+              )
+          }
+        }
+      }
+    }
+  }
+  
+  `)
+
+  const { aboutMe } = data.portfolioJson
+
+
   return (
     <section id="aboutMe">
       <div className="home-banner grids col-1 sm-2">
@@ -22,7 +47,7 @@ const AboutMe = () => {
         </div>
         <div>
           <StaticImage
-            src="../../../static/assets/OtsoEeco.png"
+            src={aboutMe.featuredImage}
             alt="Kultakämmen profiilikuva"
             className="featured-image portfolio"
             objectFit="cover"

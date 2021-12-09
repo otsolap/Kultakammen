@@ -1,10 +1,30 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import careerCMS from '../../util/frontend.json'
-
-const { career } = careerCMS
 
 const Eeco = () => {
+
+  const data = useStaticQuery(graphql`
+  query CareerQuery {
+    portfolioJson {
+      career {
+        DescriptionOne
+        DescriptionTwo
+        subtitle
+        title
+        featuredImageOne {
+          childrenImageSharp {
+            gatsbyImageData(height: 439, width: 585, layout: CONSTRAINED)
+          }
+        }
+      }
+    }
+  }
+  `)
+
+  const { career } = data.portfolioJson
+
+
   return (
     <section id="eeco">
       <h2 className="text-center gold">{career.title}</h2>
