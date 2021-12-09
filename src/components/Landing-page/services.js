@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 
 const Services = () => {
@@ -18,7 +18,7 @@ const Services = () => {
         analyticsFeaturedImage {
           childrenImageSharp {
             gatsbyImageData(
-              layout: CONSTRAINED,
+            layout: CONSTRAINED,
             width: 585
             height: 439)
           }
@@ -30,10 +30,6 @@ const Services = () => {
 
   const { services } = data.portfolioJson
 
-
-
-
-
   return (
     <section id="services">
       <div className="wrapper">
@@ -42,8 +38,8 @@ const Services = () => {
         <div className="grids col-1 sm-2">
           <div className="service-card">
             <div className="service-img">
-              <StaticImage
-                src="../../../static/assets/Kultakammen-New-Website.jpg"
+              <GatsbyImage
+                src={services.analyticsFeaturedImage}
                 alt="Kultakämmen palvelut"
                 className="featured-image"
                 objectFit="cover"
@@ -55,8 +51,8 @@ const Services = () => {
           </div>
           <div className="service-card">
             <div className="service-img">
-              <StaticImage
-                src="../../../static/assets/Kultakammen-Google.jpg"
+              <GatsbyImage
+                src={services.analyticsFeaturedImage}
                 alt="Kultakämmen palvelut"
                 className="featured-image"
                 objectFit="cover"

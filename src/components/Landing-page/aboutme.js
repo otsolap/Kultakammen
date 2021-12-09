@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const AboutMe = () => {
   const data = useStaticQuery(graphql`
@@ -46,7 +46,7 @@ const AboutMe = () => {
           <Link to={aboutMe.CtaLink} className="button tutustu"><span>{aboutMe.CTA}t</span></Link>
         </div>
         <div>
-          <StaticImage
+          <GatsbyImage
             src={aboutMe.featuredImage}
             alt="Kultakämmen profiilikuva"
             className="featured-image portfolio"

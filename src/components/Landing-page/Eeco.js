@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Eeco = () => {
 
@@ -30,8 +30,8 @@ const Eeco = () => {
       <h2 className="text-center gold">{career.title}</h2>
       <div className="eeco-dev grids col-1 sm-2">
         <div className="eeco-img">
-          <StaticImage
-            src="../../../static/assets/Eeco.png"
+          <GatsbyImage
+            src={career.featuredImageOne}
             alt="Kultakämmen profiilikuva"
             className="featured-image"
             objectFit="cover"
@@ -49,8 +49,8 @@ const Eeco = () => {
         </div>
 
         <div className="eeco-img">
-          <StaticImage
-            src="../../../static/assets/Eeco-New-Clients.jpg"
+          <GatsbyImage
+            src={career.featuredImageOne}
             alt="Kultakämmen profiilikuva"
             className="featured-image"
             objectFit="cover"
