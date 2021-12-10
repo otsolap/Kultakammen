@@ -13,18 +13,17 @@ const Services = () => {
           analyticsDescription
           analyticsPrice
           analyticsTitle
-           analyticsFeaturedImage {
-            childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, width: 585, height: 439)
-            }
-          }
-          title
           webDescription
           webPrice
           webTitle
-            webFeaturedImage {
+          analyticsFeaturedImage {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, width: 585, height: 439)
+              gatsbyImageData(height: 439, width: 585, layout: CONSTRAINED)
+            }
+          }
+         webFeaturedImage {
+            childImageSharp {
+              gatsbyImageData(height: 439, width: 585, layout: CONSTRAINED)
             }
           }
         }
@@ -33,14 +32,16 @@ const Services = () => {
   }  
   `)
 
-  const { services } = data.portfolioJson
-  const webImage = services.webFeaturedImage
+  const { services } = data.allUtilJson.nodes[0, 1]
+
+  const ImageOne = services.webFeaturedImage
     ? services.webFeaturedImage.childImageSharp.gatsbyImageData
     : ""
 
-  const analyticsImage = services.analyticsFeaturedImage
+  const ImageTwo = services.analyticsFeaturedImage
     ? services.analyticsFeaturedImage.childImageSharp.gatsbyImageData
     : ""
+
 
   return (
     <section id="services">
@@ -51,8 +52,8 @@ const Services = () => {
           <div className="service-card">
             <div className="service-img">
               <GatsbyImage
-                image={webImage}
-                alt="Kultakämmen palvelut"
+                image={ImageOne}
+                alt={services.webTitle}
                 className="featured-image"
                 objectFit="cover"
               />
@@ -64,8 +65,8 @@ const Services = () => {
           <div className="service-card">
             <div className="service-img">
               <GatsbyImage
-                image={analyticsImage}
-                alt="Kultakämmen palvelut"
+                image={ImageTwo}
+                alt={services.analyticsTitle}
                 className="featured-image"
                 objectFit="cover"
               />

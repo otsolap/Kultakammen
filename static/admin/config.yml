@@ -37,8 +37,8 @@ collections:
             label: Kuva
             default: "/assets/OtsoEeco.png"
             required: true
-          - widget: string
-            name: salesPitch
+          - widget: markdown
+            name: body
             label: Myyntipuhe
             required: true
           - widget: string
@@ -63,13 +63,13 @@ collections:
               default: "/assets/Eeco.png"
             - name: DescriptionOne
               label: Kuvaus työtehtävästä
-              widget: string
+              widget: text
             - name: subtitle
               label: väliotsikko
               widget: string
             - name: DescriptionTwo
               label: Kuvaus työtehtävästä
-              widget: string
+              widget: text
             - name: ToolKit
             - name: "featuredImageTwo"
               widget: image
@@ -87,7 +87,7 @@ collections:
               widget: string
             - name: "webDescription"
               label: "Kuvaus webpalvelusta"
-              widdget: string
+              widdget: text
             - name: webFeaturedImage
               widget: image
               label: Kuva
@@ -100,7 +100,7 @@ collections:
               widget: string
             - name: "analyticsDescription"
               label: "Kuvaus analytiikka-palvelusta"
-              widdget: string
+              widdget: text
             - name: analyticsFeaturedImage
               widget: image
               label: Kuva

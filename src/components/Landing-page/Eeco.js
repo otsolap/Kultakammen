@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const Eeco = () => {
-
   const data = useStaticQuery(graphql`
   query CareerQuery {
     allUtilJson {
@@ -16,18 +15,12 @@ const Eeco = () => {
           title
           featuredImageOne {
             childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED, 
-                width: 585, 
-                height: 439)
+              gatsbyImageData(height: 145, width: 585, layout: CONSTRAINED)
             }
           }
           featuredImageTwo {
             childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED, 
-                width: 585, 
-                height: 439)
+              gatsbyImageData(height: 439, width: 585, layout: CONSTRAINED)
             }
           }
         }
@@ -36,7 +29,9 @@ const Eeco = () => {
   }  
   `)
 
-  const { career } = data.portfolioJson
+  const { career } = data.allUtilJson.nodes[0, 1]
+
+
   const ImageOne = career.featuredImageOne
     ? career.featuredImageOne.childImageSharp.gatsbyImageData
     : ""
@@ -52,10 +47,9 @@ const Eeco = () => {
         <div className="eeco-img">
           <GatsbyImage
             image={ImageOne}
-            alt="Kultakämmen profiilikuva"
+            alt={career.title}
             className="featured-image"
             objectFit="cover"
-
           />
         </div>
         <div className="eeco-description-otso">
@@ -66,14 +60,13 @@ const Eeco = () => {
         <div className="eeco-description">
           <h4>{career.subtitle}</h4>
           {career.DescriptionTwo}
-          <strong>Työkaluvyöhöni kuuluu:</strong>
-          {career.ToolKit}
+          <strong className="toolkit-txt">Työkaluvyöhöni kuuluu:</strong> {career.ToolKit}
         </div>
 
         <div className="eeco-img">
           <GatsbyImage
             image={ImageTwo}
-            alt="Kultakämmen profiilikuva"
+            alt={career.subtitle}
             className="featured-image"
             objectFit="cover"
           />

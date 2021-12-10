@@ -13,20 +13,19 @@ const Footer = () => {
   const data = useStaticQuery(graphql`
   query FooterQuery {
     allUtilJson {
-      edges {
-        node {
-          footer {
-            CTA
-            companyID
-            companyName
-          }
+      nodes {
+        footer {
+          CTA
+          companyID
+          companyName
         }
       }
     }
-  }   
+  }
+  
   `)
 
-  const { footer } = data.portfolioJson
+  const { footer } = data.allUtilJson.nodes[0, 1]
 
   return (
     <footer className="site-footer">
