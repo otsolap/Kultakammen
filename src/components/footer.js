@@ -12,14 +12,18 @@ import {
 const Footer = () => {
   const data = useStaticQuery(graphql`
   query FooterQuery {
-    portfolioJson {
-      footer {
-        CTA
-        companyID
-        companyName
+    allUtilJson {
+      edges {
+        node {
+          footer {
+            CTA
+            companyID
+            companyName
+          }
+        }
       }
     }
-  }  
+  }   
   `)
 
   const { footer } = data.portfolioJson

@@ -14,6 +14,116 @@ media_folder: "static/assets"
 public_folder: "/assets" 
 
 collections:
+  - name: landingpage
+    label: Landing Page
+    files:
+    - name: portfolio
+      label: Portfolio
+      file: "src/util/portfolio.json"
+      fields:
+        - name: aboutMe
+          label: aboutMe
+          widget: object
+          fields:
+          - widget: string
+            name: title
+            label: Otsikko
+            required: true
+          - widget: string
+            name: subtitle
+            required: true
+          - widget: image
+            name: featuredImage
+            label: Kuva
+            default: "/assets/OtsoEeco.png"
+            required: true
+          - widget: string
+            name: salesPitch
+            label: Myyntipuhe
+            required: true
+          - widget: string
+            name: CTA
+            label: CTA
+            required: true
+          - widget: string
+            name: CtaLink
+            label: CTA:n Linkki
+            required: true
+        - name: career
+          label: "Ura"
+          widget: "object"
+          fields:
+            - name: "title"
+              widget: string
+              label: 'Osion otsikko'
+              required: true
+            - name: "featuredImageOne"
+              widget: image
+              label: Kuva
+              default: "/assets/Eeco.png"
+            - name: DescriptionOne
+              label: Kuvaus työtehtävästä
+              widget: string
+            - name: subtitle
+              label: väliotsikko
+              widget: string
+            - name: DescriptionTwo
+              label: Kuvaus työtehtävästä
+              widget: string
+            - name: ToolKit
+            - name: "featuredImageTwo"
+              widget: image
+              label: Kuva
+              default: "/assets/Eeco-New-Clients.jpg"
+        - name: "services"
+          label: "Palvelut"
+          widget: "object"
+          fields:
+            - name: "title"
+              label: "Osion otsikko"
+              widget: string
+            - name: "webTitle"
+              label: "Otsikko devauspalveluun"
+              widget: string
+            - name: "webDescription"
+              label: "Kuvaus webpalvelusta"
+              widdget: string
+            - name: webFeaturedImage
+              widget: image
+              label: Kuva
+              default: "/assets/Kultakammen-New-Website.jpg"
+            - name: webPrice
+              widget: string
+              label: "Webdevaus hinta"
+            - name: "analyticsTitle"
+              label: "Otsikko devauspalveluun"
+              widget: string
+            - name: "analyticsDescription"
+              label: "Kuvaus analytiikka-palvelusta"
+              widdget: string
+            - name: analyticsFeaturedImage
+              widget: image
+              label: Kuva
+              default: "/assets/Kultakammen-Google.jpg"
+            - name: analyticsPrice
+              widget: string
+              label: "analytiikka-palvelun hinta"
+        - name: footer
+          label: "Footer"
+          widget: "object"
+          fields: 
+            - name: "CTA"
+              label: "CTA Someikonoiden yllä"
+              widget: "string"
+              required: true
+            - name: "companyName"
+              label: "Yrityksen nimi"
+              widget: "string"
+              required: true
+            - name: "companyID"
+              label: "Yrityksen y-tunnus"
+              widget: "string"
+              required: true
   - name: settings
     label: Asetukset
     files: 
@@ -70,17 +180,3 @@ collections:
                   label: Google Tag Manager
                   hint: "laita joko GTM koodi tähän tai GA. Älä molempia!"
                   required: false
-                  
-            - label: "Footer"
-              name: footer
-              file: "src/util/site.json"
-              widget: "object"
-              fields: 
-                - name: "CTA"
-                  label: "CTA Someikonoiden yllä"
-                  widget: "string"
-                  required: true
-                - name: "companyName"
-                  label: "Yrityksen nimi"
-                  widget: "string"
-                  required: true

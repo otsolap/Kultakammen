@@ -7,20 +7,25 @@ const Services = () => {
 
   const data = useStaticQuery(graphql`
   query ServicesQuery {
-    portfolioJson {
-      services {
-        analyticsDescription
-        analyticsPrice
-        title
-        webDescription
-        webPrice
-        webTitle
-        analyticsFeaturedImage {
-          childrenImageSharp {
-            gatsbyImageData(
-            layout: CONSTRAINED,
-            width: 585
-            height: 439)
+    allUtilJson {
+      nodes {
+        services {
+          analyticsDescription
+          analyticsPrice
+          analyticsTitle
+           analyticsFeaturedImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, width: 585, height: 439)
+            }
+          }
+          title
+          webDescription
+          webPrice
+          webTitle
+            webFeaturedImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, width: 585, height: 439)
+            }
           }
         }
       }
@@ -29,6 +34,13 @@ const Services = () => {
   `)
 
   const { services } = data.portfolioJson
+  const webImage = services.webFeaturedImage
+    ? services.webFeaturedImage.childImageSharp.gatsbyImageData
+    : ""
+
+  const analyticsImage = services.analyticsFeaturedImage
+    ? services.analyticsFeaturedImage.childImageSharp.gatsbyImageData
+    : ""
 
   return (
     <section id="services">
@@ -39,7 +51,7 @@ const Services = () => {
           <div className="service-card">
             <div className="service-img">
               <GatsbyImage
-                src={services.analyticsFeaturedImage}
+                image={webImage}
                 alt="Kultakämmen palvelut"
                 className="featured-image"
                 objectFit="cover"
@@ -52,13 +64,14 @@ const Services = () => {
           <div className="service-card">
             <div className="service-img">
               <GatsbyImage
-                src={services.analyticsFeaturedImage}
+                image={analyticsImage}
                 alt="Kultakämmen palvelut"
                 className="featured-image"
                 objectFit="cover"
               />
             </div>
-            <h3 className="title">{services.analyticsDescription}</h3>
+            <h3 className="title">{services.analyticsTitle}</h3>
+            <p>{services.analyticsDescription}</p>
             <span className="price"><strong>Lähtöhinta:</strong> {services.analyticsPrice}</span>
           </div>
         </div>

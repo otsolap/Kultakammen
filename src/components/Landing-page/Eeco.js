@@ -6,24 +6,44 @@ const Eeco = () => {
 
   const data = useStaticQuery(graphql`
   query CareerQuery {
-    portfolioJson {
-      career {
-        DescriptionOne
-        DescriptionTwo
-        subtitle
-        title
-        featuredImageOne {
-          childrenImageSharp {
-            gatsbyImageData(height: 439, width: 585, layout: CONSTRAINED)
+    allUtilJson {
+      nodes {
+        career {
+          DescriptionOne
+          DescriptionTwo
+          ToolKit
+          subtitle
+          title
+          featuredImageOne {
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED, 
+                width: 585, 
+                height: 439)
+            }
+          }
+          featuredImageTwo {
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED, 
+                width: 585, 
+                height: 439)
+            }
           }
         }
       }
     }
-  }
+  }  
   `)
 
   const { career } = data.portfolioJson
+  const ImageOne = career.featuredImageOne
+    ? career.featuredImageOne.childImageSharp.gatsbyImageData
+    : ""
 
+  const ImageTwo = career.featuredImageTwo
+    ? career.featuredImageTwo.childImageSharp.gatsbyImageData
+    : ""
 
   return (
     <section id="eeco">
@@ -31,7 +51,7 @@ const Eeco = () => {
       <div className="eeco-dev grids col-1 sm-2">
         <div className="eeco-img">
           <GatsbyImage
-            src={career.featuredImageOne}
+            image={ImageOne}
             alt="Kultakämmen profiilikuva"
             className="featured-image"
             objectFit="cover"
@@ -46,11 +66,13 @@ const Eeco = () => {
         <div className="eeco-description">
           <h4>{career.subtitle}</h4>
           {career.DescriptionTwo}
+          <strong>Työkaluvyöhöni kuuluu:</strong>
+          {career.ToolKit}
         </div>
 
         <div className="eeco-img">
           <GatsbyImage
-            src={career.featuredImageOne}
+            image={ImageTwo}
             alt="Kultakämmen profiilikuva"
             className="featured-image"
             objectFit="cover"

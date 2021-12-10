@@ -3,24 +3,25 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const AboutMe = () => {
-  const data = useStaticQuery(graphql`
+  const query = useStaticQuery(graphql`
   query aboutMeQuery {
-    portfolioJson {
-      aboutMe {
-        CTA
-        CtaLink
-        profession
-        salesPitch
-        title
-        subtitle
-        featuredImage {
-          childImageSharp {
-            gatsbyImageData(
-              layout: CONSTRAINED, 
-              width: 585
-              height: 439
-              )
-          }
+    allUtilJson {
+      nodes {
+        aboutMe {
+          CTA
+          CtaLink
+          profession
+          salesPitch
+          subtitle
+          title
+           featuredImage {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED,
+                    width: 585, 
+                    height: 439)
+                }
+              }
         }
       }
     }
@@ -28,26 +29,40 @@ const AboutMe = () => {
   
   `)
 
-  const { aboutMe } = data.portfolioJson
+  const { aboutMe } = useStaticQuery(query)
+  const {
+    CTA,
+    CtaLink,
+    profession,
+    salesPitch,
+    subtitle,
+    title,
+    featuredImage
+  } = aboutMe.allUtilJson
+  console.log(aboutMe)
+  console.log(aboutMe.allUtilJson)
 
+  const Image = featuredImage
+    ? featuredImage.childImageSharp.gatsbyImageData
+    : ""
 
   return (
     <section id="aboutMe">
       <div className="home-banner grids col-1 sm-2">
         <div>
-          <h1 className="title">{aboutMe.title}</h1>
+          <h1 className="title">{title}</h1>
           <div className="tag-container">
-            <p className="tagline">{aboutMe.subtitle}</p>
-            <p className="tagline">{aboutMe.profession}</p>
+            <p className="tagline">{subtitle}</p>
+            <p className="tagline">{profession}</p>
           </div>
           <p>
-            {aboutMe.salesPitch}</p>
+            {salesPitch}</p>
           <p>Jos haluat nähdä CV:ni voit kirjautua <Link to="/portfolio">tästä</Link> sisään portfoliosivulleni.</p>
-          <Link to={aboutMe.CtaLink} className="button tutustu"><span>{aboutMe.CTA}t</span></Link>
+          <Link to={CtaLink} className="button tutustu"><span>{CTA}</span></Link>
         </div>
         <div>
           <GatsbyImage
-            src={aboutMe.featuredImage}
+            image={Image}
             alt="Kultakämmen profiilikuva"
             className="featured-image portfolio"
             objectFit="cover"

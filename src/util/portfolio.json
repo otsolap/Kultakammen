@@ -1,5 +1,4 @@
-[
-  {
+{
     "aboutMe": {
       "title": "Kultakammen",
       "subtitle": "Otso Lappalainen",
@@ -24,6 +23,7 @@
       "webDescription": "Koodaan moderneille menetelmillä, jotta nettisivusi olisivat entistä toimivampia, turvallisempia ja kustannustehokkaampia. Tehdään sinulle uudet ja laadukkaat nettisivut parhailla menetelmillä.",
       "webFeaturedImage": "/assets/Kultakammen-New-Website.jpg",
       "webPrice": "999€",
+      "analyticsTitle": "Google Markkinointi: SEO & SEM",
       "analyticsDescription": "Suunnittelen ja luon Google Ads tilin, jotta saat parempaa näkyvyyttä kustannustehokkaammin. Käyn myös läpi nettisivun hakukoneoptimoinnin parhaat menetelmät.",
       "analyticsFeaturedImage": "/assets/Kultakammen-Google.jpg",
       "analyticsPrice": "999€"
@@ -34,4 +34,3 @@
     "companyID": "3162360-6"
     }
   }
-]
