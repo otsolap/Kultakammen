@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import {
   TiSocialGithub,
   TiSocialLinkedin,
@@ -7,31 +6,16 @@ import {
 import {
   RiStackOverflowFill,
 } from "react-icons/ri"
+import portfolio from '../util/portfolio.json'
 
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
-  query FooterQuery {
-    allUtilJson {
-      nodes {
-        footer {
-          CTA
-          companyID
-          companyName
-        }
-      }
-    }
-  }
-  
-  `)
-
-  const { footer } = data.allUtilJson.nodes[0, 1]
 
   return (
     <footer className="site-footer">
       <div className="container">
         <div className="footer-social">
-          <div className="footer-social-text"><p>{footer.CTA}</p></div>
+          <div className="footer-social-text"><p>{portfolio.footer.CTA}</p></div>
           <div className="footer-social-icons">
             <a
               target="_blank"
@@ -62,7 +46,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p>{footer.companyName}  ©{new Date().getFullYear()} | y-tunnus: {footer.companyID} </p>
+        <p>{portfolio.footer.companyName}  ©{new Date().getFullYear()} | y-tunnus: {portfolio.footer.companyID} </p>
       </div>
     </footer>
   )

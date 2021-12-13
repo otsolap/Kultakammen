@@ -37,8 +37,8 @@ collections:
             label: Kuva
             default: "/assets/OtsoEeco.png"
             required: true
-          - widget: markdown
-            name: body
+          - widget: text
+            name: salesPitch
             label: Myyntipuhe
             required: true
           - widget: string

@@ -27,7 +27,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
