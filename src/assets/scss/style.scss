@@ -288,6 +288,9 @@ section {
 
 		.featured-image {
 			max-width: 680px;
+			max-width: $breakpoint-sm {
+				display: none;
+			}
 		}
 	}
 }
