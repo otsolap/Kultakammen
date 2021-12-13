@@ -15,7 +15,7 @@ const AboutMe = () => {
           </div>
           <p> {portfolio.aboutMe.salesPitch}</p>
           <p>Jos haluat nähdä CV:ni voit kirjautua <Link to="/portfolio">tästä</Link> sisään portfoliosivulleni.</p>
-          <Link to={portfolio.aboutMe.CtaLink} className="button tutustu"><span>{portfolio.aboutMe.CTA}t</span></Link>
+          <Link to={portfolio.aboutMe.CtaLink} className="button tutustu"><span>{portfolio.aboutMe.CTA}</span></Link>
         </div>
         <div className="home-banner-img">
           <img
