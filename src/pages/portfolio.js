@@ -37,7 +37,7 @@ const Portfolio = () => {
             <p className="role gold">Analytiikka</p>
           </div>
           <div className="address-container">
-            <p className="address">Helsinginkatu 9A 19, 00500 Helsinki Finland</p>
+            <p className="address">Iiluodontie 3 40 00990 Helsinki Finland</p>
           </div>
           <div id="contact" className="contact-container">
             <p className="contact-details">
