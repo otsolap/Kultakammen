@@ -56,7 +56,7 @@ function LoginForm({ navigateTarget }) {
                 placeholder="Sähköposti*"
                 name="email">
               </input>
-              {errors.email && <p className="text-red-500 text-xs italic">Sähköposti on pakollinen kenttä</p>}
+              {errors.email && <p className="warning">Sähköposti on pakollinen kenttä</p>}
             </div>
             <div className="input-container">
               <label htmlFor="password">

@@ -36,13 +36,13 @@ const AuthOverlay = () => {
           <div>
 
             {identity.urlToken?.type === "confirmation" &&
-              <p>Confirming User...</p>
+              <p>Varmistetaan käyttäjä</p>
             }
             {identity.urlToken?.type === "email_change" && (
               identity.user
-                ? <p>Changing Email...</p>
+                ? <p>Sähköpostin vaitho</p>
                 : <>
-                  <p>In order to confirm your email change, you must log in with your prior credentials.</p>
+                  <p>Vaihtaaksesi sähköpostisi sinun täytyy sisäänkirjautua ensiksi</p>
                   <LoginForm />
                 </>
             )}
@@ -57,7 +57,7 @@ const AuthOverlay = () => {
                 {identity.urlToken.type === "invite" &&
                   <>
                     <h2>Welcome</h2>
-                    <p className="mb-0">Let's complete the rest of your account info</p>
+                    <p className="mb-0">Täytä profiilisi loput tiedot</p>
                   </>
                 }
                 <form onSubmit={handleSubmit(onSubmit)}>

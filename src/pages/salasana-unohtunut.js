@@ -30,7 +30,7 @@ const ForgotPassword = () => {
       <main className="netlify-identity-page forgotten-password-page">
         <div>
           <div>
-            <h1 className="px-4 pt-5 text-2xl text-left text-teal-500 font-bold sm:text-3xl">
+            <h1>
               Salasana unohtonut
             </h1>
             <div>
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
                       </label>
                       <input
                         ref={register({ required: true, pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
-                        className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${formProcessing && 'disabled'}`}
+                        className={`${formProcessing && 'disabled'}`}
                         type="email"
                         placeholder="Sähköposti*"
                         name="email">

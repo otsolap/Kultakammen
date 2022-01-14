@@ -3,14 +3,6 @@ import { navigate } from 'gatsby'
 import { useIdentityContext } from 'react-netlify-identity-gotrue'
 import Layout from '../../components/layout';
 
-// Component wrapper with optional role-specificity and optional redirect (otherwise
-// just shows the unauthorized message)
-
-// Allows the following features:
-// - For logged out folks, this component's rendering should force a redirect to /login
-//   with a callback so that after the user logs in, they will be pushed back to the content
-// - For logged in folks that don't meet the role-gating requirements, the 'Unauthorized'
-//   message should be displayed 
 const PrivateContent = ({ as: Comp, rolesAllowed, callbackPath, ...props }) => {
   const identity = useIdentityContext()
 
